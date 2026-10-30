@@ -214,9 +214,12 @@ async def _raw_request_wrapper(prompt, max_tokens=1600):
                 reason = "network error" if wait == NETWORK_WAIT_S else "rate limit reached"
                 print(f"[evaluation] {reason}; waiting {wait:.1f} s (excluded from latency)")
                 entry["rate_limit_waits"] += 1
-                entry["rate_limit_wait_s"] += wait
-                _recorder.throttle_seconds += wait + (time.perf_counter() - started)
                 await asyncio.sleep(wait)
+                # Measure the time actually lost (rejected request + real sleep),
+                # because a sleep can overrun its planned length on a busy machine.
+                lost = time.perf_counter() - started
+                entry["rate_limit_wait_s"] += lost
+                _recorder.throttle_seconds += lost
     finally:
         entry["seconds"] = round(time.perf_counter() - started, 3)
         entry["usage"] = _recorder._last_usage

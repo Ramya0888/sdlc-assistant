@@ -1,0 +1,21 @@
+{
+  "Functional requirements": 5,
+  "Non-functional requirements": 4,
+  "Actors": 3,
+  "Use cases": 5,
+  "Requirement acceptance criteria": 10,
+  "User stories": 6,
+  "Story acceptance criteria": 12,
+  "UML classes": 6,
+  "Class relationships": 6,
+  "Sequence messages": 18,
+  "DB tables": 4,
+  "DB columns": 22,
+  "Foreign keys": 5,
+  "REST endpoints": 6,
+  "Status codes": 12,
+  "Stack entries": 8,
+  "Dependencies": 8,
+  "Folders": 8,
+  "Doc sections": 6
+}
