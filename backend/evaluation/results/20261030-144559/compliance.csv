@@ -1,0 +1,526 @@
+domain_id,repeat,module,rule,passed,detail
+D1,1,Requirement Analyzer,FR = 5,True,5
+D1,1,Requirement Analyzer,NFR = 4,True,4
+D1,1,Requirement Analyzer,actors = 3,True,3
+D1,1,Requirement Analyzer,use cases = 5,True,5
+D1,1,Requirement Analyzer,use-case actor in actors,True,
+D1,1,Requirement Analyzer,no generic actor,True,
+D1,1,Requirement Analyzer,5 criteria groups,True,5
+D1,1,Requirement Analyzer,2 criteria each,True,
+D1,1,User Story Generator,6 stories,True,6
+D1,1,User Story Generator,IDs US-001..US-006,True,
+D1,1,User Story Generator,Connextra template,True,
+D1,1,User Story Generator,priority in set,True,
+D1,1,User Story Generator,"points in {1,2,3,5,8}",True,
+D1,1,User Story Generator,sprint in set,True,
+D1,1,User Story Generator,2 criteria each,True,
+D1,1,UML Generator,use_case starts 'flowchart LR',True,
+D1,1,UML Generator,class_diagram starts 'classDiagram',True,
+D1,1,UML Generator,sequence starts 'sequenceDiagram',True,
+D1,1,UML Generator,<= 6 classes,True,6
+D1,1,UML Generator,<= 8 relationships,True,6
+D1,1,Database Designer,4 tables,True,4
+D1,1,Database Designer,4-6 columns each,False,"5, 5, 5, 7"
+D1,1,Database Designer,one INTEGER PK each,True,
+D1,1,Database Designer,allowed types,True,
+D1,1,Database Designer,FK as table.column,True,
+D1,1,API Designer,6 endpoints,True,6
+D1,1,API Designer,allowed HTTP verbs,True,
+D1,1,API Designer,<= 2 status codes each,True,
+D1,1,Project Structure,<= 8 stack entries,True,8
+D1,1,Project Structure,<= 8 dependencies,True,8
+D1,1,Project Structure,<= 8 folders,True,8
+D1,1,Project Structure,React + Vite + FastAPI,True,
+D1,1,Project Structure,diagram starts 'flowchart TD',True,
+D1,1,Documentation,6 sections,True,
+D1,1,Documentation,each < 100 words,True,"47, 62, 40, 37, 41, 40"
+D1,2,Requirement Analyzer,FR = 5,True,5
+D1,2,Requirement Analyzer,NFR = 4,True,4
+D1,2,Requirement Analyzer,actors = 3,True,3
+D1,2,Requirement Analyzer,use cases = 5,True,5
+D1,2,Requirement Analyzer,use-case actor in actors,True,
+D1,2,Requirement Analyzer,no generic actor,True,
+D1,2,Requirement Analyzer,5 criteria groups,True,5
+D1,2,Requirement Analyzer,2 criteria each,True,
+D1,2,User Story Generator,6 stories,True,6
+D1,2,User Story Generator,IDs US-001..US-006,True,
+D1,2,User Story Generator,Connextra template,True,
+D1,2,User Story Generator,priority in set,True,
+D1,2,User Story Generator,"points in {1,2,3,5,8}",True,
+D1,2,User Story Generator,sprint in set,True,
+D1,2,User Story Generator,2 criteria each,True,
+D1,2,UML Generator,use_case starts 'flowchart LR',True,
+D1,2,UML Generator,class_diagram starts 'classDiagram',True,
+D1,2,UML Generator,sequence starts 'sequenceDiagram',True,
+D1,2,UML Generator,<= 6 classes,True,6
+D1,2,UML Generator,<= 8 relationships,True,6
+D1,2,Database Designer,4 tables,True,4
+D1,2,Database Designer,4-6 columns each,True,"5, 5, 5, 6"
+D1,2,Database Designer,one INTEGER PK each,True,
+D1,2,Database Designer,allowed types,True,
+D1,2,Database Designer,FK as table.column,True,
+D1,2,API Designer,6 endpoints,True,6
+D1,2,API Designer,allowed HTTP verbs,True,
+D1,2,API Designer,<= 2 status codes each,True,
+D1,2,Project Structure,<= 8 stack entries,True,8
+D1,2,Project Structure,<= 8 dependencies,True,8
+D1,2,Project Structure,<= 8 folders,True,8
+D1,2,Project Structure,React + Vite + FastAPI,True,
+D1,2,Project Structure,diagram starts 'flowchart TD',True,
+D1,2,Documentation,6 sections,True,
+D1,2,Documentation,each < 100 words,True,"40, 49, 26, 29, 46, 39"
+D1,3,Requirement Analyzer,FR = 5,True,5
+D1,3,Requirement Analyzer,NFR = 4,True,4
+D1,3,Requirement Analyzer,actors = 3,True,3
+D1,3,Requirement Analyzer,use cases = 5,True,5
+D1,3,Requirement Analyzer,use-case actor in actors,True,
+D1,3,Requirement Analyzer,no generic actor,True,
+D1,3,Requirement Analyzer,5 criteria groups,True,5
+D1,3,Requirement Analyzer,2 criteria each,True,
+D1,3,User Story Generator,6 stories,True,6
+D1,3,User Story Generator,IDs US-001..US-006,True,
+D1,3,User Story Generator,Connextra template,True,
+D1,3,User Story Generator,priority in set,True,
+D1,3,User Story Generator,"points in {1,2,3,5,8}",True,
+D1,3,User Story Generator,sprint in set,True,
+D1,3,User Story Generator,2 criteria each,True,
+D1,3,UML Generator,use_case starts 'flowchart LR',True,
+D1,3,UML Generator,class_diagram starts 'classDiagram',True,
+D1,3,UML Generator,sequence starts 'sequenceDiagram',True,
+D1,3,UML Generator,<= 6 classes,True,6
+D1,3,UML Generator,<= 8 relationships,True,6
+D1,3,Database Designer,4 tables,True,4
+D1,3,Database Designer,4-6 columns each,False,"5, 5, 5, 7"
+D1,3,Database Designer,one INTEGER PK each,True,
+D1,3,Database Designer,allowed types,True,
+D1,3,Database Designer,FK as table.column,True,
+D1,3,API Designer,6 endpoints,True,6
+D1,3,API Designer,allowed HTTP verbs,True,
+D1,3,API Designer,<= 2 status codes each,True,
+D1,3,Project Structure,<= 8 stack entries,True,8
+D1,3,Project Structure,<= 8 dependencies,True,8
+D1,3,Project Structure,<= 8 folders,True,8
+D1,3,Project Structure,React + Vite + FastAPI,True,
+D1,3,Project Structure,diagram starts 'flowchart TD',True,
+D1,3,Documentation,6 sections,True,
+D1,3,Documentation,each < 100 words,True,"40, 49, 26, 29, 46, 39"
+D2,1,Requirement Analyzer,FR = 5,True,5
+D2,1,Requirement Analyzer,NFR = 4,True,4
+D2,1,Requirement Analyzer,actors = 3,True,3
+D2,1,Requirement Analyzer,use cases = 5,True,5
+D2,1,Requirement Analyzer,use-case actor in actors,True,
+D2,1,Requirement Analyzer,no generic actor,True,
+D2,1,Requirement Analyzer,5 criteria groups,True,5
+D2,1,Requirement Analyzer,2 criteria each,True,
+D2,1,User Story Generator,6 stories,True,6
+D2,1,User Story Generator,IDs US-001..US-006,True,
+D2,1,User Story Generator,Connextra template,True,
+D2,1,User Story Generator,priority in set,True,
+D2,1,User Story Generator,"points in {1,2,3,5,8}",True,
+D2,1,User Story Generator,sprint in set,True,
+D2,1,User Story Generator,2 criteria each,True,
+D2,1,UML Generator,use_case starts 'flowchart LR',True,
+D2,1,UML Generator,class_diagram starts 'classDiagram',True,
+D2,1,UML Generator,sequence starts 'sequenceDiagram',True,
+D2,1,UML Generator,<= 6 classes,True,6
+D2,1,UML Generator,<= 8 relationships,True,6
+D2,1,Database Designer,4 tables,True,4
+D2,1,Database Designer,4-6 columns each,True,"5, 5, 5, 5"
+D2,1,Database Designer,one INTEGER PK each,True,
+D2,1,Database Designer,allowed types,True,
+D2,1,Database Designer,FK as table.column,True,
+D2,1,API Designer,6 endpoints,True,6
+D2,1,API Designer,allowed HTTP verbs,True,
+D2,1,API Designer,<= 2 status codes each,True,
+D2,1,Project Structure,<= 8 stack entries,True,8
+D2,1,Project Structure,<= 8 dependencies,True,8
+D2,1,Project Structure,<= 8 folders,True,8
+D2,1,Project Structure,React + Vite + FastAPI,True,
+D2,1,Project Structure,diagram starts 'flowchart TD',True,
+D2,1,Documentation,6 sections,True,
+D2,1,Documentation,each < 100 words,True,"47, 47, 36, 33, 39, 33"
+D2,2,Requirement Analyzer,FR = 5,True,5
+D2,2,Requirement Analyzer,NFR = 4,True,4
+D2,2,Requirement Analyzer,actors = 3,True,3
+D2,2,Requirement Analyzer,use cases = 5,True,5
+D2,2,Requirement Analyzer,use-case actor in actors,True,
+D2,2,Requirement Analyzer,no generic actor,True,
+D2,2,Requirement Analyzer,5 criteria groups,True,5
+D2,2,Requirement Analyzer,2 criteria each,True,
+D2,2,User Story Generator,6 stories,True,6
+D2,2,User Story Generator,IDs US-001..US-006,True,
+D2,2,User Story Generator,Connextra template,True,
+D2,2,User Story Generator,priority in set,True,
+D2,2,User Story Generator,"points in {1,2,3,5,8}",True,
+D2,2,User Story Generator,sprint in set,True,
+D2,2,User Story Generator,2 criteria each,True,
+D2,2,UML Generator,use_case starts 'flowchart LR',True,
+D2,2,UML Generator,class_diagram starts 'classDiagram',True,
+D2,2,UML Generator,sequence starts 'sequenceDiagram',True,
+D2,2,UML Generator,<= 6 classes,True,6
+D2,2,UML Generator,<= 8 relationships,True,6
+D2,2,Database Designer,4 tables,True,4
+D2,2,Database Designer,4-6 columns each,True,"5, 4, 5, 5"
+D2,2,Database Designer,one INTEGER PK each,True,
+D2,2,Database Designer,allowed types,True,
+D2,2,Database Designer,FK as table.column,True,
+D2,2,API Designer,6 endpoints,True,6
+D2,2,API Designer,allowed HTTP verbs,True,
+D2,2,API Designer,<= 2 status codes each,True,
+D2,2,Project Structure,<= 8 stack entries,True,8
+D2,2,Project Structure,<= 8 dependencies,True,8
+D2,2,Project Structure,<= 8 folders,True,8
+D2,2,Project Structure,React + Vite + FastAPI,True,
+D2,2,Project Structure,diagram starts 'flowchart TD',True,
+D2,2,Documentation,6 sections,True,
+D2,2,Documentation,each < 100 words,True,"47, 47, 42, 36, 42, 43"
+D2,3,Requirement Analyzer,FR = 5,True,5
+D2,3,Requirement Analyzer,NFR = 4,True,4
+D2,3,Requirement Analyzer,actors = 3,True,3
+D2,3,Requirement Analyzer,use cases = 5,True,5
+D2,3,Requirement Analyzer,use-case actor in actors,True,
+D2,3,Requirement Analyzer,no generic actor,True,
+D2,3,Requirement Analyzer,5 criteria groups,True,5
+D2,3,Requirement Analyzer,2 criteria each,True,
+D2,3,User Story Generator,6 stories,True,6
+D2,3,User Story Generator,IDs US-001..US-006,True,
+D2,3,User Story Generator,Connextra template,True,
+D2,3,User Story Generator,priority in set,True,
+D2,3,User Story Generator,"points in {1,2,3,5,8}",True,
+D2,3,User Story Generator,sprint in set,True,
+D2,3,User Story Generator,2 criteria each,True,
+D2,3,UML Generator,use_case starts 'flowchart LR',True,
+D2,3,UML Generator,class_diagram starts 'classDiagram',True,
+D2,3,UML Generator,sequence starts 'sequenceDiagram',True,
+D2,3,UML Generator,<= 6 classes,True,6
+D2,3,UML Generator,<= 8 relationships,True,8
+D2,3,Database Designer,4 tables,True,4
+D2,3,Database Designer,4-6 columns each,True,"5, 5, 5, 5"
+D2,3,Database Designer,one INTEGER PK each,True,
+D2,3,Database Designer,allowed types,True,
+D2,3,Database Designer,FK as table.column,True,
+D2,3,API Designer,6 endpoints,True,6
+D2,3,API Designer,allowed HTTP verbs,True,
+D2,3,API Designer,<= 2 status codes each,True,
+D2,3,Project Structure,<= 8 stack entries,True,8
+D2,3,Project Structure,<= 8 dependencies,True,8
+D2,3,Project Structure,<= 8 folders,True,8
+D2,3,Project Structure,React + Vite + FastAPI,True,
+D2,3,Project Structure,diagram starts 'flowchart TD',True,
+D2,3,Documentation,6 sections,True,
+D2,3,Documentation,each < 100 words,True,"47, 47, 39, 36, 42, 42"
+D3,1,Requirement Analyzer,FR = 5,True,5
+D3,1,Requirement Analyzer,NFR = 4,True,4
+D3,1,Requirement Analyzer,actors = 3,True,3
+D3,1,Requirement Analyzer,use cases = 5,True,5
+D3,1,Requirement Analyzer,use-case actor in actors,True,
+D3,1,Requirement Analyzer,no generic actor,True,
+D3,1,Requirement Analyzer,5 criteria groups,True,5
+D3,1,Requirement Analyzer,2 criteria each,True,
+D3,1,User Story Generator,6 stories,True,6
+D3,1,User Story Generator,IDs US-001..US-006,True,
+D3,1,User Story Generator,Connextra template,True,
+D3,1,User Story Generator,priority in set,True,
+D3,1,User Story Generator,"points in {1,2,3,5,8}",True,
+D3,1,User Story Generator,sprint in set,True,
+D3,1,User Story Generator,2 criteria each,True,
+D3,1,UML Generator,use_case starts 'flowchart LR',True,
+D3,1,UML Generator,class_diagram starts 'classDiagram',True,
+D3,1,UML Generator,sequence starts 'sequenceDiagram',True,
+D3,1,UML Generator,<= 6 classes,True,6
+D3,1,UML Generator,<= 8 relationships,True,7
+D3,1,Database Designer,4 tables,True,4
+D3,1,Database Designer,4-6 columns each,True,"5, 5, 6, 4"
+D3,1,Database Designer,one INTEGER PK each,True,
+D3,1,Database Designer,allowed types,True,
+D3,1,Database Designer,FK as table.column,True,
+D3,1,API Designer,6 endpoints,True,6
+D3,1,API Designer,allowed HTTP verbs,True,
+D3,1,API Designer,<= 2 status codes each,True,
+D3,1,Project Structure,<= 8 stack entries,True,8
+D3,1,Project Structure,<= 8 dependencies,True,8
+D3,1,Project Structure,<= 8 folders,True,8
+D3,1,Project Structure,React + Vite + FastAPI,True,
+D3,1,Project Structure,diagram starts 'flowchart TD',True,
+D3,1,Documentation,6 sections,True,
+D3,1,Documentation,each < 100 words,True,"35, 44, 28, 36, 32, 28"
+D3,2,Requirement Analyzer,FR = 5,True,5
+D3,2,Requirement Analyzer,NFR = 4,True,4
+D3,2,Requirement Analyzer,actors = 3,True,3
+D3,2,Requirement Analyzer,use cases = 5,True,5
+D3,2,Requirement Analyzer,use-case actor in actors,True,
+D3,2,Requirement Analyzer,no generic actor,True,
+D3,2,Requirement Analyzer,5 criteria groups,True,5
+D3,2,Requirement Analyzer,2 criteria each,True,
+D3,2,User Story Generator,6 stories,True,6
+D3,2,User Story Generator,IDs US-001..US-006,True,
+D3,2,User Story Generator,Connextra template,True,
+D3,2,User Story Generator,priority in set,True,
+D3,2,User Story Generator,"points in {1,2,3,5,8}",True,
+D3,2,User Story Generator,sprint in set,True,
+D3,2,User Story Generator,2 criteria each,True,
+D3,2,UML Generator,use_case starts 'flowchart LR',True,
+D3,2,UML Generator,class_diagram starts 'classDiagram',True,
+D3,2,UML Generator,sequence starts 'sequenceDiagram',True,
+D3,2,UML Generator,<= 6 classes,True,6
+D3,2,UML Generator,<= 8 relationships,True,8
+D3,2,Database Designer,4 tables,True,4
+D3,2,Database Designer,4-6 columns each,True,"5, 5, 6, 4"
+D3,2,Database Designer,one INTEGER PK each,True,
+D3,2,Database Designer,allowed types,True,
+D3,2,Database Designer,FK as table.column,True,
+D3,2,API Designer,6 endpoints,True,6
+D3,2,API Designer,allowed HTTP verbs,True,
+D3,2,API Designer,<= 2 status codes each,True,
+D3,2,Project Structure,<= 8 stack entries,True,8
+D3,2,Project Structure,<= 8 dependencies,True,8
+D3,2,Project Structure,<= 8 folders,True,8
+D3,2,Project Structure,React + Vite + FastAPI,True,
+D3,2,Project Structure,diagram starts 'flowchart TD',True,
+D3,2,Documentation,6 sections,True,
+D3,2,Documentation,each < 100 words,True,"35, 44, 28, 36, 32, 27"
+D3,3,Requirement Analyzer,FR = 5,True,5
+D3,3,Requirement Analyzer,NFR = 4,True,4
+D3,3,Requirement Analyzer,actors = 3,True,3
+D3,3,Requirement Analyzer,use cases = 5,True,5
+D3,3,Requirement Analyzer,use-case actor in actors,True,
+D3,3,Requirement Analyzer,no generic actor,True,
+D3,3,Requirement Analyzer,5 criteria groups,True,5
+D3,3,Requirement Analyzer,2 criteria each,True,
+D3,3,User Story Generator,6 stories,True,6
+D3,3,User Story Generator,IDs US-001..US-006,True,
+D3,3,User Story Generator,Connextra template,True,
+D3,3,User Story Generator,priority in set,True,
+D3,3,User Story Generator,"points in {1,2,3,5,8}",True,
+D3,3,User Story Generator,sprint in set,True,
+D3,3,User Story Generator,2 criteria each,True,
+D3,3,UML Generator,use_case starts 'flowchart LR',True,
+D3,3,UML Generator,class_diagram starts 'classDiagram',True,
+D3,3,UML Generator,sequence starts 'sequenceDiagram',True,
+D3,3,UML Generator,<= 6 classes,True,6
+D3,3,UML Generator,<= 8 relationships,False,10
+D3,3,Database Designer,4 tables,True,4
+D3,3,Database Designer,4-6 columns each,True,"5, 5, 6, 4"
+D3,3,Database Designer,one INTEGER PK each,True,
+D3,3,Database Designer,allowed types,True,
+D3,3,Database Designer,FK as table.column,True,
+D3,3,API Designer,6 endpoints,True,6
+D3,3,API Designer,allowed HTTP verbs,True,
+D3,3,API Designer,<= 2 status codes each,True,
+D3,3,Project Structure,<= 8 stack entries,True,8
+D3,3,Project Structure,<= 8 dependencies,True,8
+D3,3,Project Structure,<= 8 folders,True,8
+D3,3,Project Structure,React + Vite + FastAPI,True,
+D3,3,Project Structure,diagram starts 'flowchart TD',True,
+D3,3,Documentation,6 sections,True,
+D3,3,Documentation,each < 100 words,True,"35, 44, 28, 36, 32, 28"
+D4,1,Requirement Analyzer,FR = 5,True,5
+D4,1,Requirement Analyzer,NFR = 4,True,4
+D4,1,Requirement Analyzer,actors = 3,True,3
+D4,1,Requirement Analyzer,use cases = 5,True,5
+D4,1,Requirement Analyzer,use-case actor in actors,True,
+D4,1,Requirement Analyzer,no generic actor,True,
+D4,1,Requirement Analyzer,5 criteria groups,True,5
+D4,1,Requirement Analyzer,2 criteria each,True,
+D4,1,User Story Generator,6 stories,True,6
+D4,1,User Story Generator,IDs US-001..US-006,True,
+D4,1,User Story Generator,Connextra template,True,
+D4,1,User Story Generator,priority in set,True,
+D4,1,User Story Generator,"points in {1,2,3,5,8}",True,
+D4,1,User Story Generator,sprint in set,True,
+D4,1,User Story Generator,2 criteria each,True,
+D4,1,UML Generator,use_case starts 'flowchart LR',True,
+D4,1,UML Generator,class_diagram starts 'classDiagram',True,
+D4,1,UML Generator,sequence starts 'sequenceDiagram',True,
+D4,1,UML Generator,<= 6 classes,True,6
+D4,1,UML Generator,<= 8 relationships,True,6
+D4,1,Database Designer,4 tables,True,4
+D4,1,Database Designer,4-6 columns each,True,"5, 4, 6, 5"
+D4,1,Database Designer,one INTEGER PK each,True,
+D4,1,Database Designer,allowed types,True,
+D4,1,Database Designer,FK as table.column,True,
+D4,1,API Designer,6 endpoints,True,6
+D4,1,API Designer,allowed HTTP verbs,True,
+D4,1,API Designer,<= 2 status codes each,True,
+D4,1,Project Structure,<= 8 stack entries,True,8
+D4,1,Project Structure,<= 8 dependencies,True,8
+D4,1,Project Structure,<= 8 folders,True,8
+D4,1,Project Structure,React + Vite + FastAPI,True,
+D4,1,Project Structure,diagram starts 'flowchart TD',True,
+D4,1,Documentation,6 sections,True,
+D4,1,Documentation,each < 100 words,True,"41, 63, 29, 28, 35, 36"
+D4,2,Requirement Analyzer,FR = 5,True,5
+D4,2,Requirement Analyzer,NFR = 4,True,4
+D4,2,Requirement Analyzer,actors = 3,True,3
+D4,2,Requirement Analyzer,use cases = 5,True,5
+D4,2,Requirement Analyzer,use-case actor in actors,True,
+D4,2,Requirement Analyzer,no generic actor,True,
+D4,2,Requirement Analyzer,5 criteria groups,True,5
+D4,2,Requirement Analyzer,2 criteria each,True,
+D4,2,User Story Generator,6 stories,True,6
+D4,2,User Story Generator,IDs US-001..US-006,True,
+D4,2,User Story Generator,Connextra template,True,
+D4,2,User Story Generator,priority in set,True,
+D4,2,User Story Generator,"points in {1,2,3,5,8}",True,
+D4,2,User Story Generator,sprint in set,True,
+D4,2,User Story Generator,2 criteria each,True,
+D4,2,UML Generator,use_case starts 'flowchart LR',True,
+D4,2,UML Generator,class_diagram starts 'classDiagram',True,
+D4,2,UML Generator,sequence starts 'sequenceDiagram',True,
+D4,2,UML Generator,<= 6 classes,True,6
+D4,2,UML Generator,<= 8 relationships,True,7
+D4,2,Database Designer,4 tables,True,4
+D4,2,Database Designer,4-6 columns each,True,"6, 6, 5, 5"
+D4,2,Database Designer,one INTEGER PK each,True,
+D4,2,Database Designer,allowed types,True,
+D4,2,Database Designer,FK as table.column,True,
+D4,2,API Designer,6 endpoints,True,6
+D4,2,API Designer,allowed HTTP verbs,True,
+D4,2,API Designer,<= 2 status codes each,True,
+D4,2,Project Structure,<= 8 stack entries,True,8
+D4,2,Project Structure,<= 8 dependencies,True,8
+D4,2,Project Structure,<= 8 folders,True,8
+D4,2,Project Structure,React + Vite + FastAPI,True,
+D4,2,Project Structure,diagram starts 'flowchart TD',True,
+D4,2,Documentation,6 sections,True,
+D4,2,Documentation,each < 100 words,True,"36, 51, 31, 32, 41, 34"
+D4,3,Requirement Analyzer,FR = 5,True,5
+D4,3,Requirement Analyzer,NFR = 4,True,4
+D4,3,Requirement Analyzer,actors = 3,True,3
+D4,3,Requirement Analyzer,use cases = 5,True,5
+D4,3,Requirement Analyzer,use-case actor in actors,True,
+D4,3,Requirement Analyzer,no generic actor,True,
+D4,3,Requirement Analyzer,5 criteria groups,True,5
+D4,3,Requirement Analyzer,2 criteria each,True,
+D4,3,User Story Generator,6 stories,True,6
+D4,3,User Story Generator,IDs US-001..US-006,True,
+D4,3,User Story Generator,Connextra template,True,
+D4,3,User Story Generator,priority in set,True,
+D4,3,User Story Generator,"points in {1,2,3,5,8}",True,
+D4,3,User Story Generator,sprint in set,True,
+D4,3,User Story Generator,2 criteria each,True,
+D4,3,UML Generator,use_case starts 'flowchart LR',True,
+D4,3,UML Generator,class_diagram starts 'classDiagram',True,
+D4,3,UML Generator,sequence starts 'sequenceDiagram',True,
+D4,3,UML Generator,<= 6 classes,True,6
+D4,3,UML Generator,<= 8 relationships,True,6
+D4,3,Database Designer,4 tables,True,4
+D4,3,Database Designer,4-6 columns each,True,"5, 4, 6, 5"
+D4,3,Database Designer,one INTEGER PK each,True,
+D4,3,Database Designer,allowed types,True,
+D4,3,Database Designer,FK as table.column,True,
+D4,3,API Designer,6 endpoints,True,6
+D4,3,API Designer,allowed HTTP verbs,True,
+D4,3,API Designer,<= 2 status codes each,True,
+D4,3,Project Structure,<= 8 stack entries,True,8
+D4,3,Project Structure,<= 8 dependencies,True,8
+D4,3,Project Structure,<= 8 folders,True,8
+D4,3,Project Structure,React + Vite + FastAPI,True,
+D4,3,Project Structure,diagram starts 'flowchart TD',True,
+D4,3,Documentation,6 sections,True,
+D4,3,Documentation,each < 100 words,True,"52, 57, 46, 49, 44, 46"
+D5,1,Requirement Analyzer,FR = 5,True,5
+D5,1,Requirement Analyzer,NFR = 4,True,4
+D5,1,Requirement Analyzer,actors = 3,True,3
+D5,1,Requirement Analyzer,use cases = 5,True,5
+D5,1,Requirement Analyzer,use-case actor in actors,True,
+D5,1,Requirement Analyzer,no generic actor,True,
+D5,1,Requirement Analyzer,5 criteria groups,True,5
+D5,1,Requirement Analyzer,2 criteria each,True,
+D5,1,User Story Generator,6 stories,True,6
+D5,1,User Story Generator,IDs US-001..US-006,True,
+D5,1,User Story Generator,Connextra template,True,
+D5,1,User Story Generator,priority in set,True,
+D5,1,User Story Generator,"points in {1,2,3,5,8}",True,
+D5,1,User Story Generator,sprint in set,True,
+D5,1,User Story Generator,2 criteria each,True,
+D5,1,UML Generator,use_case starts 'flowchart LR',True,
+D5,1,UML Generator,class_diagram starts 'classDiagram',True,
+D5,1,UML Generator,sequence starts 'sequenceDiagram',True,
+D5,1,UML Generator,<= 6 classes,True,6
+D5,1,UML Generator,<= 8 relationships,True,7
+D5,1,Database Designer,4 tables,True,4
+D5,1,Database Designer,4-6 columns each,True,"5, 5, 5, 6"
+D5,1,Database Designer,one INTEGER PK each,True,
+D5,1,Database Designer,allowed types,True,
+D5,1,Database Designer,FK as table.column,True,
+D5,1,API Designer,6 endpoints,True,6
+D5,1,API Designer,allowed HTTP verbs,True,
+D5,1,API Designer,<= 2 status codes each,True,
+D5,1,Project Structure,<= 8 stack entries,True,8
+D5,1,Project Structure,<= 8 dependencies,True,8
+D5,1,Project Structure,<= 8 folders,True,8
+D5,1,Project Structure,React + Vite + FastAPI,True,
+D5,1,Project Structure,diagram starts 'flowchart TD',True,
+D5,1,Documentation,6 sections,True,
+D5,1,Documentation,each < 100 words,True,"45, 47, 38, 42, 50, 46"
+D5,2,Requirement Analyzer,FR = 5,True,5
+D5,2,Requirement Analyzer,NFR = 4,True,4
+D5,2,Requirement Analyzer,actors = 3,True,3
+D5,2,Requirement Analyzer,use cases = 5,True,5
+D5,2,Requirement Analyzer,use-case actor in actors,True,
+D5,2,Requirement Analyzer,no generic actor,True,
+D5,2,Requirement Analyzer,5 criteria groups,True,5
+D5,2,Requirement Analyzer,2 criteria each,True,
+D5,2,User Story Generator,6 stories,True,6
+D5,2,User Story Generator,IDs US-001..US-006,True,
+D5,2,User Story Generator,Connextra template,False,
+D5,2,User Story Generator,priority in set,True,
+D5,2,User Story Generator,"points in {1,2,3,5,8}",True,
+D5,2,User Story Generator,sprint in set,True,
+D5,2,User Story Generator,2 criteria each,True,
+D5,2,UML Generator,use_case starts 'flowchart LR',True,
+D5,2,UML Generator,class_diagram starts 'classDiagram',True,
+D5,2,UML Generator,sequence starts 'sequenceDiagram',True,
+D5,2,UML Generator,<= 6 classes,True,6
+D5,2,UML Generator,<= 8 relationships,True,7
+D5,2,Database Designer,4 tables,True,4
+D5,2,Database Designer,4-6 columns each,True,"5, 5, 5, 6"
+D5,2,Database Designer,one INTEGER PK each,True,
+D5,2,Database Designer,allowed types,True,
+D5,2,Database Designer,FK as table.column,True,
+D5,2,API Designer,6 endpoints,True,6
+D5,2,API Designer,allowed HTTP verbs,True,
+D5,2,API Designer,<= 2 status codes each,True,
+D5,2,Project Structure,<= 8 stack entries,True,8
+D5,2,Project Structure,<= 8 dependencies,True,8
+D5,2,Project Structure,<= 8 folders,True,8
+D5,2,Project Structure,React + Vite + FastAPI,True,
+D5,2,Project Structure,diagram starts 'flowchart TD',True,
+D5,2,Documentation,6 sections,True,
+D5,2,Documentation,each < 100 words,True,"45, 47, 38, 42, 50, 46"
+D5,3,Requirement Analyzer,FR = 5,True,5
+D5,3,Requirement Analyzer,NFR = 4,True,4
+D5,3,Requirement Analyzer,actors = 3,True,3
+D5,3,Requirement Analyzer,use cases = 5,True,5
+D5,3,Requirement Analyzer,use-case actor in actors,True,
+D5,3,Requirement Analyzer,no generic actor,True,
+D5,3,Requirement Analyzer,5 criteria groups,True,5
+D5,3,Requirement Analyzer,2 criteria each,True,
+D5,3,User Story Generator,6 stories,True,6
+D5,3,User Story Generator,IDs US-001..US-006,True,
+D5,3,User Story Generator,Connextra template,True,
+D5,3,User Story Generator,priority in set,True,
+D5,3,User Story Generator,"points in {1,2,3,5,8}",True,
+D5,3,User Story Generator,sprint in set,True,
+D5,3,User Story Generator,2 criteria each,True,
+D5,3,UML Generator,use_case starts 'flowchart LR',True,
+D5,3,UML Generator,class_diagram starts 'classDiagram',True,
+D5,3,UML Generator,sequence starts 'sequenceDiagram',True,
+D5,3,UML Generator,<= 6 classes,True,6
+D5,3,UML Generator,<= 8 relationships,True,7
+D5,3,Database Designer,4 tables,True,4
+D5,3,Database Designer,4-6 columns each,True,"5, 5, 5, 6"
+D5,3,Database Designer,one INTEGER PK each,True,
+D5,3,Database Designer,allowed types,True,
+D5,3,Database Designer,FK as table.column,True,
+D5,3,API Designer,6 endpoints,True,6
+D5,3,API Designer,allowed HTTP verbs,True,
+D5,3,API Designer,<= 2 status codes each,True,
+D5,3,Project Structure,<= 8 stack entries,True,8
+D5,3,Project Structure,<= 8 dependencies,True,8
+D5,3,Project Structure,<= 8 folders,True,8
+D5,3,Project Structure,React + Vite + FastAPI,True,
+D5,3,Project Structure,diagram starts 'flowchart TD',True,
+D5,3,Documentation,6 sections,True,
+D5,3,Documentation,each < 100 words,True,"46, 59, 36, 36, 46, 48"

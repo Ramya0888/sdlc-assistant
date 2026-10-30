@@ -1,0 +1,82 @@
+{
+  "runs_total": 15,
+  "runs_succeeded": 15,
+  "M1_latency_s": {
+    "mean": 19.29,
+    "sd": 2.35,
+    "median": 18.26,
+    "min": 17.282,
+    "max": 25.502
+  },
+  "M2_per_call_s": {
+    "mean_latency_div_7": 2.76,
+    "measured_mean_request": 2.69
+  },
+  "M3_first_attempt_parse": {
+    "ok": 105,
+    "calls": 105,
+    "rate": 1.0
+  },
+  "M4_retry_free_runs": {
+    "ok": 15,
+    "runs": 15,
+    "gateway_retries": 0,
+    "repair_calls": 0
+  },
+  "M5_sql_executable": {
+    "ok": 15,
+    "runs": 15
+  },
+  "M6_diagram_render": {
+    "uml_ok": 45,
+    "uml_total": 45,
+    "er_and_architecture_ok": 29,
+    "er_and_architecture_total": 30
+  },
+  "M7_constraint_compliance": {
+    "satisfied": 521,
+    "checked": 525,
+    "rate": 0.9924,
+    "fully_compliant_runs": 11
+  },
+  "M8_entity_coverage": {
+    "per_domain": {
+      "Food delivery": 0.5714,
+      "Hospital": 0.5714,
+      "Library": 0.8,
+      "E-commerce": 0.4762,
+      "Online exam": 0.8
+    },
+    "mean": 0.6438
+  },
+  "M9_cacs": {
+    "per_run": {
+      "D1-r1": 0.35,
+      "D1-r2": 0.4,
+      "D1-r3": 0.4,
+      "D2-r1": 0.65,
+      "D2-r2": 0.55,
+      "D2-r3": 0.65,
+      "D3-r1": 0.6,
+      "D3-r2": 0.6,
+      "D3-r3": 0.55,
+      "D4-r1": 0.45,
+      "D4-r2": 0.5,
+      "D4-r3": 0.5,
+      "D5-r1": 0.4,
+      "D5-r2": 0.45,
+      "D5-r3": 0.5
+    },
+    "mean": 0.5033
+  },
+  "rate_limit": {
+    "waits": 74,
+    "total_wait_s": 401.2,
+    "note": "HTTP 429 waits are excluded from M1, M2 and module times"
+  },
+  "tokens_per_run": {
+    "mean": 8864,
+    "min": 8535,
+    "max": 9141
+  }
+}

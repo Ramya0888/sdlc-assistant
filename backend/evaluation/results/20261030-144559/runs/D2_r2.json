@@ -1,0 +1,1710 @@
+{
+  "domain_id": "D2",
+  "domain": "Hospital",
+  "repeat": 2,
+  "latency_s": 18.016,
+  "wall_clock_s": 53.156,
+  "rate_limit_wait_s": 35.14,
+  "succeeded": true,
+  "error": null,
+  "instrumentation": {
+    "main_calls": 7,
+    "first_attempt_ok": 7,
+    "gateway_retries": 0,
+    "repair_calls": 0,
+    "repair_kinds": [],
+    "http_requests": 7,
+    "prompt_tokens": 3169,
+    "completion_tokens": 5366,
+    "total_tokens": 8535,
+    "module_seconds": {
+      "Requirement Analyzer": 3.197,
+      "User Story Generator": 2.416,
+      "UML Generator": 1.981,
+      "Database Designer": 3.547,
+      "API Designer": 3.134,
+      "Project Structure": 1.919,
+      "Documentation": 1.819
+    },
+    "rate_limit_waits": 6,
+    "rate_limit_wait_s": 35.14
+  },
+  "requests": [
+    {
+      "module": "Requirement Analyzer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.196,
+      "usage": {
+        "prompt_tokens": 857,
+        "completion_tokens": 1059,
+        "total_tokens": 1916
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "User Story Generator",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.4,
+      "usage": {
+        "prompt_tokens": 521,
+        "completion_tokens": 666,
+        "total_tokens": 1187
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 5.74
+    },
+    {
+      "module": "UML Generator",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 1.966,
+      "usage": {
+        "prompt_tokens": 332,
+        "completion_tokens": 504,
+        "total_tokens": 836
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 4.683
+    },
+    {
+      "module": "Database Designer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.534,
+      "usage": {
+        "prompt_tokens": 420,
+        "completion_tokens": 1238,
+        "total_tokens": 1658
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 4.54
+    },
+    {
+      "module": "API Designer",
+      "kind": "first",
+      "max_tokens": 1900,
+      "seconds": 3.131,
+      "usage": {
+        "prompt_tokens": 371,
+        "completion_tokens": 852,
+        "total_tokens": 1223
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 8.11
+    },
+    {
+      "module": "Project Structure",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 1.913,
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 538,
+        "total_tokens": 894
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 5.447
+    },
+    {
+      "module": "Documentation",
+      "kind": "first",
+      "max_tokens": 1600,
+      "seconds": 1.809,
+      "usage": {
+        "prompt_tokens": 312,
+        "completion_tokens": 509,
+        "total_tokens": 821
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 3.993
+    }
+  ],
+  "calls": [
+    {
+      "module": "Requirement Analyzer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "User Story Generator",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "UML Generator",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Database Designer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "API Designer",
+      "purpose": "main",
+      "max_tokens": 1900,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Project Structure",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Documentation",
+      "purpose": "main",
+      "max_tokens": 1600,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    }
+  ],
+  "raw_outputs": {
+    "Requirement Analyzer": {
+      "project": {
+        "name": "Hospital Management System",
+        "summary": "A system for patient registration, appointment scheduling, medical record access, doctor workflow, and admin billing.",
+        "domain": "Healthcare"
+      },
+      "functional_requirements": [
+        "Patients can register and maintain personal profiles.",
+        "Patients can book, modify, and cancel appointments with doctors.",
+        "Patients can view their own medical history and prescription records.",
+        "Doctors can manage their appointment schedules and record diagnoses.",
+        "Administrators can manage departments, doctors, and patient billing."
+      ],
+      "non_functional_requirements": [
+        "All patient data must be stored and transmitted securely following HIPAA guidelines.",
+        "System responses for user actions must be under 2 seconds.",
+        "The system must achieve 99.9% uptime and support failover.",
+        "The architecture should be scalable to handle peak loads of 10,000 concurrent users."
+      ],
+      "actors": [
+        {
+          "name": "Patient",
+          "description": "Registers, books appointments, and accesses personal medical information."
+        },
+        {
+          "name": "Doctor",
+          "description": "Manages schedule, records diagnoses, and writes prescriptions for patients."
+        },
+        {
+          "name": "Administrator",
+          "description": "Oversees departments, doctor accounts, and handles patient billing."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Register Account",
+          "actor": "Patient",
+          "description": "Creates a new user profile with personal and contact details."
+        },
+        {
+          "name": "Book Appointment",
+          "actor": "Patient",
+          "description": "Selects a doctor and time slot, then confirms the appointment."
+        },
+        {
+          "name": "View Medical History",
+          "actor": "Patient",
+          "description": "Retrieves a list of past visits, diagnoses, and prescriptions."
+        },
+        {
+          "name": "Record Diagnosis and Prescription",
+          "actor": "Doctor",
+          "description": "Enters diagnosis details and generates a prescription linked to the patient record."
+        },
+        {
+          "name": "Manage Billing",
+          "actor": "Administrator",
+          "description": "Creates, updates, and exports invoices for patient services."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Patients can register and maintain personal profiles.",
+          "criteria": [
+            "Registration succeeds only when all mandatory fields are provided.",
+            "A confirmation email is sent to the patient after successful registration."
+          ]
+        },
+        {
+          "requirement": "Patients can book, modify, and cancel appointments with doctors.",
+          "criteria": [
+            "The system prevents double\u2011booking of the same time slot.",
+            "Patients receive a notification confirming the booked, modified, or cancelled appointment."
+          ]
+        },
+        {
+          "requirement": "Patients can view their own medical history and prescription records.",
+          "criteria": [
+            "Only the authenticated patient can access their records.",
+            "Medical history loads within 2 seconds for any query."
+          ]
+        },
+        {
+          "requirement": "Doctors can manage their appointment schedules and record diagnoses.",
+          "criteria": [
+            "Doctors can add, edit, or remove appointments in their personal calendar.",
+            "Diagnoses and prescriptions are saved and immediately visible in the patient\u2019s record."
+          ]
+        },
+        {
+          "requirement": "Administrators can manage departments, doctors, and patient billing.",
+          "criteria": [
+            "Admins can generate an invoice for a patient\u2019s visit with correct charges.",
+            "Invoices can be exported as PDF files."
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "User Story Generator": {
+      "user_stories": [
+        {
+          "id": "US-001",
+          "story": "As a patient, I want to register an account, so that I can access the hospital system securely.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Patient can create an account with email and password.",
+            "System validates required fields and stores encrypted credentials."
+          ]
+        },
+        {
+          "id": "US-002",
+          "story": "As a patient, I want to book appointments with doctors, so that I can receive timely care.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Patient can view available time slots for selected doctor.",
+            "Appointment is confirmed and added to both patient and doctor schedules."
+          ]
+        },
+        {
+          "id": "US-003",
+          "story": "As a patient, I want to view my medical history, so that I can stay informed about my health.",
+          "priority": "Medium",
+          "story_points": 3,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Patient can access a list of past visits, diagnoses, and prescriptions.",
+            "Data is displayed only after successful authentication."
+          ]
+        },
+        {
+          "id": "US-004",
+          "story": "As a doctor, I want to manage my appointment schedule, so that I can organize my patient visits efficiently.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Doctor can view, add, modify, and cancel appointments.",
+            "Schedule changes are reflected in real-time for patients."
+          ]
+        },
+        {
+          "id": "US-005",
+          "story": "As a doctor, I want to record diagnoses and write prescriptions, so that patients receive appropriate treatment.",
+          "priority": "Medium",
+          "story_points": 8,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Doctor can enter diagnosis details and select medications from a formulary.",
+            "Prescriptions are saved to the patient\u2019s record and can be viewed by the patient."
+          ]
+        },
+        {
+          "id": "US-006",
+          "story": "As an administrator, I want to manage departments, doctors, and patient billing, so that the hospital operates smoothly.",
+          "priority": "Low",
+          "story_points": 5,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Admin can add, edit, or remove departments and assign doctors to them.",
+            "Admin can generate and update billing records for patient services."
+          ]
+        }
+      ]
+    },
+    "UML Generator": {
+      "use_case": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+      "class_diagram": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Doctor \"*\" --> \"*\" Department : belongsTo\n    Patient \"1\" --> \"*\" Billing : incurs\n    Department \"1\" --> \"*\" Doctor : employs",
+      "sequence": "sequenceDiagram\n    participant P as Patient\n    participant S as System\n    participant D as Doctor\n    P->>S: Register\n    S-->>P: Confirmation\n    P->>S: Book Appointment (doctorId, time)\n    S-->>P: Appointment Confirmed\n    D->>S: View Schedule\n    D->>S: Record Diagnosis (appointmentId, notes)\n    S-->>D: Diagnosis Saved\n    D->>S: Write Prescription (appointmentId, meds)\n    S-->>D: Prescription Saved"
+    },
+    "Database Designer": {
+      "tables": [
+        {
+          "table": "Patients",
+          "columns": [
+            {
+              "name": "patient_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "dob",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "address",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Doctors",
+          "columns": [
+            {
+              "name": "doctor_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "specialty",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Appointments",
+          "columns": [
+            {
+              "name": "appointment_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "patient_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Patients.patient_id"
+            },
+            {
+              "name": "doctor_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Doctors.doctor_id"
+            },
+            {
+              "name": "appointment_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Prescriptions",
+          "columns": [
+            {
+              "name": "prescription_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "appointment_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Appointments.appointment_id"
+            },
+            {
+              "name": "medication",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "dosage",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "notes",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Patients",
+          "to": "Appointments",
+          "cardinality": "1:N",
+          "description": "A patient can have many appointments"
+        },
+        {
+          "from": "Doctors",
+          "to": "Appointments",
+          "cardinality": "1:N",
+          "description": "A doctor can have many appointments"
+        },
+        {
+          "from": "Appointments",
+          "to": "Prescriptions",
+          "cardinality": "1:N",
+          "description": "An appointment can generate multiple prescriptions"
+        }
+      ],
+      "sql": "CREATE TABLE Patients (\n    patient_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    dob DATETIME,\n    phone TEXT,\n    address TEXT\n);\n\nCREATE TABLE Doctors (\n    doctor_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    specialty TEXT,\n    phone TEXT\n);\n\nCREATE TABLE Appointments (\n    appointment_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    patient_id INTEGER,\n    doctor_id INTEGER,\n    appointment_time DATETIME,\n    status TEXT,\n    FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),\n    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)\n);\n\nCREATE TABLE Prescriptions (\n    prescription_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    appointment_id INTEGER,\n    medication TEXT,\n    dosage TEXT,\n    notes TEXT,\n    FOREIGN KEY (appointment_id) REFERENCES Appointments(appointment_id)\n);",
+      "er_diagram": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text name\n    datetime dob\n    text phone\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text name\n    text specialty\n    text phone\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text medication\n    text dosage\n    text notes\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "API Designer": {
+      "apis": [
+        {
+          "method": "POST",
+          "endpoint": "/api/patients/register",
+          "purpose": "Register a new patient",
+          "request_body": {
+            "name": "string",
+            "email": "string",
+            "password": "string",
+            "date_of_birth": "string"
+          },
+          "response_body": {
+            "patient_id": "string",
+            "message": "string"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Patient created"
+            },
+            {
+              "code": 400,
+              "description": "Invalid input"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/appointments",
+          "purpose": "Book an appointment with a doctor",
+          "request_body": {
+            "patient_id": "string",
+            "doctor_id": "string",
+            "preferred_date": "string",
+            "reason": "string"
+          },
+          "response_body": {
+            "appointment_id": "string",
+            "status": "string"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Appointment scheduled"
+            },
+            {
+              "code": 409,
+              "description": "Time slot unavailable"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/patients/{patient_id}/history",
+          "purpose": "View patient's medical history",
+          "request_body": {},
+          "response_body": {
+            "records": [
+              {
+                "date": "string",
+                "diagnosis": "string",
+                "prescription": "string"
+              }
+            ]
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "History retrieved"
+            },
+            {
+              "code": 404,
+              "description": "Patient not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "endpoint": "/api/doctors/{doctor_id}/schedule",
+          "purpose": "Update doctor's appointment schedule",
+          "request_body": {
+            "available_slots": [
+              "string"
+            ]
+          },
+          "response_body": {
+            "message": "string"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Schedule updated"
+            },
+            {
+              "code": 400,
+              "description": "Invalid schedule data"
+            }
+          ]
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "/api/appointments/{appointment_id}/diagnosis",
+          "purpose": "Record diagnosis and prescription for an appointment",
+          "request_body": {
+            "diagnosis": "string",
+            "prescription": "string"
+          },
+          "response_body": {
+            "appointment_id": "string",
+            "status": "string"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Diagnosis recorded"
+            },
+            {
+              "code": 404,
+              "description": "Appointment not found"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "/api/admin/billing/{patient_id}",
+          "purpose": "Delete a patient's billing record",
+          "request_body": {},
+          "response_body": {
+            "message": "string"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Billing record deleted"
+            },
+            {
+              "code": 404,
+              "description": "Billing record not found"
+            }
+          ]
+        }
+      ]
+    },
+    "Project Structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        },
+        {
+          "category": "Cache / Session Store",
+          "technology": "Redis"
+        }
+      ],
+      "architecture": "Microservice\u2011style deployment with a single FastAPI service handling authentication, patient, doctor and admin domains, a PostgreSQL relational store, Redis for caching and session tokens, and a React/Vite SPA served via Nginx. Docker containers ensure portability and high availability; Kubernetes can orchestrate scaling and health checks.",
+      "dependencies": [
+        "uvicorn",
+        "pydantic",
+        "python\u2011jwt",
+        "alembic",
+        "pytest",
+        "react\u2011router",
+        "axios",
+        "dotenv"
+      ],
+      "folders": [
+        "frontend",
+        "backend",
+        "docker",
+        "configs",
+        "tests",
+        "migrations",
+        "docs",
+        "scripts"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        A[React SPA] --> B[Axios API Calls]\n    end\n    subgraph Server\n        B --> C[FastAPI]\n        C --> D[PostgreSQL]\n        C --> E[Redis]\n    end\n    subgraph Infra\n        F[Nginx] --> A\n        G[Docker Compose]\n        G --> C\n        G --> D\n        G --> E\n    end"
+    },
+    "Documentation": {
+      "readme": "Hospital Management System (HMS) enables patient registration, appointment booking, medical history viewing, doctor schedule management, diagnosis recording, prescription writing, and admin control of departments, staff, and billing. Built with a RESTful API, React frontend, Node.js/Express backend, and PostgreSQL database. Emphasizes data security, low latency, and 99.9% uptime.",
+      "api_documentation": "POST /patients \u2013 register; GET /patients/{id} \u2013 profile; GET /patients/{id}/history \u2013 medical history. POST /appointments \u2013 book; GET /doctors/{id}/schedule \u2013 view schedule; PUT /appointments/{id} \u2013 update status. POST /diagnoses \u2013 record; POST /prescriptions \u2013 create. Admin: GET/POST/PUT /departments, /doctors, /billing. All endpoints require JWT auth, role\u2011based access.",
+      "installation": "Clone repo, run `npm install` in server and client directories. Set up PostgreSQL, run `psql -f schema.sql`. Create .env with DB_URL, JWT_SECRET, and PORT. Run `npm run migrate` to apply migrations. Start server with `npm start` and client with `npm run dev`.",
+      "deployment": "Containerize with Docker; use docker-compose to launch app, db, and reverse proxy (NGINX). Deploy to cloud (AWS ECS, Azure AKS, or GCP GKE). Enable TLS via Let's Encrypt. Configure auto\u2011scaling and health checks for high availability.",
+      "sprint_plan": "Sprint 1: Core patient registration & auth. Sprint 2: Appointment booking & doctor schedule UI. Sprint 3: Diagnosis, prescription APIs. Sprint 4: Admin module for departments, billing. Sprint 5: Security hardening, JWT refresh, audit logs. Sprint 6: Performance testing, CI/CD pipeline, documentation.",
+      "architecture": "Three\u2011tier: React SPA (frontend) \u2192 Node.js/Express REST API (business logic) \u2192 PostgreSQL (data). JWT for stateless auth, role\u2011based middleware. NGINX as reverse proxy and load balancer. Docker containers for each tier, orchestrated by Docker Compose or Kubernetes. Logging with Winston, monitoring via Prometheus/Grafana."
+    }
+  },
+  "result": {
+    "project": {
+      "name": "Hospital Management System",
+      "summary": "A system for patient registration, appointment scheduling, medical record access, doctor workflow, and admin billing.",
+      "domain": "Healthcare"
+    },
+    "requirement_analysis": {
+      "functional_requirements": [
+        "Patients can register and maintain personal profiles.",
+        "Patients can book, modify, and cancel appointments with doctors.",
+        "Patients can view their own medical history and prescription records.",
+        "Doctors can manage their appointment schedules and record diagnoses.",
+        "Administrators can manage departments, doctors, and patient billing."
+      ],
+      "non_functional_requirements": [
+        "All patient data must be stored and transmitted securely following HIPAA guidelines.",
+        "System responses for user actions must be under 2 seconds.",
+        "The system must achieve 99.9% uptime and support failover.",
+        "The architecture should be scalable to handle peak loads of 10,000 concurrent users."
+      ],
+      "actors": [
+        {
+          "name": "Patient",
+          "description": "Registers, books appointments, and accesses personal medical information."
+        },
+        {
+          "name": "Doctor",
+          "description": "Manages schedule, records diagnoses, and writes prescriptions for patients."
+        },
+        {
+          "name": "Administrator",
+          "description": "Oversees departments, doctor accounts, and handles patient billing."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Register Account",
+          "actor": "Patient",
+          "description": "Creates a new user profile with personal and contact details."
+        },
+        {
+          "name": "Book Appointment",
+          "actor": "Patient",
+          "description": "Selects a doctor and time slot, then confirms the appointment."
+        },
+        {
+          "name": "View Medical History",
+          "actor": "Patient",
+          "description": "Retrieves a list of past visits, diagnoses, and prescriptions."
+        },
+        {
+          "name": "Record Diagnosis and Prescription",
+          "actor": "Doctor",
+          "description": "Enters diagnosis details and generates a prescription linked to the patient record."
+        },
+        {
+          "name": "Manage Billing",
+          "actor": "Administrator",
+          "description": "Creates, updates, and exports invoices for patient services."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Patients can register and maintain personal profiles.",
+          "criteria": [
+            "Registration succeeds only when all mandatory fields are provided.",
+            "A confirmation email is sent to the patient after successful registration."
+          ]
+        },
+        {
+          "requirement": "Patients can book, modify, and cancel appointments with doctors.",
+          "criteria": [
+            "The system prevents double\u2011booking of the same time slot.",
+            "Patients receive a notification confirming the booked, modified, or cancelled appointment."
+          ]
+        },
+        {
+          "requirement": "Patients can view their own medical history and prescription records.",
+          "criteria": [
+            "Only the authenticated patient can access their records.",
+            "Medical history loads within 2 seconds for any query."
+          ]
+        },
+        {
+          "requirement": "Doctors can manage their appointment schedules and record diagnoses.",
+          "criteria": [
+            "Doctors can add, edit, or remove appointments in their personal calendar.",
+            "Diagnoses and prescriptions are saved and immediately visible in the patient\u2019s record."
+          ]
+        },
+        {
+          "requirement": "Administrators can manage departments, doctors, and patient billing.",
+          "criteria": [
+            "Admins can generate an invoice for a patient\u2019s visit with correct charges.",
+            "Invoices can be exported as PDF files."
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "user_stories": [
+      {
+        "id": "US-001",
+        "story": "As a patient, I want to register an account, so that I can access the hospital system securely.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Patient can create an account with email and password.",
+          "System validates required fields and stores encrypted credentials."
+        ]
+      },
+      {
+        "id": "US-002",
+        "story": "As a patient, I want to book appointments with doctors, so that I can receive timely care.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Patient can view available time slots for selected doctor.",
+          "Appointment is confirmed and added to both patient and doctor schedules."
+        ]
+      },
+      {
+        "id": "US-003",
+        "story": "As a patient, I want to view my medical history, so that I can stay informed about my health.",
+        "priority": "Medium",
+        "story_points": 3,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Patient can access a list of past visits, diagnoses, and prescriptions.",
+          "Data is displayed only after successful authentication."
+        ]
+      },
+      {
+        "id": "US-004",
+        "story": "As a doctor, I want to manage my appointment schedule, so that I can organize my patient visits efficiently.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Doctor can view, add, modify, and cancel appointments.",
+          "Schedule changes are reflected in real-time for patients."
+        ]
+      },
+      {
+        "id": "US-005",
+        "story": "As a doctor, I want to record diagnoses and write prescriptions, so that patients receive appropriate treatment.",
+        "priority": "Medium",
+        "story_points": 8,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Doctor can enter diagnosis details and select medications from a formulary.",
+          "Prescriptions are saved to the patient\u2019s record and can be viewed by the patient."
+        ]
+      },
+      {
+        "id": "US-006",
+        "story": "As an administrator, I want to manage departments, doctors, and patient billing, so that the hospital operates smoothly.",
+        "priority": "Low",
+        "story_points": 5,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Admin can add, edit, or remove departments and assign doctors to them.",
+          "Admin can generate and update billing records for patient services."
+        ]
+      }
+    ],
+    "uml": {
+      "use_case": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+      "class_diagram": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Doctor \"*\" --> \"*\" Department : belongsTo\n    Patient \"1\" --> \"*\" Billing : incurs\n    Department \"1\" --> \"*\" Doctor : employs",
+      "sequence": "sequenceDiagram\n    participant P as Patient\n    participant S as System\n    participant D as Doctor\n    P->>S: Register\n    S-->>P: Confirmation\n    P->>S: Book Appointment (doctorId, time)\n    S-->>P: Appointment Confirmed\n    D->>S: View Schedule\n    D->>S: Record Diagnosis (appointmentId, notes)\n    S-->>D: Diagnosis Saved\n    D->>S: Write Prescription (appointmentId, meds)\n    S-->>D: Prescription Saved"
+    },
+    "database": {
+      "tables": [
+        {
+          "table": "Patients",
+          "columns": [
+            {
+              "name": "patient_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "dob",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "address",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Doctors",
+          "columns": [
+            {
+              "name": "doctor_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "specialty",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Appointments",
+          "columns": [
+            {
+              "name": "appointment_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "patient_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Patients.patient_id"
+            },
+            {
+              "name": "doctor_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Doctors.doctor_id"
+            },
+            {
+              "name": "appointment_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Prescriptions",
+          "columns": [
+            {
+              "name": "prescription_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "appointment_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Appointments.appointment_id"
+            },
+            {
+              "name": "medication",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "dosage",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "notes",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Patients",
+          "to": "Appointments",
+          "cardinality": "1:N",
+          "description": "A patient can have many appointments"
+        },
+        {
+          "from": "Doctors",
+          "to": "Appointments",
+          "cardinality": "1:N",
+          "description": "A doctor can have many appointments"
+        },
+        {
+          "from": "Appointments",
+          "to": "Prescriptions",
+          "cardinality": "1:N",
+          "description": "An appointment can generate multiple prescriptions"
+        }
+      ],
+      "sql": "CREATE TABLE Patients (\n    patient_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    dob DATETIME,\n    phone TEXT,\n    address TEXT\n);\n\nCREATE TABLE Doctors (\n    doctor_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    specialty TEXT,\n    phone TEXT\n);\n\nCREATE TABLE Appointments (\n    appointment_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    patient_id INTEGER,\n    doctor_id INTEGER,\n    appointment_time DATETIME,\n    status TEXT,\n    FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),\n    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)\n);\n\nCREATE TABLE Prescriptions (\n    prescription_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    appointment_id INTEGER,\n    medication TEXT,\n    dosage TEXT,\n    notes TEXT,\n    FOREIGN KEY (appointment_id) REFERENCES Appointments(appointment_id)\n);",
+      "er_diagram": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text name\n    datetime dob\n    text phone\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text name\n    text specialty\n    text phone\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text medication\n    text dosage\n    text notes\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "apis": [
+      {
+        "method": "POST",
+        "endpoint": "/api/patients/register",
+        "purpose": "Register a new patient",
+        "request_body": {
+          "name": "string",
+          "email": "string",
+          "password": "string",
+          "date_of_birth": "string"
+        },
+        "response_body": {
+          "patient_id": "string",
+          "message": "string"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Patient created"
+          },
+          {
+            "code": 400,
+            "description": "Invalid input"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/appointments",
+        "purpose": "Book an appointment with a doctor",
+        "request_body": {
+          "patient_id": "string",
+          "doctor_id": "string",
+          "preferred_date": "string",
+          "reason": "string"
+        },
+        "response_body": {
+          "appointment_id": "string",
+          "status": "string"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Appointment scheduled"
+          },
+          {
+            "code": 409,
+            "description": "Time slot unavailable"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/patients/{patient_id}/history",
+        "purpose": "View patient's medical history",
+        "request_body": {},
+        "response_body": {
+          "records": [
+            {
+              "date": "string",
+              "diagnosis": "string",
+              "prescription": "string"
+            }
+          ]
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "History retrieved"
+          },
+          {
+            "code": 404,
+            "description": "Patient not found"
+          }
+        ]
+      },
+      {
+        "method": "PUT",
+        "endpoint": "/api/doctors/{doctor_id}/schedule",
+        "purpose": "Update doctor's appointment schedule",
+        "request_body": {
+          "available_slots": [
+            "string"
+          ]
+        },
+        "response_body": {
+          "message": "string"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Schedule updated"
+          },
+          {
+            "code": 400,
+            "description": "Invalid schedule data"
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/api/appointments/{appointment_id}/diagnosis",
+        "purpose": "Record diagnosis and prescription for an appointment",
+        "request_body": {
+          "diagnosis": "string",
+          "prescription": "string"
+        },
+        "response_body": {
+          "appointment_id": "string",
+          "status": "string"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Diagnosis recorded"
+          },
+          {
+            "code": 404,
+            "description": "Appointment not found"
+          }
+        ]
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/api/admin/billing/{patient_id}",
+        "purpose": "Delete a patient's billing record",
+        "request_body": {},
+        "response_body": {
+          "message": "string"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Billing record deleted"
+          },
+          {
+            "code": 404,
+            "description": "Billing record not found"
+          }
+        ]
+      }
+    ],
+    "project_structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        },
+        {
+          "category": "Cache / Session Store",
+          "technology": "Redis"
+        }
+      ],
+      "architecture": "Microservice\u2011style deployment with a single FastAPI service handling authentication, patient, doctor and admin domains, a PostgreSQL relational store, Redis for caching and session tokens, and a React/Vite SPA served via Nginx. Docker containers ensure portability and high availability; Kubernetes can orchestrate scaling and health checks.",
+      "dependencies": [
+        "uvicorn",
+        "pydantic",
+        "python\u2011jwt",
+        "alembic",
+        "pytest",
+        "react\u2011router",
+        "axios",
+        "dotenv"
+      ],
+      "folders": [
+        "frontend",
+        "backend",
+        "docker",
+        "configs",
+        "tests",
+        "migrations",
+        "docs",
+        "scripts"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        A[React SPA] --> B[Axios API Calls]\n    end\n    subgraph Server\n        B --> C[FastAPI]\n        C --> D[PostgreSQL]\n        C --> E[Redis]\n    end\n    subgraph Infra\n        F[Nginx] --> A\n        G[Docker Compose]\n        G --> C\n        G --> D\n        G --> E\n    end"
+    },
+    "documentation": {
+      "readme": "Hospital Management System (HMS) enables patient registration, appointment booking, medical history viewing, doctor schedule management, diagnosis recording, prescription writing, and admin control of departments, staff, and billing. Built with a RESTful API, React frontend, Node.js/Express backend, and PostgreSQL database. Emphasizes data security, low latency, and 99.9% uptime.",
+      "api_documentation": "POST /patients \u2013 register; GET /patients/{id} \u2013 profile; GET /patients/{id}/history \u2013 medical history. POST /appointments \u2013 book; GET /doctors/{id}/schedule \u2013 view schedule; PUT /appointments/{id} \u2013 update status. POST /diagnoses \u2013 record; POST /prescriptions \u2013 create. Admin: GET/POST/PUT /departments, /doctors, /billing. All endpoints require JWT auth, role\u2011based access.",
+      "installation": "Clone repo, run `npm install` in server and client directories. Set up PostgreSQL, run `psql -f schema.sql`. Create .env with DB_URL, JWT_SECRET, and PORT. Run `npm run migrate` to apply migrations. Start server with `npm start` and client with `npm run dev`.",
+      "deployment": "Containerize with Docker; use docker-compose to launch app, db, and reverse proxy (NGINX). Deploy to cloud (AWS ECS, Azure AKS, or GCP GKE). Enable TLS via Let's Encrypt. Configure auto\u2011scaling and health checks for high availability.",
+      "sprint_plan": "Sprint 1: Core patient registration & auth. Sprint 2: Appointment booking & doctor schedule UI. Sprint 3: Diagnosis, prescription APIs. Sprint 4: Admin module for departments, billing. Sprint 5: Security hardening, JWT refresh, audit logs. Sprint 6: Performance testing, CI/CD pipeline, documentation.",
+      "architecture": "Three\u2011tier: React SPA (frontend) \u2192 Node.js/Express REST API (business logic) \u2192 PostgreSQL (data). JWT for stateless auth, role\u2011based middleware. NGINX as reverse proxy and load balancer. Docker containers for each tier, orchestrated by Docker Compose or Kubernetes. Logging with Winston, monitoring via Prometheus/Grafana."
+    },
+    "review": {
+      "needs_clarification": false,
+      "questions": []
+    }
+  },
+  "sql_valid": true,
+  "sql_validation": {
+    "sql_syntax": "Valid",
+    "semantic": "Valid"
+  },
+  "counts": {
+    "fr": 5,
+    "stories": 6,
+    "tables": 4,
+    "apis": 6
+  },
+  "compliance": {
+    "satisfied": 35,
+    "checked": 35,
+    "ccr": 1.0,
+    "rules": [
+      {
+        "module": "Requirement Analyzer",
+        "rule": "FR = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "NFR = 4",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "actors = 3",
+        "passed": true,
+        "detail": "3"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use cases = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use-case actor in actors",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "no generic actor",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "5 criteria groups",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "6 stories",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "IDs US-001..US-006",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "Connextra template",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "priority in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "points in {1,2,3,5,8}",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "sprint in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "use_case starts 'flowchart LR'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "class_diagram starts 'classDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "sequence starts 'sequenceDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 6 classes",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 8 relationships",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4 tables",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4-6 columns each",
+        "passed": true,
+        "detail": "5, 4, 5, 5"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "one INTEGER PK each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "allowed types",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "FK as table.column",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "6 endpoints",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "API Designer",
+        "rule": "allowed HTTP verbs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "<= 2 status codes each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 stack entries",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 dependencies",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 folders",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "React + Vite + FastAPI",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "diagram starts 'flowchart TD'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "6 sections",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "each < 100 words",
+        "passed": true,
+        "detail": "47, 47, 42, 36, 42, 43"
+      }
+    ]
+  },
+  "coverage": {
+    "expected": [
+      "Patients",
+      "Doctors",
+      "Departments",
+      "Appointments",
+      "Diagnoses/Records",
+      "Prescriptions",
+      "Bills"
+    ],
+    "generated_tables": [
+      "Patients",
+      "Doctors",
+      "Appointments",
+      "Prescriptions"
+    ],
+    "covered": [
+      "Patients",
+      "Doctors",
+      "Appointments",
+      "Prescriptions"
+    ],
+    "missing": [
+      "Departments",
+      "Diagnoses/Records",
+      "Bills"
+    ],
+    "matched_by": {
+      "Patients": "patient",
+      "Doctors": "doctor",
+      "Appointments": "appointment",
+      "Prescriptions": "prescription"
+    },
+    "ec": 0.5714
+  },
+  "consistency": {
+    "cacs": 0.55,
+    "checks": [
+      {
+        "id": "C1",
+        "check": "FR -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs have a matching story"
+      },
+      {
+        "id": "C2",
+        "check": "Use cases -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 use cases have a matching story"
+      },
+      {
+        "id": "C3",
+        "check": "FR -> API endpoints",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs served by an endpoint; missing: []"
+      },
+      {
+        "id": "C4",
+        "check": "Actors <-> UML use-case actors",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "3/3 actors appear; generic nodes: none"
+      },
+      {
+        "id": "C5",
+        "check": "DB tables <-> UML classes",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "4/4 tables have a class; classes without table: ['billing', 'department']"
+      },
+      {
+        "id": "C6",
+        "check": "API design <-> documented APIs",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/6 designed endpoints documented; extra documented: 9"
+      },
+      {
+        "id": "C7",
+        "check": "N:M relationships <-> junction table",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "no junction table for: ['Doctor-Department']"
+      },
+      {
+        "id": "C8",
+        "check": "API payloads <-> DB schema",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "uuid ids vs INTEGER keys: no ; 9/15 payload fields have no column: ['availableslot', 'date', 'dateofbirth', 'diagnosi', 'email', 'password', 'preferreddate', 'reason']"
+      },
+      {
+        "id": "C9",
+        "check": "Project structure <-> docs architecture",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "conflicts: [\"backend: ['FastAPI'] vs ['Express', 'Node.js']\"]"
+      },
+      {
+        "id": "C10",
+        "check": "Story sprints <-> docs sprint plan",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "stories use 3 sprints; plan uses 6"
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "D2-r2-use_case",
+      "kind": "use_case",
+      "code": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D2-r2-class_diagram",
+      "kind": "class_diagram",
+      "code": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Doctor \"*\" --> \"*\" Department : belongsTo\n    Patient \"1\" --> \"*\" Billing : incurs\n    Department \"1\" --> \"*\" Doctor : employs",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D2-r2-sequence",
+      "kind": "sequence",
+      "code": "sequenceDiagram\n    participant P as Patient\n    participant S as System\n    participant D as Doctor\n    P->>S: Register\n    S-->>P: Confirmation\n    P->>S: Book Appointment (doctorId, time)\n    S-->>P: Appointment Confirmed\n    D->>S: View Schedule\n    D->>S: Record Diagnosis (appointmentId, notes)\n    S-->>D: Diagnosis Saved\n    D->>S: Write Prescription (appointmentId, meds)\n    S-->>D: Prescription Saved",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D2-r2-er",
+      "kind": "er_diagram",
+      "code": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text name\n    datetime dob\n    text phone\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text name\n    text specialty\n    text phone\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text medication\n    text dosage\n    text notes\n}",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D2-r2-arch",
+      "kind": "architecture_diagram",
+      "code": "flowchart TD\n    subgraph Client\n        A[React SPA] --> B[Axios API Calls]\n    end\n    subgraph Server\n        B --> C[FastAPI]\n        C --> D[PostgreSQL]\n        C --> E[Redis]\n    end\n    subgraph Infra\n        F[Nginx] --> A\n        G[Docker Compose]\n        G --> C\n        G --> D\n        G --> E\n    end",
+      "valid": true,
+      "error": null
+    }
+  ]
+}

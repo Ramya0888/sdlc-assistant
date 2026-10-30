@@ -1,0 +1,68 @@
+[
+    {
+      "id": "D1",
+      "domain": "Food delivery",
+      "requirements": "Build an online food delivery platform where users can register and login, browse restaurants, view menus, add food items to their cart, place orders, make online payments and track deliveries.\n\nRestaurant administrators should manage restaurants, menus, food items and incoming orders.\n\nDelivery partners should view assigned deliveries and update delivery status.\n\nThe system should provide secure authentication, fast response times, reliable data storage and a responsive web interface.",
+      "expected_entities": {
+        "Users": ["user", "customer", "account"],
+        "Restaurants": ["restaurant"],
+        "MenuItems": ["menuitem", "fooditem", "menu", "dish"],
+        "Orders": ["order"],
+        "OrderItems": ["orderitem", "orderdetail", "orderline"],
+        "Payments": ["payment", "transaction"],
+        "Deliveries": ["delivery", "shipment", "deliveryassignment"]
+      }
+    },
+    {
+      "id": "D2",
+      "domain": "Hospital",
+      "requirements": "Build a hospital management system where patients can register, book appointments with doctors and view their medical history.\n\nDoctors should manage their appointment schedules, record diagnoses and write prescriptions for patients.\n\nAdministrators should manage departments, doctors and patient billing.\n\nThe system should keep patient data secure, respond quickly and be available at all times.",
+      "expected_entities": {
+        "Patients": ["patient"],
+        "Doctors": ["doctor", "physician"],
+        "Departments": ["department"],
+        "Appointments": ["appointment"],
+        "Diagnoses/Records": ["diagnosis", "diagnose", "record", "medicalrecord", "medicalhistory"],
+        "Prescriptions": ["prescription"],
+        "Bills": ["bill", "billing", "invoice", "payment"]
+      }
+    },
+    {
+      "id": "D3",
+      "domain": "Library",
+      "requirements": "Build an online library management system where members can search the catalogue, borrow books, return books and renew loans.\n\nLibrarians should manage books, members and loans, and collect fines for overdue books.\n\nThe system should send email reminders before the due date.\n\nIt should be easy to use, secure and reliable.",
+      "expected_entities": {
+        "Members": ["member", "user", "patron"],
+        "Books": ["book"],
+        "Loans": ["loan", "borrow", "borrowing", "issue", "checkout"],
+        "Librarians": ["librarian", "staff"],
+        "Fines": ["fine", "penalty"]
+      }
+    },
+    {
+      "id": "D4",
+      "domain": "E-commerce",
+      "requirements": "Build an e-commerce platform where customers can browse a product catalogue, add products to a cart, pay online and track their orders.\n\nSellers should list products and manage their inventory after being approved by administrators.\n\nAdministrators should approve sellers and handle refund requests.\n\nThe platform should be secure, scalable and fast.",
+      "expected_entities": {
+        "Users": ["user", "customer", "account"],
+        "Products": ["product"],
+        "Orders": ["order"],
+        "OrderItems": ["orderitem", "orderdetail", "orderline"],
+        "Payments": ["payment", "transaction"],
+        "Shipments": ["shipment", "shipping", "delivery", "tracking"],
+        "Refunds": ["refund", "return"]
+      }
+    },
+    {
+      "id": "D5",
+      "domain": "Online exam",
+      "requirements": "Build an online examination platform where students can take timed tests and view their results.\n\nTeachers should create question banks, schedule exams and review auto-graded results on a dashboard.\n\nAdministrators should manage users and exam settings.\n\nThe system should be secure against cheating, reliable during exams and responsive.",
+      "expected_entities": {
+        "Users": ["user", "student", "teacher", "account"],
+        "Exams": ["exam", "test"],
+        "Questions": ["question", "questionbank"],
+        "Submissions": ["submission", "attempt", "answer"],
+        "Results": ["result", "examresult", "score", "grade"]
+      }
+    }
+  ]

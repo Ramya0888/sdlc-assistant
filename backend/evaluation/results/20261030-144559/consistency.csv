@@ -1,0 +1,151 @@
+domain_id,repeat,id,check,result,evidence
+D1,1,C1,FR -> user stories,partial,4/5 FRs have a matching story
+D1,1,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D1,1,C3,FR -> API endpoints,partial,"3/5 FRs served by an endpoint; missing: ['User registration and secure login', 'Process online payments']"
+D1,1,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: none
+D1,1,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['deliverypartner', 'fooditem', 'menu']"
+D1,1,C6,API design <-> documented APIs,partial,6/6 designed endpoints documented; extra documented: 3
+D1,1,C7,N:M relationships <-> junction table,fail,no junction table for: ['Order-FoodItem']
+D1,1,C8,API payloads <-> DB schema,fail,"uuid ids vs INTEGER keys: yes ['id', 'item_id', 'order_id', 'restaurant_id', 'user_id']; 8/17 payload fields have no column: ['deliveryaddress', 'estimateddelivery', 'expiresin', 'newstatu', 'password', 'paymentmethod', 'quantity', 'rating']"
+D1,1,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D1,1,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D1,2,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D1,2,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D1,2,C3,FR -> API endpoints,partial,"3/5 FRs served by an endpoint; missing: ['Customers can register and log in securely.', 'Customers can make online payments for orders.']"
+D1,2,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: none
+D1,2,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['deliverypartner', 'fooditem', 'menu']"
+D1,2,C6,API design <-> documented APIs,partial,5/6 designed endpoints documented; extra documented: 7
+D1,2,C7,N:M relationships <-> junction table,fail,no junction table for: ['Order-FoodItem']
+D1,2,C8,API payloads <-> DB schema,fail,"uuid ids vs INTEGER keys: yes ['id', 'item_id', 'order_id', 'restaurant_id', 'user_id']; 9/18 payload fields have no column: ['available', 'deliveryaddress', 'estimateddelivery', 'expiresin', 'newstatu', 'password', 'paymentmethod', 'quantity']"
+D1,2,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D1,2,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 7
+D1,3,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D1,3,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D1,3,C3,FR -> API endpoints,partial,"3/5 FRs served by an endpoint; missing: ['Customers can register and log in securely.', 'Customers can make online payments for orders.']"
+D1,3,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: none
+D1,3,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['deliverypartner', 'fooditem', 'menu']"
+D1,3,C6,API design <-> documented APIs,partial,5/6 designed endpoints documented; extra documented: 7
+D1,3,C7,N:M relationships <-> junction table,fail,no junction table for: ['Order-FoodItem']
+D1,3,C8,API payloads <-> DB schema,fail,"uuid ids vs INTEGER keys: yes ['id', 'item_id', 'order_id', 'restaurant_id', 'user_id']; 9/18 payload fields have no column: ['available', 'deliveryaddress', 'estimateddelivery', 'expiresin', 'newstatu', 'password', 'paymentmethod', 'quantity']"
+D1,3,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D1,3,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 7
+D2,1,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D2,1,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D2,1,C3,FR -> API endpoints,pass,5/5 FRs served by an endpoint; missing: []
+D2,1,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D2,1,C5,DB tables <-> UML classes,partial,"4/4 tables have a class; classes without table: ['billing', 'department']"
+D2,1,C6,API design <-> documented APIs,partial,3/6 designed endpoints documented; extra documented: 9
+D2,1,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D2,1,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 8/15 payload fields have no column: ['availableslot', 'date', 'dateofbirth', 'diagnosi', 'password', 'preferreddate', 'reason', 'record']"
+D2,1,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D2,1,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D2,2,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D2,2,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D2,2,C3,FR -> API endpoints,pass,5/5 FRs served by an endpoint; missing: []
+D2,2,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D2,2,C5,DB tables <-> UML classes,partial,"4/4 tables have a class; classes without table: ['billing', 'department']"
+D2,2,C6,API design <-> documented APIs,partial,3/6 designed endpoints documented; extra documented: 9
+D2,2,C7,N:M relationships <-> junction table,fail,no junction table for: ['Doctor-Department']
+D2,2,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 9/15 payload fields have no column: ['availableslot', 'date', 'dateofbirth', 'diagnosi', 'email', 'password', 'preferreddate', 'reason']"
+D2,2,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D2,2,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 6
+D2,3,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D2,3,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D2,3,C3,FR -> API endpoints,pass,5/5 FRs served by an endpoint; missing: []
+D2,3,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D2,3,C5,DB tables <-> UML classes,partial,"4/4 tables have a class; classes without table: ['billing', 'department']"
+D2,3,C6,API design <-> documented APIs,partial,3/6 designed endpoints documented; extra documented: 9
+D2,3,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D2,3,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 7/15 payload fields have no column: ['availableslot', 'date', 'name', 'password', 'preferreddate', 'reason', 'record']"
+D2,3,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D2,3,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D3,1,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D3,1,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D3,1,C3,FR -> API endpoints,pass,5/5 FRs served by an endpoint; missing: []
+D3,1,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: ['System']
+D3,1,C5,DB tables <-> UML classes,partial,"4/4 tables have a class; classes without table: ['catalogue', 'emailservice']"
+D3,1,C6,API design <-> documented APIs,partial,5/6 designed endpoints documented; extra documented: 4
+D3,1,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D3,1,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 5/13 payload fields have no column: ['availablecopy', 'fineamount', 'newduedate', 'returnedat', 'totalcopy']"
+D3,1,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D3,1,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 4
+D3,2,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D3,2,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D3,2,C3,FR -> API endpoints,pass,5/5 FRs served by an endpoint; missing: []
+D3,2,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: ['System']
+D3,2,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['catalog', 'fine', 'librarysystem']"
+D3,2,C6,API design <-> documented APIs,partial,4/6 designed endpoints documented; extra documented: 4
+D3,2,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D3,2,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 5/13 payload fields have no column: ['availablecopy', 'fineamount', 'newduedate', 'returnedat', 'totalcopy']"
+D3,2,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D3,2,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 4
+D3,3,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D3,3,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D3,3,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['System sends email reminders before due dates']
+D3,3,C4,Actors <-> UML use-case actors,partial,2/3 actors appear; generic nodes: ['System']
+D3,3,C5,DB tables <-> UML classes,partial,"4/4 tables have a class; classes without table: ['fine', 'librarysystem']"
+D3,3,C6,API design <-> documented APIs,partial,5/6 designed endpoints documented; extra documented: 4
+D3,3,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D3,3,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 5/13 payload fields have no column: ['availablecopy', 'fineamount', 'newduedate', 'returnedat', 'totalcopy']"
+D3,3,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D3,3,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 4
+D4,1,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D4,1,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D4,1,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['Customers can checkout and pay online']
+D4,1,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D4,1,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['admin', 'cart', 'customer']"
+D4,1,C6,API design <-> documented APIs,fail,2/6 designed endpoints documented; extra documented: 10
+D4,1,C7,N:M relationships <-> junction table,fail,"no junction table for: ['Cart-Product', 'Order-Product']"
+D4,1,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 17/26 payload fields have no column: ['approvedat', 'cartid', 'city', 'country', 'currency', 'estimateddelivery', 'line1', 'page']"
+D4,1,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D4,1,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D4,2,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D4,2,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D4,2,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['Customers can checkout and pay online']
+D4,2,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D4,2,C5,DB tables <-> UML classes,partial,"2/4 tables have a class; classes without table: ['admin', 'cart', 'customer', 'seller']"
+D4,2,C6,API design <-> documented APIs,fail,2/6 designed endpoints documented; extra documented: 7
+D4,2,C7,N:M relationships <-> junction table,partial,resolved: ['Order-Product via OrderItems']; no junction table for: ['Cart-Product']
+D4,2,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 16/26 payload fields have no column: ['approvedat', 'cartid', 'city', 'country', 'currency', 'estimateddelivery', 'line1', 'page']"
+D4,2,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D4,2,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D4,3,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D4,3,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D4,3,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['Customers can complete online payment and receive a receipt']
+D4,3,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D4,3,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['admin', 'cart', 'customer']"
+D4,3,C6,API design <-> documented APIs,partial,3/6 designed endpoints documented; extra documented: 5
+D4,3,C7,N:M relationships <-> junction table,fail,"no junction table for: ['Cart-Product', 'Order-Product']"
+D4,3,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 20/29 payload fields have no column: ['amount', 'approvedat', 'cartid', 'city', 'country', 'currency', 'estimateddelivery', 'line1']"
+D4,3,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D4,3,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5
+D5,1,C1,FR -> user stories,partial,4/5 FRs have a matching story
+D5,1,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D5,1,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['The system automatically grades objective questions.']
+D5,1,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D5,1,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['admin', 'student', 'teacher']"
+D5,1,C6,API design <-> documented APIs,fail,2/6 designed endpoints documented; extra documented: 3
+D5,1,C7,N:M relationships <-> junction table,fail,"no junction table for: ['Exam-Question', 'Student-Exam', 'Teacher-Exam']"
+D5,1,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 13/23 payload fields have no column: ['active', 'answer', 'bankid', 'description', 'expiresin', 'gradedat', 'option', 'password']"
+D5,1,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D5,1,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 6
+D5,2,C1,FR -> user stories,pass,5/5 FRs have a matching story
+D5,2,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D5,2,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['The system automatically grades objective questions and stor']
+D5,2,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D5,2,C5,DB tables <-> UML classes,partial,"3/4 tables have a class; classes without table: ['admin', 'student', 'teacher']"
+D5,2,C6,API design <-> documented APIs,fail,2/6 designed endpoints documented; extra documented: 3
+D5,2,C7,N:M relationships <-> junction table,fail,"no junction table for: ['Teacher-Question', 'Teacher-Exam']"
+D5,2,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 12/23 payload fields have no column: ['active', 'answer', 'bankid', 'description', 'expiresin', 'gradedat', 'option', 'password']"
+D5,2,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D5,2,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 6
+D5,3,C1,FR -> user stories,partial,4/5 FRs have a matching story
+D5,3,C2,Use cases -> user stories,pass,5/5 use cases have a matching story
+D5,3,C3,FR -> API endpoints,partial,4/5 FRs served by an endpoint; missing: ['The system automatically grades objective questions and stor']
+D5,3,C4,Actors <-> UML use-case actors,pass,3/3 actors appear; generic nodes: none
+D5,3,C5,DB tables <-> UML classes,partial,"2/4 tables have a class; classes without table: ['admin', 'questionbank', 'student', 'teacher']"
+D5,3,C6,API design <-> documented APIs,fail,1/6 designed endpoints documented; extra documented: 7
+D5,3,C7,N:M relationships <-> junction table,pass,no many-to-many relationship in schema or class diagram
+D5,3,C8,API payloads <-> DB schema,partial,"uuid ids vs INTEGER keys: no ; 11/20 payload fields have no column: ['active', 'answer', 'bankid', 'description', 'expiresin', 'gradedat', 'password', 'remainingsecond']"
+D5,3,C9,Project structure <-> docs architecture,fail,"conflicts: [""backend: ['FastAPI'] vs ['Express', 'Node.js']""]"
+D5,3,C10,Story sprints <-> docs sprint plan,fail,stories use 3 sprints; plan uses 5

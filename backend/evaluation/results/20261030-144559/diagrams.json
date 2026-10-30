@@ -1,0 +1,507 @@
+[
+  {
+    "id": "D1-r1-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|update status| DeliverySystem\n    AuthSystem -->|authenticate| Database\n    OrderSystem -->|process| Database\n    DeliverySystem -->|track| Database",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r1-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assignedTo\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r1-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login credentials\n    WA->>AS: authenticate\n    AS->>DB: verify user\n    DB-->>AS: user data\n    AS-->>WA: auth token\n    WA->>U: login success\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>WA: order status update\n    WA->>U: order status",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r1-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS_USER_ID ||--o{ RESTAURANTS_ADMIN_USER_ID : \"User administers many restaurants\"\nRESTAURANTS_RESTAURANT_ID ||--o{ MENUITEMS_RESTAURANT_ID : \"Restaurant offers many menu items\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"User places many orders\"\nRESTAURANTS_RESTAURANT_ID ||--o{ ORDERS_RESTAURANT_ID : \"Restaurant receives many orders\"\nUSERS_USER_ID ||--o{ ORDERS_DELIVERY_PARTNER_ID : \"Delivery partner handles many orders\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    integer delivery_partner_id FK\n    datetime order_time\n    text status\n    real total\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r1-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Infra\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n        MQ[(RabbitMQ)]\n        NG[NGINX]\n    end\n    UI -->|HTTPS| NG\n    NG -->|Proxy| Auth & User & Restaurant & Order & Delivery\n    Auth -->|JWT| User\n    Order -->|Publish| MQ\n    MQ -->|Consume| Delivery\n    Delivery -->|Update| DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Cache -->|Cache| DB",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r2-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|view/update| DeliveryPortal\n    AuthSystem -->|authenticates| Database\n    OrderSystem -->|processes| Database\n    DeliveryPortal -->|updates status| Database",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r2-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assigned to\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r2-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login/register\n    WA->>AS: authenticate\n    AS->>DB: verify credentials\n    DB-->>AS: result\n    AS-->>WA: token\n    U->>WA: browse restaurants/menu\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>DB: update order status",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r2-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS ||--o{ RESTAURANTS : \"User administers many restaurants\"\nRESTAURANTS ||--o{ MENUITEMS : \"Restaurant offers multiple menu items\"\nUSERS ||--o{ ORDERS : \"User places many orders\"\nRESTAURANTS ||--o{ ORDERS : \"Restaurant receives many orders\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    datetime order_time\n    text status\n    real total\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r2-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Data\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n    end\n    UI -->|HTTPS| Auth\n    UI -->|HTTPS| User\n    UI -->|HTTPS| Restaurant\n    UI -->|HTTPS| Order\n    UI -->|HTTPS| Delivery\n    Auth --> DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Delivery --> DB\n    Order --> Cache\n    Delivery --> Cache\n    Cache -->|Pub/Sub| Delivery\n    style Client fill:#f9f,stroke:#333,stroke-width:2px\n    style API fill:#bbf,stroke:#333,stroke-width:2px\n    style Data fill:#bfb,stroke:#333,stroke-width:2px",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D1-r3-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|view/update| DeliveryPortal\n    AuthSystem -->|authenticates| Database\n    OrderSystem -->|processes| Database\n    DeliveryPortal -->|updates status| Database"
+  },
+  {
+    "id": "D1-r3-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assigned to\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives"
+  },
+  {
+    "id": "D1-r3-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login/register\n    WA->>AS: authenticate\n    AS->>DB: verify credentials\n    DB-->>AS: result\n    AS-->>WA: token\n    U->>WA: browse restaurants/menu\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>DB: update order status"
+  },
+  {
+    "id": "D1-r3-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS ||--o{ ORDERS : \"A user can place many orders\"\nRESTAURANTS ||--o{ MENUITEMS : \"A restaurant offers multiple menu items\"\nRESTAURANTS ||--o{ ORDERS : \"Orders are placed for a restaurant\"\nUSERS ||--o{ RESTAURANTS : \"A user can manage multiple restaurants as admin\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    integer delivery_partner_id FK\n    real total_amount\n    text status\n    datetime order_time\n}"
+  },
+  {
+    "id": "D1-r3-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API_Gateway[FastAPI Gateway]\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Payment[Payment Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Data[Data Layer]\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n        MQ[(RabbitMQ)]\n    end\n    UI -->|REST/JWT| API_Gateway\n    Auth --> DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Payment --> DB\n    Delivery --> DB\n    Order --> MQ\n    Delivery --> MQ\n    MQ -->|Async Events| Delivery\n    Cache -->|Cache Reads| UI"
+  },
+  {
+    "id": "D2-r1-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r1-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Patient \"1\" --> \"*\" Prescription : receives\n    Department \"1\" --> \"*\" Doctor : contains\n    Patient \"1\" --> \"1\" Billing : billed",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r1-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant P as Patient\n    participant HMS as System\n    participant D as Doctor\n    P->>HMS: Register(details)\n    HMS-->>P: Confirmation\n    P->>HMS: BookAppointment(date, doctor)\n    HMS-->>P: AppointmentConfirmed\n    D->>HMS: ViewSchedule()\n    HMS-->>D: ScheduleData\n    D->>HMS: RecordDiagnosis(appointmentId, notes)\n    HMS-->>D: DiagnosisSaved\n    D->>HMS: WritePrescription(appointmentId, meds)\n    HMS-->>D: PrescriptionSaved",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r1-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text name\n    datetime dob\n    text phone\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text name\n    text specialty\n    text email\n    text phone\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text medication\n    text dosage\n    text notes\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r1-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        FastAPI[FastAPI Service]\n    end\n    subgraph DB\n        Postgres[(PostgreSQL)]\n        Redis[(Redis Cache)]\n    end\n    subgraph Infra\n        Nginx[Nginx Reverse Proxy]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx -->|Proxy| FastAPI\n    FastAPI -->|SQL| Postgres\n    FastAPI -->|Cache| Redis\n    Docker -->|Orchestrates| Nginx\n    Docker -->|Orchestrates| FastAPI\n    Docker -->|Orchestrates| Postgres\n    Docker -->|Orchestrates| Redis",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r2-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r2-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Doctor \"*\" --> \"*\" Department : belongsTo\n    Patient \"1\" --> \"*\" Billing : incurs\n    Department \"1\" --> \"*\" Doctor : employs",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r2-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant P as Patient\n    participant S as System\n    participant D as Doctor\n    P->>S: Register\n    S-->>P: Confirmation\n    P->>S: Book Appointment (doctorId, time)\n    S-->>P: Appointment Confirmed\n    D->>S: View Schedule\n    D->>S: Record Diagnosis (appointmentId, notes)\n    S-->>D: Diagnosis Saved\n    D->>S: Write Prescription (appointmentId, meds)\n    S-->>D: Prescription Saved",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r2-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text name\n    datetime dob\n    text phone\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text name\n    text specialty\n    text phone\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text medication\n    text dosage\n    text notes\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r2-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        A[React SPA] --> B[Axios API Calls]\n    end\n    subgraph Server\n        B --> C[FastAPI]\n        C --> D[PostgreSQL]\n        C --> E[Redis]\n    end\n    subgraph Infra\n        F[Nginx] --> A\n        G[Docker Compose]\n        G --> C\n        G --> D\n        G --> E\n    end",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r3-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Patient -->|register / view history| HMS\n    Patient -->|book appointment| HMS\n    Doctor -->|manage schedule / record diagnosis / write prescription| HMS\n    Admin -->|manage departments / doctors / billing| HMS\n    HMS -->|stores secure data| Database",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r3-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Patient {\n        +id\n        +name\n        +dob\n        +medicalHistory\n    }\n    class Doctor {\n        +id\n        +name\n        +specialty\n        +schedule\n    }\n    class Appointment {\n        +id\n        +dateTime\n        +status\n    }\n    class Prescription {\n        +id\n        +medications\n        +dosage\n    }\n    class Department {\n        +id\n        +name\n    }\n    class Billing {\n        +id\n        +amount\n        +status\n    }\n    Patient \"1\" --> \"*\" Appointment : books\n    Doctor \"1\" --> \"*\" Appointment : attends\n    Appointment \"1\" --> \"1\" Prescription : generates\n    Patient \"1\" --> \"*\" Prescription : receives\n    Department \"1\" --> \"*\" Doctor : contains\n    Patient \"1\" --> \"1\" Billing : billed\n    Doctor \"1\" --> \"*\" Billing : processes\n    Patient \"1\" --> \"*\" Appointment : has",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r3-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant P as Patient\n    participant HMS as System\n    participant D as Doctor\n    P->>HMS: Register(details)\n    HMS-->>P: Confirmation\n    P->>HMS: BookAppointment(date, doctorId)\n    HMS-->>P: AppointmentConfirmed\n    D->>HMS: ViewSchedule()\n    HMS-->>D: ScheduleData\n    D->>HMS: RecordDiagnosis(appId, notes)\n    HMS-->>D: DiagnosisSaved\n    D->>HMS: WritePrescription(appId, meds)\n    HMS-->>D: PrescriptionCreated",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r3-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nPATIENTS ||--o{ APPOINTMENTS : \"A patient can have many appointments\"\nDOCTORS ||--o{ APPOINTMENTS : \"A doctor can have many appointments\"\nAPPOINTMENTS ||--o{ PRESCRIPTIONS : \"An appointment can generate multiple prescriptions\"\nPATIENTS {\n    integer patient_id PK\n    text full_name\n    datetime date_of_birth\n    text phone_number\n    text address\n}\nDOCTORS {\n    integer doctor_id PK\n    text full_name\n    text specialty\n    text email\n    boolean is_active\n}\nAPPOINTMENTS {\n    integer appointment_id PK\n    integer patient_id FK\n    integer doctor_id FK\n    datetime appointment_time\n    text status\n}\nPRESCRIPTIONS {\n    integer prescription_id PK\n    integer appointment_id FK\n    text diagnosis\n    text medication\n    text dosage\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D2-r3-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        GW[Nginx]\n        BE[FastAPI Service]\n    end\n    subgraph Data\n        DB[PostgreSQL]\n        Cache[Redis]\n    end\n    UI --> GW\n    GW --> BE\n    BE --> DB\n    BE --> Cache\n    style UI fill:#bbf,stroke:#333,stroke-width:1px\n    style BE fill:#bfb,stroke:#333,stroke-width:1px\n    style DB fill:#fbb,stroke:#333,stroke-width:1px\n    style Cache fill:#ffb,stroke:#333,stroke-width:1px",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r1-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Member -->|search| Catalogue\n    Member -->|borrow| System\n    Member -->|return| System\n    Member -->|renew| System\n    Librarian -->|manage books| System\n    Librarian -->|manage members| System\n    Librarian -->|manage loans| System\n    System -->|collect fines| Librarian\n    System -->|send reminder| EmailService",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r1-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Member {\n        +memberId\n        +name\n        +searchCatalogue()\n        +borrowBook()\n        +returnBook()\n        +renewLoan()\n    }\n    class Librarian {\n        +librarianId\n        +manageBooks()\n        +manageMembers()\n        +manageLoans()\n        +collectFines()\n    }\n    class Book {\n        +ISBN\n        +title\n        +author\n        +available\n    }\n    class Loan {\n        +loanId\n        +dueDate\n        +isOverdue()\n    }\n    class Catalogue {\n        +search()\n    }\n    class EmailService {\n        +sendReminder()\n    }\n    Member \"1\" --> \"*\" Loan : borrows\n    Loan \"*\" --> \"1\" Book : contains\n    Librarian \"1\" --> \"*\" Book : manages\n    Librarian \"1\" --> \"*\" Member : manages\n    Librarian \"1\" --> \"*\" Loan : manages\n    Loan \"*\" --> EmailService : triggers\n    EmailService --> Member : notifies",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r1-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant M as Member\n    participant S as System\n    participant L as Librarian\n    participant E as EmailService\n    M->>S: request renew loan\n    S->>S: check due date\n    alt overdue\n        S->>L: calculate fine\n        L->>S: fine collected\n    else\n        S->>S: extend due date\n    end\n    S->>E: send reminder email\n    E->>M: email reminder",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r1-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nMEMBERS_MEMBER_ID ||--o{ LOANS_MEMBER_ID : \"A member can have many loans\"\nBOOKS_BOOK_ID ||--o{ LOANS_BOOK_ID : \"A book can be loaned many times\"\nLIBRARIANS_LIBRARIAN_ID ||--o{ BOOKS_BOOK_ID : \"A librarian manages many books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r1-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI]\n        Auth[JWT Auth]\n        Biz[Business Logic]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n        Email[Email Service]\n    end\n    UI -->|REST API| API\n    API --> Auth\n    API --> Biz\n    Biz --> DB\n    Biz --> Cache\n    Biz --> Email\n    Email -->|SMTP| UserEmail[User Email]\n    Cache -->|Cache Hits| DB",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r2-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Member --> Search\n    Member --> Borrow\n    Member --> Return\n    Member --> Renew\n    Librarian --> ManageBooks\n    Librarian --> ManageMembers\n    Librarian --> ManageLoans\n    Librarian --> CollectFines\n    System --> SendReminders",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r2-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class LibrarySystem {\n        +search()\n        +borrow()\n        +return()\n        +renew()\n    }\n    class Catalog {\n        +findBook()\n    }\n    class Book {\n        -title\n        -author\n        -status\n    }\n    class Member {\n        -memberId\n        -name\n    }\n    class Loan {\n        -dueDate\n        -status\n    }\n    class Fine {\n        -amount\n    }\n    LibrarySystem --> Catalog\n    LibrarySystem --> Book\n    LibrarySystem --> Member\n    LibrarySystem --> Loan\n    LibrarySystem --> Fine\n    Member \"1\" --> \"*\" Loan\n    Loan \"*\" --> \"1\" Book\n    Loan \"0..1\" --> \"0..1\" Fine",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r2-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant Member\n    participant LibrarySystem\n    participant Catalog\n    participant Loan\n    participant Book\n    participant EmailService\n    Member->>LibrarySystem: searchBook(title)\n    LibrarySystem->>Catalog: findBook(title)\n    Catalog-->>LibrarySystem: bookInfo\n    Member->>LibrarySystem: requestBorrow(bookId)\n    LibrarySystem->>Loan: createLoan(memberId, bookId)\n    Loan->>Book: markBorrowed()\n    Loan-->>Member: loanConfirmed(dueDate)\n    LibrarySystem->>EmailService: scheduleReminder(memberEmail, dueDate)",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r2-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nMEMBERS ||--o{ LOANS : \"A member can have many loans\"\nBOOKS ||--o{ LOANS : \"A book can be loaned many times\"\nLIBRARIANS ||--o{ BOOKS : \"Librarians manage multiple books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r2-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI]\n        Auth[JWT Auth]\n        Biz[Business Logic]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n        Email[Email Service]\n    end\n    UI -->|REST API| API\n    API --> Auth\n    API --> Biz\n    Biz --> DB\n    Biz --> Cache\n    Biz --> Email\n    Email -->|SMTP| UserEmail[User Email]\n    Cache -->|Cache Hits| DB",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r3-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Member --> SearchCatalog\n    Member --> BorrowBook\n    Member --> ReturnBook\n    Member --> RenewLoan\n    Librarian --> ManageBooks\n    Librarian --> ManageMembers\n    Librarian --> ManageLoans\n    Librarian --> CollectFines\n    System --> SendReminder\n    SearchCatalog --> System\n    BorrowBook --> System\n    ReturnBook --> System\n    RenewLoan --> System\n    ManageBooks --> System\n    ManageMembers --> System\n    ManageLoans --> System\n    CollectFines --> System\n    SendReminder --> System",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r3-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class LibrarySystem {\n        +searchCatalog()\n        +borrowBook()\n        +returnBook()\n        +renewLoan()\n        +sendReminder()\n    }\n    class Book {\n        -title\n        -author\n        -isbn\n        -available\n    }\n    class Member {\n        -memberId\n        -name\n        -email\n    }\n    class Librarian {\n        -employeeId\n        -name\n    }\n    class Loan {\n        -loanId\n        -dueDate\n        -status\n    }\n    class Fine {\n        -amount\n        -paid\n    }\n    LibrarySystem --> Book : manages\n    LibrarySystem --> Member : manages\n    LibrarySystem --> Loan : creates\n    LibrarySystem --> Fine : issues\n    Librarian --> Book : manages\n    Librarian --> Member : manages\n    Librarian --> Loan : manages\n    Loan --> Book : contains\n    Loan --> Member : belongsTo\n    Fine --> Loan : relatedTo",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r3-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant Member\n    participant LibrarySystem\n    participant Book\n    participant Loan\n    participant EmailService\n    Member->>LibrarySystem: searchCatalog()\n    LibrarySystem->>Book: checkAvailability()\n    Book-->>LibrarySystem: available\n    Member->>LibrarySystem: borrowBook()\n    LibrarySystem->>Loan: createLoan()\n    LibrarySystem-->>Member: confirmBorrow()\n    LibrarySystem->>EmailService: scheduleReminder()\n    EmailService-->>Member: sendReminder()",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r3-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nMEMBERS ||--o{ LOANS : \"A member can have many loans\"\nBOOKS ||--o{ LOANS : \"A book can be loaned many times\"\nLIBRARIANS ||--o{ BOOKS : \"A librarian manages many books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D3-r3-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    A[User Browser] -->|HTTP| B[React SPA]\n    B -->|API Calls| C[FastAPI Backend]\n    C -->|ORM| D[PostgreSQL]\n    C -->|Cache| E[Redis]\n    C -->|Email Service| F[SMTP Server]\n    C -->|Background Worker| G[Task Scheduler]\n    G -->|Reminders| F",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r1-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Seller| ApproveSeller\n    Admin -->|Handle Refund| HandleRefund",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r1-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Customer {\n        +id\n        +name\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : placedBy\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r1-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebUI\n    participant CS as CartService\n    participant PS as PaymentService\n    participant OS as OrderService\n    C->>UI: Browse catalog\n    C->>UI: Add product to cart\n    UI->>CS: AddItem(productId)\n    C->>UI: Checkout\n    UI->>PS: ProcessPayment(details)\n    PS-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cartId)\n    OS-->>UI: OrderConfirmed\n    C->>UI: Track order\n    UI->>OS: GetOrderStatus(orderId)\n    OS-->>UI: status",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r1-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS_USER_ID ||--o{ SELLERS_USER_ID : \"A user can be a seller\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"A user can place many orders\"\nSELLERS_SELLER_ID ||--o{ PRODUCTS_SELLER_ID : \"A seller lists multiple products\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_admin\n}\nSELLERS {\n    integer seller_id PK\n    integer user_id FK\n    text store_name\n    boolean approved\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r1-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        A[React SPA] -->|REST/GraphQL| B[FastAPI Gateway]\n    end\n    subgraph Backend\n        B --> C[Auth Service]\n        B --> D[Product Service]\n        B --> E[Cart Service]\n        B --> F[Order Service]\n        B --> G[Admin Service]\n        D --> H[PostgreSQL]\n        E --> H\n        F --> H\n        G --> H\n        F --> I[Redis Cache]\n        F --> J[Celery Workers]\n        J --> K[RabbitMQ]\n    end\n    subgraph Infra\n        L[Nginx] --> B\n        M[Docker Compose]\n        L --> M\n    end",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r2-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Sellers| ApproveSeller\n    Admin -->|Handle Refunds| HandleRefund",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r2-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Customer {\n        +id\n        +name\n        +email\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n        +stock\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : belongsTo\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves\n    Admin --> Order : handlesRefund",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r2-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebApp\n    participant PS as ProductService\n    participant CS as CartService\n    participant PG as PaymentGateway\n    participant OS as OrderService\n    participant S as Seller\n    C->>UI: BrowseCatalog\n    UI->>PS: GetProducts\n    PS-->>UI: ProductList\n    C->>UI: AddToCart(productId)\n    UI->>CS: AddItem(productId)\n    CS-->>UI: UpdatedCart\n    C->>UI: Checkout\n    UI->>PG: ProcessPayment(details)\n    PG-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cart)\n    OS-->>UI: OrderConfirmed\n    OS->>S: NotifyOrder(orderId)\n    UI-->>C: OrderConfirmed",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r2-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS ||--o{ PRODUCTS : \"A seller user can list many products\"\nUSERS ||--o{ ORDERS : \"A customer can place many orders\"\nORDERS ||--o{ ORDERITEMS : \"An order contains multiple items\"\nPRODUCTS ||--o{ ORDERITEMS : \"A product can appear in many order items\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_seller\n    boolean is_admin\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}\nORDERITEMS {\n    integer item_id PK\n    integer order_id FK\n    integer product_id FK\n    integer quantity\n    real unit_price\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D4-r2-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        A[React SPA] --> B[API Gateway (Nginx)]\n    end\n    subgraph Server\n        B --> C[FastAPI Service]\n        C --> D[PostgreSQL]\n        C --> E[Redis]\n        C --> F[Celery Workers]\n    end\n    C --> G[Stripe Payment API]\n    F --> D\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style C fill:#bbf,stroke:#333,stroke-width:2px",
+    "valid": false,
+    "error": "Parse error on line 3:"
+  },
+  {
+    "id": "D4-r3-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Seller| ApproveSeller\n    Admin -->|Handle Refund| HandleRefund"
+  },
+  {
+    "id": "D4-r3-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class Customer {\n        +id\n        +name\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : placedBy\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves"
+  },
+  {
+    "id": "D4-r3-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebUI\n    participant CS as CartService\n    participant PS as PaymentService\n    participant OS as OrderService\n    C->>UI: Browse catalog\n    C->>UI: Add product to cart\n    UI->>CS: AddItem(productId)\n    C->>UI: Checkout\n    UI->>PS: ProcessPayment(details)\n    PS-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cartId)\n    OS-->>UI: OrderConfirmed\n    C->>UI: Track order\n    UI->>OS: GetOrderStatus(orderId)\n    OS-->>UI: status"
+  },
+  {
+    "id": "D4-r3-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS_USER_ID ||--o{ SELLERS_USER_ID : \"A user can be a seller\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"A user can place many orders\"\nSELLERS_SELLER_ID ||--o{ PRODUCTS_SELLER_ID : \"A seller lists multiple products\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_admin\n}\nSELLERS {\n    integer seller_id PK\n    integer user_id FK\n    text store_name\n    boolean approved\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}"
+  },
+  {
+    "id": "D4-r3-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        A[React SPA] -->|REST/JSON| B[FastAPI Gateway]\n    end\n    subgraph Services\n        B --> C[Auth Service]\n        B --> D[Product Service]\n        B --> E[Cart Service]\n        B --> F[Order Service]\n        B --> G[Admin Service]\n    end\n    C --> H[PostgreSQL]\n    D --> H\n    E --> H\n    F --> H\n    G --> H\n    F --> I[Redis Cache]\n    F --> J[Celery Workers]\n    J --> K[RabbitMQ]\n    F --> L[Stripe API]\n    G --> M[Refund Queue]\n    M --> J\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px"
+  },
+  {
+    "id": "D5-r1-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Student -->|takes exam| ExamSystem\n    Teacher -->|creates questions| QuestionBank\n    Teacher -->|schedules| ExamSystem\n    Teacher -->|reviews results| Dashboard\n    Admin -->|manages| UserManagement\n    ExamSystem -->|provides| Dashboard",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r1-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +id\n        +name\n        +email\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createQuestion()\n        +scheduleExam()\n        +reviewResult()\n    }\n    class Admin {\n        +manageUser()\n        +configureSettings()\n    }\n    class Exam {\n        +startTime\n        +duration\n        +grade()\n    }\n    class Question {\n        +text\n        +type\n        +score\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Exam \"*\" -- \"*\" Question : contains\n    Student \"*\" -- \"*\" Exam : takes\n    Teacher \"*\" -- \"*\" Exam : schedules\n    Exam \"*\" -- \"1\" Student : results",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r1-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    participant Grader\n    Student->>ExamSystem: startExam()\n    ExamSystem->>QuestionBank: fetchQuestions()\n    QuestionBank-->>ExamSystem: questions\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>Grader: grade()\n    Grader-->>ExamSystem: result\n    ExamSystem->>Student: viewResult()",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r1-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS ||--o{ EXAMS : \"A teacher user creates many exams\"\nEXAMS ||--o{ QUESTIONS : \"Each exam contains multiple questions\"\nEXAMS ||--o{ EXAMATTEMPTS : \"An exam can have many student attempts\"\nUSERS ||--o{ EXAMATTEMPTS : \"A student user can have many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_at\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nEXAMATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime started_at\n    datetime completed_at\n    real score\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r1-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        SPA[React SPA]\n    end\n    subgraph Edge\n        Nginx[Nginx Reverse Proxy]\n    end\n    subgraph API\n        FastAPI[FastAPI Service]\n        WS[WebSocket Endpoint]\n    end\n    subgraph DB\n        Postgres[PostgreSQL]\n        Redis[Redis]\n    end\n    subgraph Workers\n        Celery[Celery Workers]\n    end\n    SPA -->|HTTPS| Nginx\n    Nginx -->|REST / WS| FastAPI\n    FastAPI -->|SQLAlchemy| Postgres\n    FastAPI -->|Cache / Broker| Redis\n    Celery -->|Broker| Redis\n    Celery -->|Result Store| Postgres",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r2-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Student -->|takes exam| ExamSystem\n    Teacher -->|creates questions| QuestionBank\n    Teacher -->|schedules| ExamSystem\n    Teacher -->|reviews results| Dashboard\n    Admin -->|manages| UserManagement\n    ExamSystem -->|provides| Dashboard",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r2-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +id\n        +name\n        +email\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createQuestion()\n        +scheduleExam()\n        +reviewResult()\n    }\n    class Admin {\n        +manageUser()\n        +configureSettings()\n    }\n    class Exam {\n        +startTime\n        +duration\n        +grade()\n    }\n    class Question {\n        +text\n        +type\n        +score\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Exam \"1\" *-- \"*\" Question\n    Student \"*\" --> \"1\" Exam\n    Teacher \"*\" --> \"*\" Question\n    Teacher \"*\" --> \"*\" Exam",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r2-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    participant Grader\n    Student->>ExamSystem: startExam()\n    ExamSystem->>QuestionBank: fetchQuestions()\n    QuestionBank-->>ExamSystem: questions\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>Grader: grade()\n    Grader-->>ExamSystem: result\n    ExamSystem->>Student: viewResult()",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r2-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS_USER_ID ||--o{ EXAMS_CREATOR_ID : \"A teacher creates many exams\"\nEXAMS_EXAM_ID ||--o{ QUESTIONS_EXAM_ID : \"An exam has multiple questions\"\nEXAMS_EXAM_ID ||--o{ ATTEMPTS_EXAM_ID : \"An exam can have many attempts\"\nUSERS_USER_ID ||--o{ ATTEMPTS_STUDENT_ID : \"A student can make many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_start\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime start_time\n    datetime end_time\n    real score\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r2-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI REST]\n        WS[FastAPI WebSocket]\n        GR[Celery Worker]\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n    end\n    subgraph Infra\n        Nginx[NGINX]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx --> API\n    Nginx --> WS\n    API --> DB\n    API --> Cache\n    WS --> Cache\n    GR --> DB\n    GR --> Cache\n    Docker --> Nginx\n    Docker --> API\n    Docker --> WS\n    Docker --> GR",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r3-use_case",
+    "kind": "use_case",
+    "code": "flowchart LR\n    Student -->|Take Exam| ExamSystem\n    Teacher -->|Create Bank / Schedule| ExamSystem\n    Admin -->|Manage Users / Settings| ExamSystem\n    ExamSystem -->|Provide Dashboard| Teacher\n    ExamSystem -->|Show Results| Student",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r3-class_diagram",
+    "kind": "class_diagram",
+    "code": "classDiagram\n    class User {\n        +id: UUID\n        +name: String\n        +email: String\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createBank()\n        +scheduleExam()\n        +reviewResults()\n    }\n    class Admin {\n        +manageUsers()\n        +configureSettings()\n    }\n    class Exam {\n        +id: UUID\n        +startTime: DateTime\n        +duration: int\n    }\n    class QuestionBank {\n        +id: UUID\n        +addQuestion()\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Teacher --> QuestionBank : manages\n    Teacher --> Exam : schedules\n    Student --> Exam : takes\n    Exam --> QuestionBank : uses",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r3-sequence",
+    "kind": "sequence",
+    "code": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    Student->>ExamSystem: startExam(examId)\n    ExamSystem->>QuestionBank: fetchQuestions(examId)\n    QuestionBank-->>ExamSystem: questions\n    ExamSystem->>Student: deliverQuestions()\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>ExamSystem: autoGrade()\n    ExamSystem-->>Student: showResult()\n    ExamSystem->>Teacher: notifyResult()\n",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r3-er",
+    "kind": "er_diagram",
+    "code": "erDiagram\nUSERS ||--o{ EXAMS : \"A teacher user creates many exams\"\nEXAMS ||--o{ QUESTIONS : \"Each exam contains multiple questions\"\nEXAMS ||--o{ EXAMATTEMPTS : \"An exam can have many student attempts\"\nUSERS ||--o{ EXAMATTEMPTS : \"A student user can have many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_at\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nEXAMATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime started_at\n    datetime completed_at\n    real score\n}",
+    "valid": true,
+    "error": null
+  },
+  {
+    "id": "D5-r3-arch",
+    "kind": "architecture_diagram",
+    "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI REST & WS]\n        Auth[JWT Auth]\n        Grader[Celery Workers]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n    end\n    subgraph Infra\n        Nginx[NGINX]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx -->|Proxy| API\n    API --> Auth\n    API -->|CRUD| DB\n    API -->|Cache| Cache\n    API -->|Async| Grader\n    Grader --> DB\n    Grader --> Cache\n    Nginx --> Docker",
+    "valid": true,
+    "error": null
+  }
+]

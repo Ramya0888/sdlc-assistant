@@ -1,0 +1,16 @@
+domain_id,repeat,generated_tables,covered,missing,ec
+D1,1,"Users, Restaurants, MenuItems, Orders","Users, Restaurants, MenuItems, Orders","OrderItems, Payments, Deliveries",0.5714
+D1,2,"Users, Restaurants, MenuItems, Orders","Users, Restaurants, MenuItems, Orders","OrderItems, Payments, Deliveries",0.5714
+D1,3,"Users, Restaurants, MenuItems, Orders","Users, Restaurants, MenuItems, Orders","OrderItems, Payments, Deliveries",0.5714
+D2,1,"Patients, Doctors, Appointments, Prescriptions","Patients, Doctors, Appointments, Prescriptions","Departments, Diagnoses/Records, Bills",0.5714
+D2,2,"Patients, Doctors, Appointments, Prescriptions","Patients, Doctors, Appointments, Prescriptions","Departments, Diagnoses/Records, Bills",0.5714
+D2,3,"Patients, Doctors, Appointments, Prescriptions","Patients, Doctors, Appointments, Prescriptions","Departments, Diagnoses/Records, Bills",0.5714
+D3,1,"Members, Books, Loans, Librarians","Members, Books, Loans, Librarians",Fines,0.8
+D3,2,"Members, Books, Loans, Librarians","Members, Books, Loans, Librarians",Fines,0.8
+D3,3,"Members, Books, Loans, Librarians","Members, Books, Loans, Librarians",Fines,0.8
+D4,1,"users, sellers, products, orders","Users, Products, Orders","OrderItems, Payments, Shipments, Refunds",0.4286
+D4,2,"Users, Products, Orders, OrderItems","Users, Products, Orders, OrderItems","Payments, Shipments, Refunds",0.5714
+D4,3,"users, sellers, products, orders","Users, Products, Orders","OrderItems, Payments, Shipments, Refunds",0.4286
+D5,1,"Users, Exams, Questions, ExamAttempts","Users, Exams, Questions, Submissions",Results,0.8
+D5,2,"Users, Exams, Questions, Attempts","Users, Exams, Questions, Submissions",Results,0.8
+D5,3,"Users, Exams, Questions, ExamAttempts","Users, Exams, Questions, Submissions",Results,0.8

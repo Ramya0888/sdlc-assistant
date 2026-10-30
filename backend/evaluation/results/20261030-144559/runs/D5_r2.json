@@ -1,0 +1,1776 @@
+{
+  "domain_id": "D5",
+  "domain": "Online exam",
+  "repeat": 2,
+  "latency_s": 25.502,
+  "wall_clock_s": 59.1,
+  "rate_limit_wait_s": 33.598,
+  "succeeded": true,
+  "error": null,
+  "instrumentation": {
+    "main_calls": 7,
+    "first_attempt_ok": 7,
+    "gateway_retries": 0,
+    "repair_calls": 0,
+    "repair_kinds": [],
+    "http_requests": 7,
+    "prompt_tokens": 3127,
+    "completion_tokens": 5912,
+    "total_tokens": 9039,
+    "module_seconds": {
+      "Requirement Analyzer": 2.986,
+      "User Story Generator": 3.12,
+      "UML Generator": 1.914,
+      "Database Designer": 3.575,
+      "API Designer": 2.618,
+      "Project Structure": 2.515,
+      "Documentation": 8.772
+    },
+    "rate_limit_waits": 6,
+    "rate_limit_wait_s": 33.598
+  },
+  "requests": [
+    {
+      "module": "Requirement Analyzer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.985,
+      "usage": {
+        "prompt_tokens": 851,
+        "completion_tokens": 1072,
+        "total_tokens": 1923
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "User Story Generator",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 3.113,
+      "usage": {
+        "prompt_tokens": 515,
+        "completion_tokens": 802,
+        "total_tokens": 1317
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 6.317
+    },
+    {
+      "module": "UML Generator",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 1.913,
+      "usage": {
+        "prompt_tokens": 326,
+        "completion_tokens": 593,
+        "total_tokens": 919
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 1.015
+    },
+    {
+      "module": "Database Designer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.572,
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 1371,
+        "total_tokens": 1785
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 5.125
+    },
+    {
+      "module": "API Designer",
+      "kind": "first",
+      "max_tokens": 1900,
+      "seconds": 2.608,
+      "usage": {
+        "prompt_tokens": 365,
+        "completion_tokens": 915,
+        "total_tokens": 1280
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 8.087
+    },
+    {
+      "module": "Project Structure",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.503,
+      "usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 636,
+        "total_tokens": 986
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 7.668
+    },
+    {
+      "module": "Documentation",
+      "kind": "first",
+      "max_tokens": 1600,
+      "seconds": 2.328,
+      "usage": {
+        "prompt_tokens": 306,
+        "completion_tokens": 523,
+        "total_tokens": 829
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 2.65
+    }
+  ],
+  "calls": [
+    {
+      "module": "Requirement Analyzer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "User Story Generator",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "UML Generator",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Database Designer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "API Designer",
+      "purpose": "main",
+      "max_tokens": 1900,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Project Structure",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Documentation",
+      "purpose": "main",
+      "max_tokens": 1600,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    }
+  ],
+  "raw_outputs": {
+    "Requirement Analyzer": {
+      "project": {
+        "name": "Online Examination Platform",
+        "summary": "Web system for creating exams, delivering timed tests to students, and providing auto\u2011graded results.",
+        "domain": "Education Technology"
+      },
+      "functional_requirements": [
+        "Teachers can create, edit, and delete question banks.",
+        "Teachers can schedule exams with start time, duration, and assigned student groups.",
+        "Students can take timed exams online.",
+        "The system automatically grades objective questions and stores results.",
+        "Teachers and students can view exam results on a dashboard."
+      ],
+      "non_functional_requirements": [
+        "The platform must prevent cheating through question randomization and session monitoring.",
+        "The system must remain available and reliable throughout the entire exam window.",
+        "User interfaces must respond within 2 seconds for all interactive actions.",
+        "The application must scale to support concurrent exams for up to 5,000 students."
+      ],
+      "actors": [
+        {
+          "name": "Teacher",
+          "description": "Creates question banks, schedules exams, and reviews results."
+        },
+        {
+          "name": "Student",
+          "description": "Logs in, takes assigned timed exams, and views personal results."
+        },
+        {
+          "name": "Administrator",
+          "description": "Manages user accounts, roles, and global exam settings."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Create Question Bank",
+          "actor": "Teacher",
+          "description": "Teacher adds, edits, or deletes questions in a bank."
+        },
+        {
+          "name": "Schedule Exam",
+          "actor": "Teacher",
+          "description": "Teacher defines exam date, time, duration, and selects question bank."
+        },
+        {
+          "name": "Take Exam",
+          "actor": "Student",
+          "description": "Student starts the exam, answers questions within the time limit, and submits."
+        },
+        {
+          "name": "Review Exam Results",
+          "actor": "Teacher",
+          "description": "Teacher accesses auto\u2011graded results and analytics for each exam."
+        },
+        {
+          "name": "Manage Users and Settings",
+          "actor": "Administrator",
+          "description": "Administrator creates, updates, or removes user accounts and configures system parameters."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Teachers can create, edit, and delete question banks.",
+          "criteria": [
+            "All question types can be added, modified, and removed without errors.",
+            "Changes are persisted and immediately available for exam scheduling."
+          ]
+        },
+        {
+          "requirement": "Teachers can schedule exams with start time, duration, and assigned student groups.",
+          "criteria": [
+            "Exam appears in the assigned students' dashboards at the scheduled time.",
+            "Scheduling conflicts are detected and prevented."
+          ]
+        },
+        {
+          "requirement": "Students can take timed exams online.",
+          "criteria": [
+            "A visible countdown timer starts when the exam begins.",
+            "Submission is blocked after the timer expires."
+          ]
+        },
+        {
+          "requirement": "The system automatically grades objective questions and stores results.",
+          "criteria": [
+            "Grades are calculated instantly after submission.",
+            "Results are saved and retrievable from the dashboard."
+          ]
+        },
+        {
+          "requirement": "The platform must prevent cheating through question randomization and session monitoring.",
+          "criteria": [
+            "Question order is randomized for each student session.",
+            "Multiple concurrent logins from the same account are detected and blocked."
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "User Story Generator": {
+      "user_stories": [
+        {
+          "id": "US-001",
+          "story": "As a teacher, I want to create and organize question banks, so that I can reuse questions for multiple exams.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Teachers can add, edit, and delete questions within a bank.",
+            "Questions are searchable and can be grouped by subject or difficulty."
+          ]
+        },
+        {
+          "id": "US-002",
+          "story": "As a teacher, I want to schedule exams, so that students know when to take them.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Teachers can set exam date, start time, duration, and associate a question bank.",
+            "Scheduled exams appear on the student dashboard with countdown timer."
+          ]
+        },
+        {
+          "id": "US-003",
+          "story": "As a student, I want to take a timed test, so that I can complete assessments within the allocated period.",
+          "priority": "High",
+          "story_points": 8,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "The test starts automatically at the scheduled time and enforces the configured duration.",
+            "The interface disables navigation away from the exam page and records answers in real time."
+          ]
+        },
+        {
+          "id": "US-004",
+          "story": "As a student, I want to view my results after the exam, so that I can understand my performance.",
+          "priority": "Medium",
+          "story_points": 3,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Results display total score, per-question feedback, and overall percentile.",
+            "Results are accessible only to the student and authorized teachers."
+          ]
+        },
+        {
+          "id": "US-005",
+          "story": "As an administrator, I want to manage users and exam settings, so that the platform remains organized and secure.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Admins can create, edit, deactivate, and assign roles to user accounts.",
+            "Admins can configure global exam parameters such as time limits and password policies."
+          ]
+        },
+        {
+          "id": "US-006",
+          "story": "As a system, I need to enforce anti\u2011cheating measures, so that exam integrity is maintained.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "The platform detects multiple simultaneous logins for the same account and blocks them.",
+            "During exams, screen capture, copy\u2011paste, and navigation away from the test window are prevented."
+          ]
+        }
+      ]
+    },
+    "UML Generator": {
+      "use_case": "flowchart LR\n    Student -->|takes exam| ExamSystem\n    Teacher -->|creates questions| QuestionBank\n    Teacher -->|schedules| ExamSystem\n    Teacher -->|reviews results| Dashboard\n    Admin -->|manages| UserManagement\n    ExamSystem -->|provides| Dashboard",
+      "class_diagram": "classDiagram\n    class User {\n        +id\n        +name\n        +email\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createQuestion()\n        +scheduleExam()\n        +reviewResult()\n    }\n    class Admin {\n        +manageUser()\n        +configureSettings()\n    }\n    class Exam {\n        +startTime\n        +duration\n        +grade()\n    }\n    class Question {\n        +text\n        +type\n        +score\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Exam \"1\" *-- \"*\" Question\n    Student \"*\" --> \"1\" Exam\n    Teacher \"*\" --> \"*\" Question\n    Teacher \"*\" --> \"*\" Exam",
+      "sequence": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    participant Grader\n    Student->>ExamSystem: startExam()\n    ExamSystem->>QuestionBank: fetchQuestions()\n    QuestionBank-->>ExamSystem: questions\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>Grader: grade()\n    Grader-->>ExamSystem: result\n    ExamSystem->>Student: viewResult()"
+    },
+    "Database Designer": {
+      "tables": [
+        {
+          "table": "Users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "role",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_active",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Exams",
+          "columns": [
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "title",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "scheduled_start",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "duration_minutes",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "creator_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            }
+          ]
+        },
+        {
+          "table": "Questions",
+          "columns": [
+            {
+              "name": "question_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Exams.exam_id"
+            },
+            {
+              "name": "content",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "max_score",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "question_type",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Attempts",
+          "columns": [
+            {
+              "name": "attempt_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Exams.exam_id"
+            },
+            {
+              "name": "student_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "start_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "end_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "score",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Users.user_id",
+          "to": "Exams.creator_id",
+          "cardinality": "1:N",
+          "description": "A teacher creates many exams"
+        },
+        {
+          "from": "Exams.exam_id",
+          "to": "Questions.exam_id",
+          "cardinality": "1:N",
+          "description": "An exam has multiple questions"
+        },
+        {
+          "from": "Exams.exam_id",
+          "to": "Attempts.exam_id",
+          "cardinality": "1:N",
+          "description": "An exam can have many attempts"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Attempts.student_id",
+          "cardinality": "1:N",
+          "description": "A student can make many attempts"
+        }
+      ],
+      "sql": "CREATE TABLE Users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    role TEXT,\n    is_active BOOLEAN\n);\n\nCREATE TABLE Exams (\n    exam_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    title TEXT,\n    scheduled_start DATETIME,\n    duration_minutes INTEGER,\n    creator_id INTEGER,\n    FOREIGN KEY (creator_id) REFERENCES Users(user_id)\n);\n\nCREATE TABLE Questions (\n    question_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    exam_id INTEGER,\n    content TEXT,\n    max_score REAL,\n    question_type TEXT,\n    FOREIGN KEY (exam_id) REFERENCES Exams(exam_id)\n);\n\nCREATE TABLE Attempts (\n    attempt_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    exam_id INTEGER,\n    student_id INTEGER,\n    start_time DATETIME,\n    end_time DATETIME,\n    score REAL,\n    FOREIGN KEY (exam_id) REFERENCES Exams(exam_id),\n    FOREIGN KEY (student_id) REFERENCES Users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ EXAMS_CREATOR_ID : \"A teacher creates many exams\"\nEXAMS_EXAM_ID ||--o{ QUESTIONS_EXAM_ID : \"An exam has multiple questions\"\nEXAMS_EXAM_ID ||--o{ ATTEMPTS_EXAM_ID : \"An exam can have many attempts\"\nUSERS_USER_ID ||--o{ ATTEMPTS_STUDENT_ID : \"A student can make many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_start\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime start_time\n    datetime end_time\n    real score\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "API Designer": {
+      "apis": [
+        {
+          "method": "POST",
+          "endpoint": "/api/auth/login",
+          "purpose": "Authenticate user and return JWT token",
+          "request_body": {
+            "email": "string",
+            "password": "string"
+          },
+          "response_body": {
+            "token": "string",
+            "expiresIn": "integer"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Login successful"
+            },
+            {
+              "code": 401,
+              "description": "Invalid credentials"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/teachers/question-banks",
+          "purpose": "Create a new question bank",
+          "request_body": {
+            "title": "string",
+            "description": "string"
+          },
+          "response_body": {
+            "bankId": "string",
+            "title": "string"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Question bank created"
+            },
+            {
+              "code": 400,
+              "description": "Invalid input"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/teachers/exams",
+          "purpose": "Schedule a new exam",
+          "request_body": {
+            "title": "string",
+            "bankId": "string",
+            "startTime": "string",
+            "durationMinutes": "integer"
+          },
+          "response_body": {
+            "examId": "string",
+            "status": "scheduled"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Exam scheduled"
+            },
+            {
+              "code": 400,
+              "description": "Invalid exam data"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/students/exams/{examId}",
+          "purpose": "Retrieve exam details for a student to start",
+          "request_body": {},
+          "response_body": {
+            "examId": "string",
+            "questions": [
+              {
+                "questionId": "string",
+                "type": "multiple-choice",
+                "text": "string",
+                "options": [
+                  "string"
+                ]
+              }
+            ],
+            "timeRemaining": "integer"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Exam data returned"
+            },
+            {
+              "code": 404,
+              "description": "Exam not found or not accessible"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/students/exams/{examId}/submit",
+          "purpose": "Submit student's answers for auto-grading",
+          "request_body": {
+            "answers": [
+              {
+                "questionId": "string",
+                "answer": "string"
+              }
+            ]
+          },
+          "response_body": {
+            "examId": "string",
+            "score": "number",
+            "gradedAt": "string"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Submission accepted and graded"
+            },
+            {
+              "code": 400,
+              "description": "Submission invalid or past deadline"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/admin/users",
+          "purpose": "List all users for management",
+          "request_body": {},
+          "response_body": {
+            "users": [
+              {
+                "userId": "string",
+                "role": "string",
+                "email": "string",
+                "active": "boolean"
+              }
+            ]
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "User list retrieved"
+            },
+            {
+              "code": 403,
+              "description": "Insufficient permissions"
+            }
+          ]
+        }
+      ]
+    },
+    "Project Structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "Cache / Message Broker",
+          "technology": "Redis"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        },
+        {
+          "category": "Testing",
+          "technology": "Jest"
+        }
+      ],
+      "architecture": "Microservice\u2011style monolith: a FastAPI backend serves REST and WebSocket endpoints, a React/Vite SPA consumes them, PostgreSQL stores users, exams, questions and results, Redis handles session caching and real\u2011time exam timers, Celery workers process auto\u2011grading, Nginx terminates TLS and proxies to backend containers. Docker Compose orchestrates services for development and production.",
+      "dependencies": [
+        "SQLAlchemy",
+        "Alembic",
+        "Pydantic",
+        "python-jose",
+        "Celery",
+        "Redis-py",
+        "Pytest",
+        "Sentry SDK"
+      ],
+      "folders": [
+        "backend",
+        "frontend",
+        "docker",
+        "configs",
+        "migrations",
+        "tests",
+        "scripts",
+        "docs"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI REST]\n        WS[FastAPI WebSocket]\n        GR[Celery Worker]\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n    end\n    subgraph Infra\n        Nginx[NGINX]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx --> API\n    Nginx --> WS\n    API --> DB\n    API --> Cache\n    WS --> Cache\n    GR --> DB\n    GR --> Cache\n    Docker --> Nginx\n    Docker --> API\n    Docker --> WS\n    Docker --> GR"
+    },
+    "Documentation": {
+      "readme": "Online Exam Platform enables teachers to build question banks, schedule timed exams, and auto\u2011grade. Students log in, take exams within a secure, proctored environment, and view results instantly. Admins manage users, roles, and system settings. Built with React frontend, Node.js/Express API, PostgreSQL, and JWT authentication.",
+      "api_documentation": "POST /api/auth/login \u2013 body {email, password}. Returns JWT. GET /api/exams/:id \u2013 fetch exam details (auth, role: student). POST /api/exams/:id/submit \u2013 submit answers, returns score. GET /api/teachers/banks \u2013 list question banks. POST /api/teachers/banks \u2013 create bank. POST /api/admin/users \u2013 create user. All endpoints require Bearer token, role\u2011based access.",
+      "installation": "Clone repo. Run `npm install` in root. Set up PostgreSQL DB and create .env with DB_URL, JWT_SECRET. Run `npm run migrate` to apply schema. Start backend with `npm start`. In /client, run `npm install` then `npm run build`.",
+      "deployment": "Containerize with Docker. Use docker-compose with services: api, db, client. Deploy to cloud (AWS ECS, Azure App Service) behind HTTPS load balancer. Enable autoscaling for API pods. Use environment variables for secrets. Configure CI/CD pipeline to build and push images on merge.",
+      "sprint_plan": "Sprint 1 (2w): Auth, user roles, DB schema. Sprint 2 (2w): Question bank CRUD, exam scheduling UI. Sprint 3 (2w): Exam taking flow, timer, auto\u2011grade engine. Sprint 4 (2w): Admin dashboard, user management, settings. Sprint 5 (1w): Cheating mitigation (browser lockdown, IP monitoring). Sprint 6 (1w): QA, load testing, documentation.",
+      "architecture": "Frontend: React SPA with Redux, React Router, Material UI. Backend: Node.js/Express REST API, JWT auth, role middleware. Database: PostgreSQL relational schema for users, exams, questions, results. Security: HTTPS, CSP, SameSite cookies, server\u2011side validation, exam session tokens, activity logging. Scalability: Stateless API, load\u2011balanced containers, DB read replicas."
+    }
+  },
+  "result": {
+    "project": {
+      "name": "Online Examination Platform",
+      "summary": "Web system for creating exams, delivering timed tests to students, and providing auto\u2011graded results.",
+      "domain": "Education Technology"
+    },
+    "requirement_analysis": {
+      "functional_requirements": [
+        "Teachers can create, edit, and delete question banks.",
+        "Teachers can schedule exams with start time, duration, and assigned student groups.",
+        "Students can take timed exams online.",
+        "The system automatically grades objective questions and stores results.",
+        "Teachers and students can view exam results on a dashboard."
+      ],
+      "non_functional_requirements": [
+        "The platform must prevent cheating through question randomization and session monitoring.",
+        "The system must remain available and reliable throughout the entire exam window.",
+        "User interfaces must respond within 2 seconds for all interactive actions.",
+        "The application must scale to support concurrent exams for up to 5,000 students."
+      ],
+      "actors": [
+        {
+          "name": "Teacher",
+          "description": "Creates question banks, schedules exams, and reviews results."
+        },
+        {
+          "name": "Student",
+          "description": "Logs in, takes assigned timed exams, and views personal results."
+        },
+        {
+          "name": "Administrator",
+          "description": "Manages user accounts, roles, and global exam settings."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Create Question Bank",
+          "actor": "Teacher",
+          "description": "Teacher adds, edits, or deletes questions in a bank."
+        },
+        {
+          "name": "Schedule Exam",
+          "actor": "Teacher",
+          "description": "Teacher defines exam date, time, duration, and selects question bank."
+        },
+        {
+          "name": "Take Exam",
+          "actor": "Student",
+          "description": "Student starts the exam, answers questions within the time limit, and submits."
+        },
+        {
+          "name": "Review Exam Results",
+          "actor": "Teacher",
+          "description": "Teacher accesses auto\u2011graded results and analytics for each exam."
+        },
+        {
+          "name": "Manage Users and Settings",
+          "actor": "Administrator",
+          "description": "Administrator creates, updates, or removes user accounts and configures system parameters."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Teachers can create, edit, and delete question banks.",
+          "criteria": [
+            "All question types can be added, modified, and removed without errors.",
+            "Changes are persisted and immediately available for exam scheduling."
+          ]
+        },
+        {
+          "requirement": "Teachers can schedule exams with start time, duration, and assigned student groups.",
+          "criteria": [
+            "Exam appears in the assigned students' dashboards at the scheduled time.",
+            "Scheduling conflicts are detected and prevented."
+          ]
+        },
+        {
+          "requirement": "Students can take timed exams online.",
+          "criteria": [
+            "A visible countdown timer starts when the exam begins.",
+            "Submission is blocked after the timer expires."
+          ]
+        },
+        {
+          "requirement": "The system automatically grades objective questions and stores results.",
+          "criteria": [
+            "Grades are calculated instantly after submission.",
+            "Results are saved and retrievable from the dashboard."
+          ]
+        },
+        {
+          "requirement": "The platform must prevent cheating through question randomization and session monitoring.",
+          "criteria": [
+            "Question order is randomized for each student session.",
+            "Multiple concurrent logins from the same account are detected and blocked."
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "user_stories": [
+      {
+        "id": "US-001",
+        "story": "As a teacher, I want to create and organize question banks, so that I can reuse questions for multiple exams.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Teachers can add, edit, and delete questions within a bank.",
+          "Questions are searchable and can be grouped by subject or difficulty."
+        ]
+      },
+      {
+        "id": "US-002",
+        "story": "As a teacher, I want to schedule exams, so that students know when to take them.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Teachers can set exam date, start time, duration, and associate a question bank.",
+          "Scheduled exams appear on the student dashboard with countdown timer."
+        ]
+      },
+      {
+        "id": "US-003",
+        "story": "As a student, I want to take a timed test, so that I can complete assessments within the allocated period.",
+        "priority": "High",
+        "story_points": 8,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "The test starts automatically at the scheduled time and enforces the configured duration.",
+          "The interface disables navigation away from the exam page and records answers in real time."
+        ]
+      },
+      {
+        "id": "US-004",
+        "story": "As a student, I want to view my results after the exam, so that I can understand my performance.",
+        "priority": "Medium",
+        "story_points": 3,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Results display total score, per-question feedback, and overall percentile.",
+          "Results are accessible only to the student and authorized teachers."
+        ]
+      },
+      {
+        "id": "US-005",
+        "story": "As an administrator, I want to manage users and exam settings, so that the platform remains organized and secure.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Admins can create, edit, deactivate, and assign roles to user accounts.",
+          "Admins can configure global exam parameters such as time limits and password policies."
+        ]
+      },
+      {
+        "id": "US-006",
+        "story": "As a system, I need to enforce anti\u2011cheating measures, so that exam integrity is maintained.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "The platform detects multiple simultaneous logins for the same account and blocks them.",
+          "During exams, screen capture, copy\u2011paste, and navigation away from the test window are prevented."
+        ]
+      }
+    ],
+    "uml": {
+      "use_case": "flowchart LR\n    Student -->|takes exam| ExamSystem\n    Teacher -->|creates questions| QuestionBank\n    Teacher -->|schedules| ExamSystem\n    Teacher -->|reviews results| Dashboard\n    Admin -->|manages| UserManagement\n    ExamSystem -->|provides| Dashboard",
+      "class_diagram": "classDiagram\n    class User {\n        +id\n        +name\n        +email\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createQuestion()\n        +scheduleExam()\n        +reviewResult()\n    }\n    class Admin {\n        +manageUser()\n        +configureSettings()\n    }\n    class Exam {\n        +startTime\n        +duration\n        +grade()\n    }\n    class Question {\n        +text\n        +type\n        +score\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Exam \"1\" *-- \"*\" Question\n    Student \"*\" --> \"1\" Exam\n    Teacher \"*\" --> \"*\" Question\n    Teacher \"*\" --> \"*\" Exam",
+      "sequence": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    participant Grader\n    Student->>ExamSystem: startExam()\n    ExamSystem->>QuestionBank: fetchQuestions()\n    QuestionBank-->>ExamSystem: questions\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>Grader: grade()\n    Grader-->>ExamSystem: result\n    ExamSystem->>Student: viewResult()"
+    },
+    "database": {
+      "tables": [
+        {
+          "table": "Users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "role",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_active",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Exams",
+          "columns": [
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "title",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "scheduled_start",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "duration_minutes",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "creator_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            }
+          ]
+        },
+        {
+          "table": "Questions",
+          "columns": [
+            {
+              "name": "question_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Exams.exam_id"
+            },
+            {
+              "name": "content",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "max_score",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "question_type",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Attempts",
+          "columns": [
+            {
+              "name": "attempt_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "exam_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Exams.exam_id"
+            },
+            {
+              "name": "student_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "start_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "end_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "score",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Users.user_id",
+          "to": "Exams.creator_id",
+          "cardinality": "1:N",
+          "description": "A teacher creates many exams"
+        },
+        {
+          "from": "Exams.exam_id",
+          "to": "Questions.exam_id",
+          "cardinality": "1:N",
+          "description": "An exam has multiple questions"
+        },
+        {
+          "from": "Exams.exam_id",
+          "to": "Attempts.exam_id",
+          "cardinality": "1:N",
+          "description": "An exam can have many attempts"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Attempts.student_id",
+          "cardinality": "1:N",
+          "description": "A student can make many attempts"
+        }
+      ],
+      "sql": "CREATE TABLE Users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    role TEXT,\n    is_active BOOLEAN\n);\n\nCREATE TABLE Exams (\n    exam_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    title TEXT,\n    scheduled_start DATETIME,\n    duration_minutes INTEGER,\n    creator_id INTEGER,\n    FOREIGN KEY (creator_id) REFERENCES Users(user_id)\n);\n\nCREATE TABLE Questions (\n    question_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    exam_id INTEGER,\n    content TEXT,\n    max_score REAL,\n    question_type TEXT,\n    FOREIGN KEY (exam_id) REFERENCES Exams(exam_id)\n);\n\nCREATE TABLE Attempts (\n    attempt_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    exam_id INTEGER,\n    student_id INTEGER,\n    start_time DATETIME,\n    end_time DATETIME,\n    score REAL,\n    FOREIGN KEY (exam_id) REFERENCES Exams(exam_id),\n    FOREIGN KEY (student_id) REFERENCES Users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ EXAMS_CREATOR_ID : \"A teacher creates many exams\"\nEXAMS_EXAM_ID ||--o{ QUESTIONS_EXAM_ID : \"An exam has multiple questions\"\nEXAMS_EXAM_ID ||--o{ ATTEMPTS_EXAM_ID : \"An exam can have many attempts\"\nUSERS_USER_ID ||--o{ ATTEMPTS_STUDENT_ID : \"A student can make many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_start\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime start_time\n    datetime end_time\n    real score\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "apis": [
+      {
+        "method": "POST",
+        "endpoint": "/api/auth/login",
+        "purpose": "Authenticate user and return JWT token",
+        "request_body": {
+          "email": "string",
+          "password": "string"
+        },
+        "response_body": {
+          "token": "string",
+          "expiresIn": "integer"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Login successful"
+          },
+          {
+            "code": 401,
+            "description": "Invalid credentials"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/teachers/question-banks",
+        "purpose": "Create a new question bank",
+        "request_body": {
+          "title": "string",
+          "description": "string"
+        },
+        "response_body": {
+          "bankId": "string",
+          "title": "string"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Question bank created"
+          },
+          {
+            "code": 400,
+            "description": "Invalid input"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/teachers/exams",
+        "purpose": "Schedule a new exam",
+        "request_body": {
+          "title": "string",
+          "bankId": "string",
+          "startTime": "string",
+          "durationMinutes": "integer"
+        },
+        "response_body": {
+          "examId": "string",
+          "status": "scheduled"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Exam scheduled"
+          },
+          {
+            "code": 400,
+            "description": "Invalid exam data"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/students/exams/{examId}",
+        "purpose": "Retrieve exam details for a student to start",
+        "request_body": {},
+        "response_body": {
+          "examId": "string",
+          "questions": [
+            {
+              "questionId": "string",
+              "type": "multiple-choice",
+              "text": "string",
+              "options": [
+                "string"
+              ]
+            }
+          ],
+          "timeRemaining": "integer"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Exam data returned"
+          },
+          {
+            "code": 404,
+            "description": "Exam not found or not accessible"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/students/exams/{examId}/submit",
+        "purpose": "Submit student's answers for auto-grading",
+        "request_body": {
+          "answers": [
+            {
+              "questionId": "string",
+              "answer": "string"
+            }
+          ]
+        },
+        "response_body": {
+          "examId": "string",
+          "score": "number",
+          "gradedAt": "string"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Submission accepted and graded"
+          },
+          {
+            "code": 400,
+            "description": "Submission invalid or past deadline"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/admin/users",
+        "purpose": "List all users for management",
+        "request_body": {},
+        "response_body": {
+          "users": [
+            {
+              "userId": "string",
+              "role": "string",
+              "email": "string",
+              "active": "boolean"
+            }
+          ]
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "User list retrieved"
+          },
+          {
+            "code": 403,
+            "description": "Insufficient permissions"
+          }
+        ]
+      }
+    ],
+    "project_structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "Cache / Message Broker",
+          "technology": "Redis"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        },
+        {
+          "category": "Testing",
+          "technology": "Jest"
+        }
+      ],
+      "architecture": "Microservice\u2011style monolith: a FastAPI backend serves REST and WebSocket endpoints, a React/Vite SPA consumes them, PostgreSQL stores users, exams, questions and results, Redis handles session caching and real\u2011time exam timers, Celery workers process auto\u2011grading, Nginx terminates TLS and proxies to backend containers. Docker Compose orchestrates services for development and production.",
+      "dependencies": [
+        "SQLAlchemy",
+        "Alembic",
+        "Pydantic",
+        "python-jose",
+        "Celery",
+        "Redis-py",
+        "Pytest",
+        "Sentry SDK"
+      ],
+      "folders": [
+        "backend",
+        "frontend",
+        "docker",
+        "configs",
+        "migrations",
+        "tests",
+        "scripts",
+        "docs"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI REST]\n        WS[FastAPI WebSocket]\n        GR[Celery Worker]\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n    end\n    subgraph Infra\n        Nginx[NGINX]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx --> API\n    Nginx --> WS\n    API --> DB\n    API --> Cache\n    WS --> Cache\n    GR --> DB\n    GR --> Cache\n    Docker --> Nginx\n    Docker --> API\n    Docker --> WS\n    Docker --> GR"
+    },
+    "documentation": {
+      "readme": "Online Exam Platform enables teachers to build question banks, schedule timed exams, and auto\u2011grade. Students log in, take exams within a secure, proctored environment, and view results instantly. Admins manage users, roles, and system settings. Built with React frontend, Node.js/Express API, PostgreSQL, and JWT authentication.",
+      "api_documentation": "POST /api/auth/login \u2013 body {email, password}. Returns JWT. GET /api/exams/:id \u2013 fetch exam details (auth, role: student). POST /api/exams/:id/submit \u2013 submit answers, returns score. GET /api/teachers/banks \u2013 list question banks. POST /api/teachers/banks \u2013 create bank. POST /api/admin/users \u2013 create user. All endpoints require Bearer token, role\u2011based access.",
+      "installation": "Clone repo. Run `npm install` in root. Set up PostgreSQL DB and create .env with DB_URL, JWT_SECRET. Run `npm run migrate` to apply schema. Start backend with `npm start`. In /client, run `npm install` then `npm run build`.",
+      "deployment": "Containerize with Docker. Use docker-compose with services: api, db, client. Deploy to cloud (AWS ECS, Azure App Service) behind HTTPS load balancer. Enable autoscaling for API pods. Use environment variables for secrets. Configure CI/CD pipeline to build and push images on merge.",
+      "sprint_plan": "Sprint 1 (2w): Auth, user roles, DB schema. Sprint 2 (2w): Question bank CRUD, exam scheduling UI. Sprint 3 (2w): Exam taking flow, timer, auto\u2011grade engine. Sprint 4 (2w): Admin dashboard, user management, settings. Sprint 5 (1w): Cheating mitigation (browser lockdown, IP monitoring). Sprint 6 (1w): QA, load testing, documentation.",
+      "architecture": "Frontend: React SPA with Redux, React Router, Material UI. Backend: Node.js/Express REST API, JWT auth, role middleware. Database: PostgreSQL relational schema for users, exams, questions, results. Security: HTTPS, CSP, SameSite cookies, server\u2011side validation, exam session tokens, activity logging. Scalability: Stateless API, load\u2011balanced containers, DB read replicas."
+    },
+    "review": {
+      "needs_clarification": false,
+      "questions": []
+    }
+  },
+  "sql_valid": true,
+  "sql_validation": {
+    "sql_syntax": "Valid",
+    "semantic": "Valid"
+  },
+  "counts": {
+    "fr": 5,
+    "stories": 6,
+    "tables": 4,
+    "apis": 6
+  },
+  "compliance": {
+    "satisfied": 34,
+    "checked": 35,
+    "ccr": 0.9714,
+    "rules": [
+      {
+        "module": "Requirement Analyzer",
+        "rule": "FR = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "NFR = 4",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "actors = 3",
+        "passed": true,
+        "detail": "3"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use cases = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use-case actor in actors",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "no generic actor",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "5 criteria groups",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "6 stories",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "IDs US-001..US-006",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "Connextra template",
+        "passed": false,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "priority in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "points in {1,2,3,5,8}",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "sprint in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "use_case starts 'flowchart LR'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "class_diagram starts 'classDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "sequence starts 'sequenceDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 6 classes",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 8 relationships",
+        "passed": true,
+        "detail": "7"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4 tables",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4-6 columns each",
+        "passed": true,
+        "detail": "5, 5, 5, 6"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "one INTEGER PK each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "allowed types",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "FK as table.column",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "6 endpoints",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "API Designer",
+        "rule": "allowed HTTP verbs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "<= 2 status codes each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 stack entries",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 dependencies",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 folders",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "React + Vite + FastAPI",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "diagram starts 'flowchart TD'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "6 sections",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "each < 100 words",
+        "passed": true,
+        "detail": "45, 47, 38, 42, 50, 46"
+      }
+    ]
+  },
+  "coverage": {
+    "expected": [
+      "Users",
+      "Exams",
+      "Questions",
+      "Submissions",
+      "Results"
+    ],
+    "generated_tables": [
+      "Users",
+      "Exams",
+      "Questions",
+      "Attempts"
+    ],
+    "covered": [
+      "Users",
+      "Exams",
+      "Questions",
+      "Submissions"
+    ],
+    "missing": [
+      "Results"
+    ],
+    "matched_by": {
+      "Users": "user",
+      "Exams": "exam",
+      "Questions": "question",
+      "Submissions": "attempt"
+    },
+    "ec": 0.8
+  },
+  "consistency": {
+    "cacs": 0.45,
+    "checks": [
+      {
+        "id": "C1",
+        "check": "FR -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs have a matching story"
+      },
+      {
+        "id": "C2",
+        "check": "Use cases -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 use cases have a matching story"
+      },
+      {
+        "id": "C3",
+        "check": "FR -> API endpoints",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "4/5 FRs served by an endpoint; missing: ['The system automatically grades objective questions and stor']"
+      },
+      {
+        "id": "C4",
+        "check": "Actors <-> UML use-case actors",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "3/3 actors appear; generic nodes: none"
+      },
+      {
+        "id": "C5",
+        "check": "DB tables <-> UML classes",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/4 tables have a class; classes without table: ['admin', 'student', 'teacher']"
+      },
+      {
+        "id": "C6",
+        "check": "API design <-> documented APIs",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "2/6 designed endpoints documented; extra documented: 3"
+      },
+      {
+        "id": "C7",
+        "check": "N:M relationships <-> junction table",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "no junction table for: ['Teacher-Question', 'Teacher-Exam']"
+      },
+      {
+        "id": "C8",
+        "check": "API payloads <-> DB schema",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "uuid ids vs INTEGER keys: no ; 12/23 payload fields have no column: ['active', 'answer', 'bankid', 'description', 'expiresin', 'gradedat', 'option', 'password']"
+      },
+      {
+        "id": "C9",
+        "check": "Project structure <-> docs architecture",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "conflicts: [\"backend: ['FastAPI'] vs ['Express', 'Node.js']\"]"
+      },
+      {
+        "id": "C10",
+        "check": "Story sprints <-> docs sprint plan",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "stories use 3 sprints; plan uses 6"
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "D5-r2-use_case",
+      "kind": "use_case",
+      "code": "flowchart LR\n    Student -->|takes exam| ExamSystem\n    Teacher -->|creates questions| QuestionBank\n    Teacher -->|schedules| ExamSystem\n    Teacher -->|reviews results| Dashboard\n    Admin -->|manages| UserManagement\n    ExamSystem -->|provides| Dashboard",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D5-r2-class_diagram",
+      "kind": "class_diagram",
+      "code": "classDiagram\n    class User {\n        +id\n        +name\n        +email\n    }\n    class Student {\n        +takeExam()\n        +viewResult()\n    }\n    class Teacher {\n        +createQuestion()\n        +scheduleExam()\n        +reviewResult()\n    }\n    class Admin {\n        +manageUser()\n        +configureSettings()\n    }\n    class Exam {\n        +startTime\n        +duration\n        +grade()\n    }\n    class Question {\n        +text\n        +type\n        +score\n    }\n    User <|-- Student\n    User <|-- Teacher\n    User <|-- Admin\n    Exam \"1\" *-- \"*\" Question\n    Student \"*\" --> \"1\" Exam\n    Teacher \"*\" --> \"*\" Question\n    Teacher \"*\" --> \"*\" Exam",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D5-r2-sequence",
+      "kind": "sequence",
+      "code": "sequenceDiagram\n    participant Student\n    participant ExamSystem\n    participant QuestionBank\n    participant Grader\n    Student->>ExamSystem: startExam()\n    ExamSystem->>QuestionBank: fetchQuestions()\n    QuestionBank-->>ExamSystem: questions\n    Student->>ExamSystem: submitAnswers()\n    ExamSystem->>Grader: grade()\n    Grader-->>ExamSystem: result\n    ExamSystem->>Student: viewResult()",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D5-r2-er",
+      "kind": "er_diagram",
+      "code": "erDiagram\nUSERS_USER_ID ||--o{ EXAMS_CREATOR_ID : \"A teacher creates many exams\"\nEXAMS_EXAM_ID ||--o{ QUESTIONS_EXAM_ID : \"An exam has multiple questions\"\nEXAMS_EXAM_ID ||--o{ ATTEMPTS_EXAM_ID : \"An exam can have many attempts\"\nUSERS_USER_ID ||--o{ ATTEMPTS_STUDENT_ID : \"A student can make many attempts\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text role\n    boolean is_active\n}\nEXAMS {\n    integer exam_id PK\n    text title\n    datetime scheduled_start\n    integer duration_minutes\n    integer creator_id FK\n}\nQUESTIONS {\n    integer question_id PK\n    integer exam_id FK\n    text content\n    real max_score\n    text question_type\n}\nATTEMPTS {\n    integer attempt_id PK\n    integer exam_id FK\n    integer student_id FK\n    datetime start_time\n    datetime end_time\n    real score\n}",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D5-r2-arch",
+      "kind": "architecture_diagram",
+      "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI REST]\n        WS[FastAPI WebSocket]\n        GR[Celery Worker]\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n    end\n    subgraph Infra\n        Nginx[NGINX]\n        Docker[Docker Compose]\n    end\n    UI -->|HTTPS| Nginx\n    Nginx --> API\n    Nginx --> WS\n    API --> DB\n    API --> Cache\n    WS --> Cache\n    GR --> DB\n    GR --> Cache\n    Docker --> Nginx\n    Docker --> API\n    Docker --> WS\n    Docker --> GR",
+      "valid": true,
+      "error": null
+    }
+  ]
+}

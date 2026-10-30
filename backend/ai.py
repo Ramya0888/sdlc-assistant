@@ -1369,11 +1369,10 @@ def build_er_diagram(
         if not description:
 
             description = "related"
-
         if cardinality == "1:1":
 
             lines.append(
-                f"{source} ||--|| {target} : {description}"
+                f"{source} ||--|| {target} : \"{description}\""
             )
 
         elif cardinality in {
@@ -1382,15 +1381,14 @@ def build_er_diagram(
         }:
 
             lines.append(
-                f"{source} }}o--o{{ {target} : {description}"
+                f"{source} }}o--o{{ {target} : \"{description}\""
             )
 
         else:
 
             lines.append(
-                f"{source} ||--o{{ {target} : {description}"
+                f"{source} ||--o{{ {target} : \"{description}\""
             )
-
     # --------------------------------------------------------
     # Tables
     # --------------------------------------------------------

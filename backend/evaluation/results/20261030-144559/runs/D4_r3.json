@@ -1,0 +1,1774 @@
+{
+  "domain_id": "D4",
+  "domain": "E-commerce",
+  "repeat": 3,
+  "latency_s": 17.282,
+  "wall_clock_s": 58.058,
+  "rate_limit_wait_s": 40.776,
+  "succeeded": true,
+  "error": null,
+  "instrumentation": {
+    "main_calls": 7,
+    "first_attempt_ok": 7,
+    "gateway_retries": 0,
+    "repair_calls": 0,
+    "repair_kinds": [],
+    "http_requests": 7,
+    "prompt_tokens": 3155,
+    "completion_tokens": 5778,
+    "total_tokens": 8933,
+    "module_seconds": {
+      "Requirement Analyzer": 2.668,
+      "User Story Generator": 2.09,
+      "UML Generator": 2.487,
+      "Database Designer": 3.288,
+      "API Designer": 2.8,
+      "Project Structure": 2.143,
+      "Documentation": 1.804
+    },
+    "rate_limit_waits": 7,
+    "rate_limit_wait_s": 40.776
+  },
+  "requests": [
+    {
+      "module": "Requirement Analyzer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.668,
+      "usage": {
+        "prompt_tokens": 855,
+        "completion_tokens": 988,
+        "total_tokens": 1843
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "User Story Generator",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.084,
+      "usage": {
+        "prompt_tokens": 519,
+        "completion_tokens": 678,
+        "total_tokens": 1197
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 9.032
+    },
+    {
+      "module": "UML Generator",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.475,
+      "usage": {
+        "prompt_tokens": 330,
+        "completion_tokens": 624,
+        "total_tokens": 954
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 5.065
+    },
+    {
+      "module": "Database Designer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.276,
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 1243,
+        "total_tokens": 1661
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 4.803
+    },
+    {
+      "module": "API Designer",
+      "kind": "first",
+      "max_tokens": 1900,
+      "seconds": 2.786,
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 1035,
+        "total_tokens": 1404
+      },
+      "error": null,
+      "rate_limit_waits": 2,
+      "rate_limit_wait_s": 8.75
+    },
+    {
+      "module": "Project Structure",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.137,
+      "usage": {
+        "prompt_tokens": 354,
+        "completion_tokens": 681,
+        "total_tokens": 1035
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 6.407
+    },
+    {
+      "module": "Documentation",
+      "kind": "first",
+      "max_tokens": 1600,
+      "seconds": 1.789,
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 529,
+        "total_tokens": 839
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 3.79
+    }
+  ],
+  "calls": [
+    {
+      "module": "Requirement Analyzer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "User Story Generator",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "UML Generator",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Database Designer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "API Designer",
+      "purpose": "main",
+      "max_tokens": 1900,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Project Structure",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Documentation",
+      "purpose": "main",
+      "max_tokens": 1600,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    }
+  ],
+  "raw_outputs": {
+    "Requirement Analyzer": {
+      "project": {
+        "name": "E-Commerce Platform",
+        "summary": "Online marketplace for customers to browse, purchase, and track orders, with seller product management and admin oversight.",
+        "domain": "E-commerce"
+      },
+      "functional_requirements": [
+        "Customers can browse the product catalogue",
+        "Customers can add products to a shopping cart",
+        "Customers can complete online payment and receive a receipt",
+        "Customers can track the status of their orders",
+        "Sellers can list products and manage inventory after admin approval"
+      ],
+      "non_functional_requirements": [
+        "The system must ensure data security and privacy",
+        "The platform must scale to support high traffic volumes",
+        "Response times for user actions should be under 2 seconds",
+        "The service must maintain 99.9% uptime"
+      ],
+      "actors": [
+        {
+          "name": "Customer",
+          "description": "Browse products, add items to cart, make purchases, and track orders"
+        },
+        {
+          "name": "Seller",
+          "description": "List products, update inventory, and fulfill orders after being approved"
+        },
+        {
+          "name": "Administrator",
+          "description": "Approve sellers, manage refunds, and oversee platform operations"
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Browse Products",
+          "actor": "Customer",
+          "description": "Search and filter the product catalogue to view product details"
+        },
+        {
+          "name": "Add Product to Cart",
+          "actor": "Customer",
+          "description": "Select items and add them to a shopping cart for later checkout"
+        },
+        {
+          "name": "Checkout and Pay",
+          "actor": "Customer",
+          "description": "Enter payment information, complete the transaction, and receive a receipt"
+        },
+        {
+          "name": "List and Manage Products",
+          "actor": "Seller",
+          "description": "Create product listings, set prices, and update stock levels"
+        },
+        {
+          "name": "Approve Seller and Process Refund",
+          "actor": "Administrator",
+          "description": "Validate seller applications and handle customer refund requests"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Customers can browse the product catalogue",
+          "criteria": [
+            "Search results are displayed within 2 seconds",
+            "Filters and sorting work correctly for all categories"
+          ]
+        },
+        {
+          "requirement": "Customers can add products to a shopping cart",
+          "criteria": [
+            "Cart updates instantly after adding an item",
+            "Quantity cannot exceed available stock"
+          ]
+        },
+        {
+          "requirement": "Customers can complete online payment and receive a receipt",
+          "criteria": [
+            "Payment gateway returns success or failure within 5 seconds",
+            "A confirmation email with receipt is sent to the customer"
+          ]
+        },
+        {
+          "requirement": "Sellers can list products and manage inventory after admin approval",
+          "criteria": [
+            "New product listings appear in the catalogue within 1 minute",
+            "Inventory changes are reflected in real\u2011time for customers"
+          ]
+        },
+        {
+          "requirement": "Administrators can approve sellers and handle refunds",
+          "criteria": [
+            "Seller approval triggers an email notification",
+            "Refunds are processed and reflected in the system within 48 hours"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "User Story Generator": {
+      "user_stories": [
+        {
+          "id": "US-001",
+          "story": "As a customer, I want to browse a product catalogue, so that I can find items to purchase.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "The catalogue displays product name, image, price, and stock status.",
+            "Customers can filter and sort products by category, price, and rating."
+          ]
+        },
+        {
+          "id": "US-002",
+          "story": "As a customer, I want to add products to a cart, so that I can purchase multiple items in one order.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Items can be added, updated quantity, or removed from the cart.",
+            "Cart persists across user sessions until checkout or manual clearing."
+          ]
+        },
+        {
+          "id": "US-003",
+          "story": "As a customer, I want to pay online securely, so that my transaction is safe and completed quickly.",
+          "priority": "High",
+          "story_points": 8,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Payment gateway supports credit/debit cards and tokenized payments with SSL encryption.",
+            "Transaction status is confirmed and displayed to the user immediately."
+          ]
+        },
+        {
+          "id": "US-004",
+          "story": "As a seller, I want to list products after approval, so that I can sell items on the platform.",
+          "priority": "Medium",
+          "story_points": 5,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Approved sellers can create, edit, and delete product listings with images and inventory levels.",
+            "Listings become visible to customers only after the seller is approved by an administrator."
+          ]
+        },
+        {
+          "id": "US-005",
+          "story": "As an administrator, I want to approve sellers, so that only vetted vendors can sell on the platform.",
+          "priority": "Medium",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Admin can view seller applications and approve or reject them.",
+            "Sellers receive notification of approval status via email."
+          ]
+        },
+        {
+          "id": "US-006",
+          "story": "As an administrator, I want to handle refund requests, so that customers receive timely resolutions.",
+          "priority": "Low",
+          "story_points": 2,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Admin can view, approve, or deny refund requests with reason codes.",
+            "Customers are notified of the refund decision and status updates."
+          ]
+        }
+      ]
+    },
+    "UML Generator": {
+      "use_case": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Seller| ApproveSeller\n    Admin -->|Handle Refund| HandleRefund",
+      "class_diagram": "classDiagram\n    class Customer {\n        +id\n        +name\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : placedBy\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves",
+      "sequence": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebUI\n    participant CS as CartService\n    participant PS as PaymentService\n    participant OS as OrderService\n    C->>UI: Browse catalog\n    C->>UI: Add product to cart\n    UI->>CS: AddItem(productId)\n    C->>UI: Checkout\n    UI->>PS: ProcessPayment(details)\n    PS-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cartId)\n    OS-->>UI: OrderConfirmed\n    C->>UI: Track order\n    UI->>OS: GetOrderStatus(orderId)\n    OS-->>UI: status"
+    },
+    "Database Designer": {
+      "tables": [
+        {
+          "table": "users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "password_hash",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_admin",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "sellers",
+          "columns": [
+            {
+              "name": "seller_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "users.user_id"
+            },
+            {
+              "name": "store_name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "approved",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "products",
+          "columns": [
+            {
+              "name": "product_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "seller_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "sellers.seller_id"
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "price",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "stock",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "orders",
+          "columns": [
+            {
+              "name": "order_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "users.user_id"
+            },
+            {
+              "name": "order_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "total_amount",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "users.user_id",
+          "to": "sellers.user_id",
+          "cardinality": "1:N",
+          "description": "A user can be a seller"
+        },
+        {
+          "from": "users.user_id",
+          "to": "orders.user_id",
+          "cardinality": "1:N",
+          "description": "A user can place many orders"
+        },
+        {
+          "from": "sellers.seller_id",
+          "to": "products.seller_id",
+          "cardinality": "1:N",
+          "description": "A seller lists multiple products"
+        }
+      ],
+      "sql": "CREATE TABLE users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    password_hash TEXT,\n    is_admin BOOLEAN\n);\n\nCREATE TABLE sellers (\n    seller_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    store_name TEXT,\n    approved BOOLEAN,\n    FOREIGN KEY (user_id) REFERENCES users(user_id)\n);\n\nCREATE TABLE products (\n    product_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    seller_id INTEGER,\n    name TEXT,\n    description TEXT,\n    price REAL,\n    stock INTEGER,\n    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)\n);\n\nCREATE TABLE orders (\n    order_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    order_date DATETIME,\n    total_amount REAL,\n    status TEXT,\n    FOREIGN KEY (user_id) REFERENCES users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ SELLERS_USER_ID : \"A user can be a seller\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"A user can place many orders\"\nSELLERS_SELLER_ID ||--o{ PRODUCTS_SELLER_ID : \"A seller lists multiple products\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_admin\n}\nSELLERS {\n    integer seller_id PK\n    integer user_id FK\n    text store_name\n    boolean approved\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "API Designer": {
+      "apis": [
+        {
+          "method": "GET",
+          "endpoint": "/api/products",
+          "purpose": "Retrieve a list of available products with optional filters",
+          "request_body": {},
+          "response_body": {
+            "products": [
+              {
+                "id": "string",
+                "name": "string",
+                "price": 0,
+                "currency": "USD",
+                "stock": 0
+              }
+            ],
+            "page": 1,
+            "total_pages": 1
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Products retrieved successfully"
+            },
+            {
+              "code": 400,
+              "description": "Invalid query parameters"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/cart/items",
+          "purpose": "Add a product to the customer's shopping cart",
+          "request_body": {
+            "product_id": "string",
+            "quantity": 1
+          },
+          "response_body": {
+            "cart_id": "string",
+            "items": [
+              {
+                "product_id": "string",
+                "quantity": 1,
+                "subtotal": 0
+              }
+            ],
+            "total": 0
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Item added to cart"
+            },
+            {
+              "code": 400,
+              "description": "Invalid product or insufficient stock"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/orders",
+          "purpose": "Create an order and process payment",
+          "request_body": {
+            "cart_id": "string",
+            "payment_method": "string",
+            "shipping_address": {
+              "line1": "string",
+              "city": "string",
+              "postal_code": "string",
+              "country": "string"
+            }
+          },
+          "response_body": {
+            "order_id": "string",
+            "status": "pending",
+            "total_amount": 0,
+            "currency": "USD"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Order created and payment processed"
+            },
+            {
+              "code": 402,
+              "description": "Payment required or failed"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/orders/{order_id}",
+          "purpose": "Retrieve order details and tracking information",
+          "request_body": {},
+          "response_body": {
+            "order_id": "string",
+            "status": "shipped",
+            "items": [
+              {
+                "product_id": "string",
+                "quantity": 1,
+                "price": 0
+              }
+            ],
+            "tracking_number": "string",
+            "estimated_delivery": "2024-12-31"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Order details returned"
+            },
+            {
+              "code": 404,
+              "description": "Order not found"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/admin/sellers/{seller_id}/approve",
+          "purpose": "Approve a seller registration request",
+          "request_body": {},
+          "response_body": {
+            "seller_id": "string",
+            "status": "approved",
+            "approved_at": "2024-10-30T12:00:00Z"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Seller approved"
+            },
+            {
+              "code": 404,
+              "description": "Seller not found"
+            }
+          ]
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "/api/admin/refunds/{order_id}",
+          "purpose": "Process a refund request for an order",
+          "request_body": {
+            "reason": "string",
+            "amount": 0
+          },
+          "response_body": {
+            "order_id": "string",
+            "refund_status": "processed",
+            "refunded_amount": 0,
+            "processed_at": "2024-10-30T12:30:00Z"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Refund processed"
+            },
+            {
+              "code": 400,
+              "description": "Invalid refund request"
+            }
+          ]
+        }
+      ]
+    },
+    "Project Structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Cache / Message Broker",
+          "technology": "Redis"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        }
+      ],
+      "architecture": "Micro\u2011service style with a single FastAPI service handling authentication, product, cart, order and admin APIs. React/Vite SPA consumes these APIs. PostgreSQL stores relational data; Redis provides session caching and async task queue (Celery). Docker composes services; Nginx terminates TLS and load\u2011balances. Stripe integration for payments, JWT for auth, and background workers process refunds and order notifications.",
+      "dependencies": [
+        "python-jose (JWT)",
+        "stripe",
+        "celery",
+        "rabbitmq",
+        "pydantic",
+        "axios",
+        "tailwindcss",
+        "pytest"
+      ],
+      "folders": [
+        "backend",
+        "frontend",
+        "docs",
+        "scripts",
+        "configs",
+        "tests",
+        "migrations",
+        "docker"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        A[React SPA] -->|REST/JSON| B[FastAPI Gateway]\n    end\n    subgraph Services\n        B --> C[Auth Service]\n        B --> D[Product Service]\n        B --> E[Cart Service]\n        B --> F[Order Service]\n        B --> G[Admin Service]\n    end\n    C --> H[PostgreSQL]\n    D --> H\n    E --> H\n    F --> H\n    G --> H\n    F --> I[Redis Cache]\n    F --> J[Celery Workers]\n    J --> K[RabbitMQ]\n    F --> L[Stripe API]\n    G --> M[Refund Queue]\n    M --> J\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px"
+    },
+    "Documentation": {
+      "readme": "E\u2011Commerce Platform enables customers to browse catalogs, add items to a cart, checkout with online payments, and track orders. Sellers register, await admin approval, then list products and manage inventory. Admins approve sellers, oversee refunds, and monitor system health. Built with Node.js, Express, React, PostgreSQL, and Stripe. Emphasizes security, scalability, and performance.",
+      "api_documentation": "POST /api/auth/login \u2013 user auth, returns JWT. POST /api/sellers/register \u2013 submit seller info. GET /api/sellers/:id/status \u2013 approval status. POST /api/products \u2013 admin\u2011approved seller adds product. GET /api/products \u2013 list with filters. POST /api/cart \u2013 add item, requires JWT. POST /api/orders \u2013 create order, payment via Stripe. GET /api/orders/:id \u2013 order status. POST /api/refunds \u2013 admin processes refund.",
+      "installation": "Clone repo, run `npm install` in server and client directories. Set env vars: DB_URL, JWT_SECRET, STRIPE_KEY, ADMIN_EMAIL. Initialize PostgreSQL schema with `npm run migrate`. Seed admin user with `npm run seed`. Start server `npm start` and client `npm run start`. Use Docker compose for full stack.",
+      "deployment": "Containerize with Docker. Use multi\u2011stage build for Node server and React static files. Deploy to Kubernetes or AWS ECS with autoscaling. Configure PostgreSQL RDS and Redis cache. Set up CI/CD pipeline (GitHub Actions) to run tests, build images, and push to registry. Use Nginx as reverse proxy with TLS.",
+      "sprint_plan": "Sprint 1: Core user auth, product catalog API, UI list. Sprint 2: Cart, checkout integration with Stripe, order tracking. Sprint 3: Seller registration workflow, admin approval UI, inventory CRUD. Sprint 4: Refund handling, admin dashboard, security hardening. Sprint 5: Load testing, CI/CD, monitoring, documentation.",
+      "architecture": "Frontend: React SPA with Redux, communicates via REST over HTTPS. Backend: Node.js/Express microservice layer, JWT auth, business logic. Data: PostgreSQL for relational data, Redis for session cache. Payments: Stripe API. Messaging: RabbitMQ for async order processing. Deployed on Docker/K8s with horizontal pod autoscaling and load balancer."
+    }
+  },
+  "result": {
+    "project": {
+      "name": "E-Commerce Platform",
+      "summary": "Online marketplace for customers to browse, purchase, and track orders, with seller product management and admin oversight.",
+      "domain": "E-commerce"
+    },
+    "requirement_analysis": {
+      "functional_requirements": [
+        "Customers can browse the product catalogue",
+        "Customers can add products to a shopping cart",
+        "Customers can complete online payment and receive a receipt",
+        "Customers can track the status of their orders",
+        "Sellers can list products and manage inventory after admin approval"
+      ],
+      "non_functional_requirements": [
+        "The system must ensure data security and privacy",
+        "The platform must scale to support high traffic volumes",
+        "Response times for user actions should be under 2 seconds",
+        "The service must maintain 99.9% uptime"
+      ],
+      "actors": [
+        {
+          "name": "Customer",
+          "description": "Browse products, add items to cart, make purchases, and track orders"
+        },
+        {
+          "name": "Seller",
+          "description": "List products, update inventory, and fulfill orders after being approved"
+        },
+        {
+          "name": "Administrator",
+          "description": "Approve sellers, manage refunds, and oversee platform operations"
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Browse Products",
+          "actor": "Customer",
+          "description": "Search and filter the product catalogue to view product details"
+        },
+        {
+          "name": "Add Product to Cart",
+          "actor": "Customer",
+          "description": "Select items and add them to a shopping cart for later checkout"
+        },
+        {
+          "name": "Checkout and Pay",
+          "actor": "Customer",
+          "description": "Enter payment information, complete the transaction, and receive a receipt"
+        },
+        {
+          "name": "List and Manage Products",
+          "actor": "Seller",
+          "description": "Create product listings, set prices, and update stock levels"
+        },
+        {
+          "name": "Approve Seller and Process Refund",
+          "actor": "Administrator",
+          "description": "Validate seller applications and handle customer refund requests"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Customers can browse the product catalogue",
+          "criteria": [
+            "Search results are displayed within 2 seconds",
+            "Filters and sorting work correctly for all categories"
+          ]
+        },
+        {
+          "requirement": "Customers can add products to a shopping cart",
+          "criteria": [
+            "Cart updates instantly after adding an item",
+            "Quantity cannot exceed available stock"
+          ]
+        },
+        {
+          "requirement": "Customers can complete online payment and receive a receipt",
+          "criteria": [
+            "Payment gateway returns success or failure within 5 seconds",
+            "A confirmation email with receipt is sent to the customer"
+          ]
+        },
+        {
+          "requirement": "Sellers can list products and manage inventory after admin approval",
+          "criteria": [
+            "New product listings appear in the catalogue within 1 minute",
+            "Inventory changes are reflected in real\u2011time for customers"
+          ]
+        },
+        {
+          "requirement": "Administrators can approve sellers and handle refunds",
+          "criteria": [
+            "Seller approval triggers an email notification",
+            "Refunds are processed and reflected in the system within 48 hours"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "user_stories": [
+      {
+        "id": "US-001",
+        "story": "As a customer, I want to browse a product catalogue, so that I can find items to purchase.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "The catalogue displays product name, image, price, and stock status.",
+          "Customers can filter and sort products by category, price, and rating."
+        ]
+      },
+      {
+        "id": "US-002",
+        "story": "As a customer, I want to add products to a cart, so that I can purchase multiple items in one order.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Items can be added, updated quantity, or removed from the cart.",
+          "Cart persists across user sessions until checkout or manual clearing."
+        ]
+      },
+      {
+        "id": "US-003",
+        "story": "As a customer, I want to pay online securely, so that my transaction is safe and completed quickly.",
+        "priority": "High",
+        "story_points": 8,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Payment gateway supports credit/debit cards and tokenized payments with SSL encryption.",
+          "Transaction status is confirmed and displayed to the user immediately."
+        ]
+      },
+      {
+        "id": "US-004",
+        "story": "As a seller, I want to list products after approval, so that I can sell items on the platform.",
+        "priority": "Medium",
+        "story_points": 5,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Approved sellers can create, edit, and delete product listings with images and inventory levels.",
+          "Listings become visible to customers only after the seller is approved by an administrator."
+        ]
+      },
+      {
+        "id": "US-005",
+        "story": "As an administrator, I want to approve sellers, so that only vetted vendors can sell on the platform.",
+        "priority": "Medium",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Admin can view seller applications and approve or reject them.",
+          "Sellers receive notification of approval status via email."
+        ]
+      },
+      {
+        "id": "US-006",
+        "story": "As an administrator, I want to handle refund requests, so that customers receive timely resolutions.",
+        "priority": "Low",
+        "story_points": 2,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Admin can view, approve, or deny refund requests with reason codes.",
+          "Customers are notified of the refund decision and status updates."
+        ]
+      }
+    ],
+    "uml": {
+      "use_case": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Seller| ApproveSeller\n    Admin -->|Handle Refund| HandleRefund",
+      "class_diagram": "classDiagram\n    class Customer {\n        +id\n        +name\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : placedBy\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves",
+      "sequence": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebUI\n    participant CS as CartService\n    participant PS as PaymentService\n    participant OS as OrderService\n    C->>UI: Browse catalog\n    C->>UI: Add product to cart\n    UI->>CS: AddItem(productId)\n    C->>UI: Checkout\n    UI->>PS: ProcessPayment(details)\n    PS-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cartId)\n    OS-->>UI: OrderConfirmed\n    C->>UI: Track order\n    UI->>OS: GetOrderStatus(orderId)\n    OS-->>UI: status"
+    },
+    "database": {
+      "tables": [
+        {
+          "table": "users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "password_hash",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_admin",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "sellers",
+          "columns": [
+            {
+              "name": "seller_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "users.user_id"
+            },
+            {
+              "name": "store_name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "approved",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "products",
+          "columns": [
+            {
+              "name": "product_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "seller_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "sellers.seller_id"
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "price",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "stock",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "orders",
+          "columns": [
+            {
+              "name": "order_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "users.user_id"
+            },
+            {
+              "name": "order_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "total_amount",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "users.user_id",
+          "to": "sellers.user_id",
+          "cardinality": "1:N",
+          "description": "A user can be a seller"
+        },
+        {
+          "from": "users.user_id",
+          "to": "orders.user_id",
+          "cardinality": "1:N",
+          "description": "A user can place many orders"
+        },
+        {
+          "from": "sellers.seller_id",
+          "to": "products.seller_id",
+          "cardinality": "1:N",
+          "description": "A seller lists multiple products"
+        }
+      ],
+      "sql": "CREATE TABLE users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    password_hash TEXT,\n    is_admin BOOLEAN\n);\n\nCREATE TABLE sellers (\n    seller_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    store_name TEXT,\n    approved BOOLEAN,\n    FOREIGN KEY (user_id) REFERENCES users(user_id)\n);\n\nCREATE TABLE products (\n    product_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    seller_id INTEGER,\n    name TEXT,\n    description TEXT,\n    price REAL,\n    stock INTEGER,\n    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)\n);\n\nCREATE TABLE orders (\n    order_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    order_date DATETIME,\n    total_amount REAL,\n    status TEXT,\n    FOREIGN KEY (user_id) REFERENCES users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ SELLERS_USER_ID : \"A user can be a seller\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"A user can place many orders\"\nSELLERS_SELLER_ID ||--o{ PRODUCTS_SELLER_ID : \"A seller lists multiple products\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_admin\n}\nSELLERS {\n    integer seller_id PK\n    integer user_id FK\n    text store_name\n    boolean approved\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "apis": [
+      {
+        "method": "GET",
+        "endpoint": "/api/products",
+        "purpose": "Retrieve a list of available products with optional filters",
+        "request_body": {},
+        "response_body": {
+          "products": [
+            {
+              "id": "string",
+              "name": "string",
+              "price": 0,
+              "currency": "USD",
+              "stock": 0
+            }
+          ],
+          "page": 1,
+          "total_pages": 1
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Products retrieved successfully"
+          },
+          {
+            "code": 400,
+            "description": "Invalid query parameters"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/cart/items",
+        "purpose": "Add a product to the customer's shopping cart",
+        "request_body": {
+          "product_id": "string",
+          "quantity": 1
+        },
+        "response_body": {
+          "cart_id": "string",
+          "items": [
+            {
+              "product_id": "string",
+              "quantity": 1,
+              "subtotal": 0
+            }
+          ],
+          "total": 0
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Item added to cart"
+          },
+          {
+            "code": 400,
+            "description": "Invalid product or insufficient stock"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/orders",
+        "purpose": "Create an order and process payment",
+        "request_body": {
+          "cart_id": "string",
+          "payment_method": "string",
+          "shipping_address": {
+            "line1": "string",
+            "city": "string",
+            "postal_code": "string",
+            "country": "string"
+          }
+        },
+        "response_body": {
+          "order_id": "string",
+          "status": "pending",
+          "total_amount": 0,
+          "currency": "USD"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Order created and payment processed"
+          },
+          {
+            "code": 402,
+            "description": "Payment required or failed"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/orders/{order_id}",
+        "purpose": "Retrieve order details and tracking information",
+        "request_body": {},
+        "response_body": {
+          "order_id": "string",
+          "status": "shipped",
+          "items": [
+            {
+              "product_id": "string",
+              "quantity": 1,
+              "price": 0
+            }
+          ],
+          "tracking_number": "string",
+          "estimated_delivery": "2024-12-31"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Order details returned"
+          },
+          {
+            "code": 404,
+            "description": "Order not found"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/admin/sellers/{seller_id}/approve",
+        "purpose": "Approve a seller registration request",
+        "request_body": {},
+        "response_body": {
+          "seller_id": "string",
+          "status": "approved",
+          "approved_at": "2024-10-30T12:00:00Z"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Seller approved"
+          },
+          {
+            "code": 404,
+            "description": "Seller not found"
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/api/admin/refunds/{order_id}",
+        "purpose": "Process a refund request for an order",
+        "request_body": {
+          "reason": "string",
+          "amount": 0
+        },
+        "response_body": {
+          "order_id": "string",
+          "refund_status": "processed",
+          "refunded_amount": 0,
+          "processed_at": "2024-10-30T12:30:00Z"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Refund processed"
+          },
+          {
+            "code": 400,
+            "description": "Invalid refund request"
+          }
+        ]
+      }
+    ],
+    "project_structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Cache / Message Broker",
+          "technology": "Redis"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Web Server / Reverse Proxy",
+          "technology": "Nginx"
+        }
+      ],
+      "architecture": "Micro\u2011service style with a single FastAPI service handling authentication, product, cart, order and admin APIs. React/Vite SPA consumes these APIs. PostgreSQL stores relational data; Redis provides session caching and async task queue (Celery). Docker composes services; Nginx terminates TLS and load\u2011balances. Stripe integration for payments, JWT for auth, and background workers process refunds and order notifications.",
+      "dependencies": [
+        "python-jose (JWT)",
+        "stripe",
+        "celery",
+        "rabbitmq",
+        "pydantic",
+        "axios",
+        "tailwindcss",
+        "pytest"
+      ],
+      "folders": [
+        "backend",
+        "frontend",
+        "docs",
+        "scripts",
+        "configs",
+        "tests",
+        "migrations",
+        "docker"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        A[React SPA] -->|REST/JSON| B[FastAPI Gateway]\n    end\n    subgraph Services\n        B --> C[Auth Service]\n        B --> D[Product Service]\n        B --> E[Cart Service]\n        B --> F[Order Service]\n        B --> G[Admin Service]\n    end\n    C --> H[PostgreSQL]\n    D --> H\n    E --> H\n    F --> H\n    G --> H\n    F --> I[Redis Cache]\n    F --> J[Celery Workers]\n    J --> K[RabbitMQ]\n    F --> L[Stripe API]\n    G --> M[Refund Queue]\n    M --> J\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px"
+    },
+    "documentation": {
+      "readme": "E\u2011Commerce Platform enables customers to browse catalogs, add items to a cart, checkout with online payments, and track orders. Sellers register, await admin approval, then list products and manage inventory. Admins approve sellers, oversee refunds, and monitor system health. Built with Node.js, Express, React, PostgreSQL, and Stripe. Emphasizes security, scalability, and performance.",
+      "api_documentation": "POST /api/auth/login \u2013 user auth, returns JWT. POST /api/sellers/register \u2013 submit seller info. GET /api/sellers/:id/status \u2013 approval status. POST /api/products \u2013 admin\u2011approved seller adds product. GET /api/products \u2013 list with filters. POST /api/cart \u2013 add item, requires JWT. POST /api/orders \u2013 create order, payment via Stripe. GET /api/orders/:id \u2013 order status. POST /api/refunds \u2013 admin processes refund.",
+      "installation": "Clone repo, run `npm install` in server and client directories. Set env vars: DB_URL, JWT_SECRET, STRIPE_KEY, ADMIN_EMAIL. Initialize PostgreSQL schema with `npm run migrate`. Seed admin user with `npm run seed`. Start server `npm start` and client `npm run start`. Use Docker compose for full stack.",
+      "deployment": "Containerize with Docker. Use multi\u2011stage build for Node server and React static files. Deploy to Kubernetes or AWS ECS with autoscaling. Configure PostgreSQL RDS and Redis cache. Set up CI/CD pipeline (GitHub Actions) to run tests, build images, and push to registry. Use Nginx as reverse proxy with TLS.",
+      "sprint_plan": "Sprint 1: Core user auth, product catalog API, UI list. Sprint 2: Cart, checkout integration with Stripe, order tracking. Sprint 3: Seller registration workflow, admin approval UI, inventory CRUD. Sprint 4: Refund handling, admin dashboard, security hardening. Sprint 5: Load testing, CI/CD, monitoring, documentation.",
+      "architecture": "Frontend: React SPA with Redux, communicates via REST over HTTPS. Backend: Node.js/Express microservice layer, JWT auth, business logic. Data: PostgreSQL for relational data, Redis for session cache. Payments: Stripe API. Messaging: RabbitMQ for async order processing. Deployed on Docker/K8s with horizontal pod autoscaling and load balancer."
+    },
+    "review": {
+      "needs_clarification": false,
+      "questions": []
+    }
+  },
+  "sql_valid": true,
+  "sql_validation": {
+    "sql_syntax": "Valid",
+    "semantic": "Valid"
+  },
+  "counts": {
+    "fr": 5,
+    "stories": 6,
+    "tables": 4,
+    "apis": 6
+  },
+  "compliance": {
+    "satisfied": 35,
+    "checked": 35,
+    "ccr": 1.0,
+    "rules": [
+      {
+        "module": "Requirement Analyzer",
+        "rule": "FR = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "NFR = 4",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "actors = 3",
+        "passed": true,
+        "detail": "3"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use cases = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use-case actor in actors",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "no generic actor",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "5 criteria groups",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "6 stories",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "IDs US-001..US-006",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "Connextra template",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "priority in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "points in {1,2,3,5,8}",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "sprint in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "use_case starts 'flowchart LR'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "class_diagram starts 'classDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "sequence starts 'sequenceDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 6 classes",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 8 relationships",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4 tables",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4-6 columns each",
+        "passed": true,
+        "detail": "5, 4, 6, 5"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "one INTEGER PK each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "allowed types",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "FK as table.column",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "6 endpoints",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "API Designer",
+        "rule": "allowed HTTP verbs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "<= 2 status codes each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 stack entries",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 dependencies",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 folders",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "React + Vite + FastAPI",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "diagram starts 'flowchart TD'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "6 sections",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "each < 100 words",
+        "passed": true,
+        "detail": "52, 57, 46, 49, 44, 46"
+      }
+    ]
+  },
+  "coverage": {
+    "expected": [
+      "Users",
+      "Products",
+      "Orders",
+      "OrderItems",
+      "Payments",
+      "Shipments",
+      "Refunds"
+    ],
+    "generated_tables": [
+      "users",
+      "sellers",
+      "products",
+      "orders"
+    ],
+    "covered": [
+      "Users",
+      "Products",
+      "Orders"
+    ],
+    "missing": [
+      "OrderItems",
+      "Payments",
+      "Shipments",
+      "Refunds"
+    ],
+    "matched_by": {
+      "Users": "user",
+      "Products": "product",
+      "Orders": "order"
+    },
+    "ec": 0.4286
+  },
+  "consistency": {
+    "cacs": 0.5,
+    "checks": [
+      {
+        "id": "C1",
+        "check": "FR -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs have a matching story"
+      },
+      {
+        "id": "C2",
+        "check": "Use cases -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 use cases have a matching story"
+      },
+      {
+        "id": "C3",
+        "check": "FR -> API endpoints",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "4/5 FRs served by an endpoint; missing: ['Customers can complete online payment and receive a receipt']"
+      },
+      {
+        "id": "C4",
+        "check": "Actors <-> UML use-case actors",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "3/3 actors appear; generic nodes: none"
+      },
+      {
+        "id": "C5",
+        "check": "DB tables <-> UML classes",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/4 tables have a class; classes without table: ['admin', 'cart', 'customer']"
+      },
+      {
+        "id": "C6",
+        "check": "API design <-> documented APIs",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/6 designed endpoints documented; extra documented: 5"
+      },
+      {
+        "id": "C7",
+        "check": "N:M relationships <-> junction table",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "no junction table for: ['Cart-Product', 'Order-Product']"
+      },
+      {
+        "id": "C8",
+        "check": "API payloads <-> DB schema",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "uuid ids vs INTEGER keys: no ; 20/29 payload fields have no column: ['amount', 'approvedat', 'cartid', 'city', 'country', 'currency', 'estimateddelivery', 'line1']"
+      },
+      {
+        "id": "C9",
+        "check": "Project structure <-> docs architecture",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "conflicts: [\"backend: ['FastAPI'] vs ['Express', 'Node.js']\"]"
+      },
+      {
+        "id": "C10",
+        "check": "Story sprints <-> docs sprint plan",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "stories use 3 sprints; plan uses 5"
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "D4-r3-use_case",
+      "kind": "use_case",
+      "code": "flowchart LR\n    Customer -->|Browse| BrowseCatalog\n    Customer -->|Add to Cart| AddToCart\n    Customer -->|Pay| OnlinePayment\n    Customer -->|Track| TrackOrder\n    Seller -->|List Products| ListProduct\n    Seller -->|Manage Inventory| ManageInventory\n    Admin -->|Approve Seller| ApproveSeller\n    Admin -->|Handle Refund| HandleRefund",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D4-r3-class_diagram",
+      "kind": "class_diagram",
+      "code": "classDiagram\n    class Customer {\n        +id\n        +name\n    }\n    class Cart {\n        +items\n    }\n    class Order {\n        +orderId\n        +status\n    }\n    class Product {\n        +productId\n        +price\n    }\n    class Seller {\n        +sellerId\n        +storeName\n    }\n    class Admin {\n        +adminId\n    }\n    Customer \"1\" --> \"1\" Cart : has\n    Cart \"*\" --> \"*\" Product : contains\n    Order \"*\" --> \"*\" Product : contains\n    Order \"1\" --> \"1\" Customer : placedBy\n    Seller \"1\" --> \"*\" Product : lists\n    Admin --> Seller : approves",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D4-r3-sequence",
+      "kind": "sequence",
+      "code": "sequenceDiagram\n    participant C as Customer\n    participant UI as WebUI\n    participant CS as CartService\n    participant PS as PaymentService\n    participant OS as OrderService\n    C->>UI: Browse catalog\n    C->>UI: Add product to cart\n    UI->>CS: AddItem(productId)\n    C->>UI: Checkout\n    UI->>PS: ProcessPayment(details)\n    PS-->>UI: PaymentSuccess\n    UI->>OS: CreateOrder(cartId)\n    OS-->>UI: OrderConfirmed\n    C->>UI: Track order\n    UI->>OS: GetOrderStatus(orderId)\n    OS-->>UI: status",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D4-r3-er",
+      "kind": "er_diagram",
+      "code": "erDiagram\nUSERS_USER_ID ||--o{ SELLERS_USER_ID : \"A user can be a seller\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"A user can place many orders\"\nSELLERS_SELLER_ID ||--o{ PRODUCTS_SELLER_ID : \"A seller lists multiple products\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    boolean is_admin\n}\nSELLERS {\n    integer seller_id PK\n    integer user_id FK\n    text store_name\n    boolean approved\n}\nPRODUCTS {\n    integer product_id PK\n    integer seller_id FK\n    text name\n    text description\n    real price\n    integer stock\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    datetime order_date\n    real total_amount\n    text status\n}",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D4-r3-arch",
+      "kind": "architecture_diagram",
+      "code": "flowchart TD\n    subgraph Client\n        A[React SPA] -->|REST/JSON| B[FastAPI Gateway]\n    end\n    subgraph Services\n        B --> C[Auth Service]\n        B --> D[Product Service]\n        B --> E[Cart Service]\n        B --> F[Order Service]\n        B --> G[Admin Service]\n    end\n    C --> H[PostgreSQL]\n    D --> H\n    E --> H\n    F --> H\n    G --> H\n    F --> I[Redis Cache]\n    F --> J[Celery Workers]\n    J --> K[RabbitMQ]\n    F --> L[Stripe API]\n    G --> M[Refund Queue]\n    M --> J\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "rerun_of_failed": "AI JSON generation failed. First error: Could not connect to Groq: [Errno 11001] getaddrinfo failed. Retry error: Could not connect to Groq: [Errno 11001] getaddrinfo failed"
+}

@@ -1,0 +1,1712 @@
+{
+  "domain_id": "D3",
+  "domain": "Library",
+  "repeat": 1,
+  "latency_s": 18.164,
+  "wall_clock_s": 56.513,
+  "rate_limit_wait_s": 38.348,
+  "succeeded": true,
+  "error": null,
+  "instrumentation": {
+    "main_calls": 7,
+    "first_attempt_ok": 7,
+    "gateway_retries": 0,
+    "repair_calls": 0,
+    "repair_kinds": [],
+    "http_requests": 7,
+    "prompt_tokens": 3162,
+    "completion_tokens": 5665,
+    "total_tokens": 8827,
+    "module_seconds": {
+      "Requirement Analyzer": 3.006,
+      "User Story Generator": 2.491,
+      "UML Generator": 2.501,
+      "Database Designer": 3.545,
+      "API Designer": 2.531,
+      "Project Structure": 2.313,
+      "Documentation": 1.777
+    },
+    "rate_limit_waits": 8,
+    "rate_limit_wait_s": 38.348
+  },
+  "requests": [
+    {
+      "module": "Requirement Analyzer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.005,
+      "usage": {
+        "prompt_tokens": 856,
+        "completion_tokens": 1008,
+        "total_tokens": 1864
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "User Story Generator",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.475,
+      "usage": {
+        "prompt_tokens": 520,
+        "completion_tokens": 756,
+        "total_tokens": 1276
+      },
+      "error": null,
+      "rate_limit_waits": 2,
+      "rate_limit_wait_s": 5.457
+    },
+    {
+      "module": "UML Generator",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.497,
+      "usage": {
+        "prompt_tokens": 331,
+        "completion_tokens": 711,
+        "total_tokens": 1042
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 5.103
+    },
+    {
+      "module": "Database Designer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.542,
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 1288,
+        "total_tokens": 1707
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 3.453
+    },
+    {
+      "module": "API Designer",
+      "kind": "first",
+      "max_tokens": 1900,
+      "seconds": 2.519,
+      "usage": {
+        "prompt_tokens": 370,
+        "completion_tokens": 865,
+        "total_tokens": 1235
+      },
+      "error": null,
+      "rate_limit_waits": 2,
+      "rate_limit_wait_s": 10.062
+    },
+    {
+      "module": "Project Structure",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.312,
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 626,
+        "total_tokens": 981
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 6.242
+    },
+    {
+      "module": "Documentation",
+      "kind": "first",
+      "max_tokens": 1600,
+      "seconds": 1.773,
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 411,
+        "total_tokens": 722
+      },
+      "error": null,
+      "rate_limit_waits": 1,
+      "rate_limit_wait_s": 4.322
+    }
+  ],
+  "calls": [
+    {
+      "module": "Requirement Analyzer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "User Story Generator",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "UML Generator",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Database Designer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "API Designer",
+      "purpose": "main",
+      "max_tokens": 1900,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Project Structure",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Documentation",
+      "purpose": "main",
+      "max_tokens": 1600,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    }
+  ],
+  "raw_outputs": {
+    "Requirement Analyzer": {
+      "project": {
+        "name": "Online Library Management System",
+        "summary": "Web platform for members to search, borrow, return, and renew books, with librarian administration and email reminders.",
+        "domain": "Library Services"
+      },
+      "functional_requirements": [
+        "Members can search the catalogue",
+        "Members can borrow books",
+        "Members can return books",
+        "Members can renew loans",
+        "Librarians can manage books, members, loans and collect fines"
+      ],
+      "non_functional_requirements": [
+        "The system must be easy to use with an intuitive UI",
+        "The system must enforce authentication and authorization for security",
+        "The system must be reliable with 99.9% uptime",
+        "Email reminders must be sent at least 24 hours before due dates"
+      ],
+      "actors": [
+        {
+          "name": "Member",
+          "description": "A registered user who searches, borrows, returns, and renews books"
+        },
+        {
+          "name": "Librarian",
+          "description": "Staff who administers books, members, loans and handles fine collection"
+        },
+        {
+          "name": "Email Service",
+          "description": "External service that sends due\u2011date reminder emails to members"
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Search Catalogue",
+          "actor": "Member",
+          "description": "Member queries the catalogue by title, author or ISBN and views results"
+        },
+        {
+          "name": "Borrow Book",
+          "actor": "Member",
+          "description": "Member selects an available book and creates a loan record"
+        },
+        {
+          "name": "Return Book",
+          "actor": "Member",
+          "description": "Member returns a borrowed book, updating its status and calculating any overdue fine"
+        },
+        {
+          "name": "Manage Inventory",
+          "actor": "Librarian",
+          "description": "Librarian adds, edits, or removes books and updates member and loan information"
+        },
+        {
+          "name": "Send Due Reminder",
+          "actor": "Email Service",
+          "description": "Email Service dispatches reminder emails to members 24 hours before loan due dates"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Members can search the catalogue",
+          "criteria": [
+            "Search results are returned within 2 seconds",
+            "Search supports title, author, and ISBN filters"
+          ]
+        },
+        {
+          "requirement": "Members can borrow books",
+          "criteria": [
+            "System verifies book availability before creating loan",
+            "Loan record includes due date and member ID"
+          ]
+        },
+        {
+          "requirement": "Members can return books",
+          "criteria": [
+            "Book status changes to available upon return",
+            "Any overdue fine is calculated and displayed to the member"
+          ]
+        },
+        {
+          "requirement": "Members can renew loans",
+          "criteria": [
+            "Renewal is allowed only if no other member has placed a hold",
+            "Due date is extended by the maximum allowed renewal period"
+          ]
+        },
+        {
+          "requirement": "Librarians can manage books, members, loans and collect fines",
+          "criteria": [
+            "Librarian can add, edit, and delete book records",
+            "System generates a printable fine receipt for overdue items"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "User Story Generator": {
+      "user_stories": [
+        {
+          "id": "US-001",
+          "story": "As a member, I want to search the catalogue, so that I can find books of interest.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Search returns results matching title, author, or ISBN.",
+            "Results are displayed within 2 seconds."
+          ]
+        },
+        {
+          "id": "US-002",
+          "story": "As a member, I want to borrow books, so that I can read them at home.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Member can borrow up to the allowed limit of books.",
+            "Borrowed books are recorded with a due date."
+          ]
+        },
+        {
+          "id": "US-003",
+          "story": "As a member, I want to return books, so that they become available for others.",
+          "priority": "Medium",
+          "story_points": 3,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Returned books are marked as available in the catalogue.",
+            "System calculates any overdue fines at return."
+          ]
+        },
+        {
+          "id": "US-004",
+          "story": "As a member, I want to renew loans, so that I can extend my reading time without visiting the library.",
+          "priority": "Medium",
+          "story_points": 2,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Renewal is allowed only if no other member has placed a hold.",
+            "New due date is updated and communicated to the member."
+          ]
+        },
+        {
+          "id": "US-005",
+          "story": "As a librarian, I want to manage books, members, and loans and collect fines, so that the library operates smoothly.",
+          "priority": "High",
+          "story_points": 8,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Librarian can add, edit, or remove books and member records.",
+            "System tracks loans and automatically calculates and records overdue fines."
+          ]
+        },
+        {
+          "id": "US-006",
+          "story": "As a system, I want to send email reminders before due dates, so that members are aware of upcoming returns.",
+          "priority": "Low",
+          "story_points": 1,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Reminder emails are sent 3 days before the due date.",
+            "Emails contain book title, due date, and renewal link."
+          ]
+        }
+      ]
+    },
+    "UML Generator": {
+      "use_case": "flowchart LR\n    Member -->|search| Catalogue\n    Member -->|borrow| System\n    Member -->|return| System\n    Member -->|renew| System\n    Librarian -->|manage books| System\n    Librarian -->|manage members| System\n    Librarian -->|manage loans| System\n    System -->|collect fines| Librarian\n    System -->|send reminder| EmailService",
+      "class_diagram": "classDiagram\n    class Member {\n        +memberId\n        +name\n        +searchCatalogue()\n        +borrowBook()\n        +returnBook()\n        +renewLoan()\n    }\n    class Librarian {\n        +librarianId\n        +manageBooks()\n        +manageMembers()\n        +manageLoans()\n        +collectFines()\n    }\n    class Book {\n        +ISBN\n        +title\n        +author\n        +available\n    }\n    class Loan {\n        +loanId\n        +dueDate\n        +isOverdue()\n    }\n    class Catalogue {\n        +search()\n    }\n    class EmailService {\n        +sendReminder()\n    }\n    Member \"1\" --> \"*\" Loan : borrows\n    Loan \"*\" --> \"1\" Book : contains\n    Librarian \"1\" --> \"*\" Book : manages\n    Librarian \"1\" --> \"*\" Member : manages\n    Librarian \"1\" --> \"*\" Loan : manages\n    Loan \"*\" --> EmailService : triggers\n    EmailService --> Member : notifies",
+      "sequence": "sequenceDiagram\n    participant M as Member\n    participant S as System\n    participant L as Librarian\n    participant E as EmailService\n    M->>S: request renew loan\n    S->>S: check due date\n    alt overdue\n        S->>L: calculate fine\n        L->>S: fine collected\n    else\n        S->>S: extend due date\n    end\n    S->>E: send reminder email\n    E->>M: email reminder"
+    },
+    "Database Designer": {
+      "tables": [
+        {
+          "table": "Members",
+          "columns": [
+            {
+              "name": "member_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "join_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_active",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Books",
+          "columns": [
+            {
+              "name": "book_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "title",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "author",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "isbn",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "copies_total",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Loans",
+          "columns": [
+            {
+              "name": "loan_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "member_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Members.member_id"
+            },
+            {
+              "name": "book_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Books.book_id"
+            },
+            {
+              "name": "loan_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "due_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "returned_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Librarians",
+          "columns": [
+            {
+              "name": "librarian_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "hire_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Members.member_id",
+          "to": "Loans.member_id",
+          "cardinality": "1:N",
+          "description": "A member can have many loans"
+        },
+        {
+          "from": "Books.book_id",
+          "to": "Loans.book_id",
+          "cardinality": "1:N",
+          "description": "A book can be loaned many times"
+        },
+        {
+          "from": "Librarians.librarian_id",
+          "to": "Books.book_id",
+          "cardinality": "1:N",
+          "description": "A librarian manages many books"
+        }
+      ],
+      "sql": "CREATE TABLE Members (\n    member_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    join_date DATETIME,\n    is_active BOOLEAN\n);\n\nCREATE TABLE Books (\n    book_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    title TEXT,\n    author TEXT,\n    isbn TEXT,\n    copies_total INTEGER\n);\n\nCREATE TABLE Loans (\n    loan_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    member_id INTEGER,\n    book_id INTEGER,\n    loan_date DATETIME,\n    due_date DATETIME,\n    returned_date DATETIME,\n    FOREIGN KEY (member_id) REFERENCES Members(member_id),\n    FOREIGN KEY (book_id) REFERENCES Books(book_id)\n);\n\nCREATE TABLE Librarians (\n    librarian_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    hire_date DATETIME\n);",
+      "er_diagram": "erDiagram\nMEMBERS_MEMBER_ID ||--o{ LOANS_MEMBER_ID : \"A member can have many loans\"\nBOOKS_BOOK_ID ||--o{ LOANS_BOOK_ID : \"A book can be loaned many times\"\nLIBRARIANS_LIBRARIAN_ID ||--o{ BOOKS_BOOK_ID : \"A librarian manages many books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "API Designer": {
+      "apis": [
+        {
+          "method": "GET",
+          "endpoint": "/api/books",
+          "purpose": "Search catalogue for books",
+          "request_body": {},
+          "response_body": {
+            "books": [
+              {
+                "id": "string",
+                "title": "string",
+                "author": "string",
+                "available_copies": 0
+              }
+            ],
+            "total": 0
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Successful retrieval of book list"
+            },
+            {
+              "code": 400,
+              "description": "Invalid query parameters"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/loans",
+          "purpose": "Borrow a book",
+          "request_body": {
+            "member_id": "string",
+            "book_id": "string"
+          },
+          "response_body": {
+            "loan_id": "string",
+            "due_date": "YYYY-MM-DD"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Loan created successfully"
+            },
+            {
+              "code": 409,
+              "description": "No available copies or member limit reached"
+            }
+          ]
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "/api/loans/{loan_id}/return",
+          "purpose": "Return a borrowed book",
+          "request_body": {},
+          "response_body": {
+            "loan_id": "string",
+            "returned_at": "YYYY-MM-DDTHH:mm:ssZ",
+            "fine_amount": 0.0
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Book returned and fine calculated"
+            },
+            {
+              "code": 404,
+              "description": "Loan not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "endpoint": "/api/loans/{loan_id}/renew",
+          "purpose": "Renew an active loan",
+          "request_body": {},
+          "response_body": {
+            "loan_id": "string",
+            "new_due_date": "YYYY-MM-DD"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Loan renewed successfully"
+            },
+            {
+              "code": 403,
+              "description": "Renewal not allowed (overdue or max renewals reached)"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/books",
+          "purpose": "Add a new book to the catalogue (librarian)",
+          "request_body": {
+            "title": "string",
+            "author": "string",
+            "isbn": "string",
+            "total_copies": 0
+          },
+          "response_body": {
+            "book_id": "string",
+            "message": "Book added"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Book created"
+            },
+            {
+              "code": 400,
+              "description": "Invalid book data"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "endpoint": "/api/members/{member_id}",
+          "purpose": "Remove a member (librarian)",
+          "request_body": {},
+          "response_body": {
+            "member_id": "string",
+            "message": "Member deleted"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Member removed"
+            },
+            {
+              "code": 404,
+              "description": "Member not found"
+            }
+          ]
+        }
+      ]
+    },
+    "Project Structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Migrations",
+          "technology": "Alembic"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Cache / Queue",
+          "technology": "Redis"
+        }
+      ],
+      "architecture": "A modular client\u2011server system: React/Vite SPA communicates via REST/JSON with FastAPI services. FastAPI handles authentication, business logic, and interacts with PostgreSQL through SQLAlchemy. Alembic manages schema migrations. Redis caches catalog queries and stores temporary session data. Docker composes services for reproducible deployment. Email service sends due\u2011date reminders. Security enforced with JWT and role\u2011based access (librarian vs member).",
+      "dependencies": [
+        "fastapi",
+        "uvicorn",
+        "sqlalchemy",
+        "psycopg2-binary",
+        "alembic",
+        "redis",
+        "python-jose",
+        "email-validator"
+      ],
+      "folders": [
+        "frontend",
+        "backend",
+        "backend/app/models",
+        "backend/app/routers",
+        "backend/app/services",
+        "tests",
+        "docker",
+        "docs"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI]\n        Auth[JWT Auth]\n        Biz[Business Logic]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n        Email[Email Service]\n    end\n    UI -->|REST API| API\n    API --> Auth\n    API --> Biz\n    Biz --> DB\n    Biz --> Cache\n    Biz --> Email\n    Email -->|SMTP| UserEmail[User Email]\n    Cache -->|Cache Hits| DB"
+    },
+    "Documentation": {
+      "readme": "Online Library Management System (OLMS) enables members to search, borrow, return, and renew books. Librarians manage catalog, members, loans, and fines. Email reminders are sent before due dates. The app prioritizes usability, security, and reliability.",
+      "api_documentation": "GET /books?query= - search catalog; GET /books/{id} - book details; POST /loans - borrow (memberId, bookId); PUT /loans/{id}/return - return; PATCH /loans/{id}/renew - extend due date; GET /members/{id}/loans - view member loans; POST /fines/pay - pay overdue fine; POST /notifications/reminder - trigger email reminder.",
+      "installation": "Clone repo, run `npm install` (Node.js 18+). Set up PostgreSQL DB, run `npm run migrate`. Configure .env with DB credentials, SMTP settings, JWT secret. Start with `npm start`.",
+      "deployment": "Containerize with Docker; use Dockerfile provided. Deploy to any cloud (AWS ECS, Azure App Service, GCP Cloud Run). Use PostgreSQL managed instance. Set environment variables for DB URL and email service. Enable HTTPS via reverse proxy.",
+      "sprint_plan": "Sprint 1: Core CRUD for books and members, authentication. Sprint 2: Loan workflow, due date logic, fine calculation. Sprint 3: Email reminder service, UI polishing. Sprint 4: Security hardening, testing, CI/CD pipeline.",
+      "architecture": "Three\u2011tier: Frontend (React), API layer (Express.js), Data layer (PostgreSQL). JWT for auth, role\u2011based access (member, librarian). Email service via Nodemailer. Services communicate via REST; Docker Compose orchestrates containers."
+    }
+  },
+  "result": {
+    "project": {
+      "name": "Online Library Management System",
+      "summary": "Web platform for members to search, borrow, return, and renew books, with librarian administration and email reminders.",
+      "domain": "Library Services"
+    },
+    "requirement_analysis": {
+      "functional_requirements": [
+        "Members can search the catalogue",
+        "Members can borrow books",
+        "Members can return books",
+        "Members can renew loans",
+        "Librarians can manage books, members, loans and collect fines"
+      ],
+      "non_functional_requirements": [
+        "The system must be easy to use with an intuitive UI",
+        "The system must enforce authentication and authorization for security",
+        "The system must be reliable with 99.9% uptime",
+        "Email reminders must be sent at least 24 hours before due dates"
+      ],
+      "actors": [
+        {
+          "name": "Member",
+          "description": "A registered user who searches, borrows, returns, and renews books"
+        },
+        {
+          "name": "Librarian",
+          "description": "Staff who administers books, members, loans and handles fine collection"
+        },
+        {
+          "name": "Email Service",
+          "description": "External service that sends due\u2011date reminder emails to members"
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Search Catalogue",
+          "actor": "Member",
+          "description": "Member queries the catalogue by title, author or ISBN and views results"
+        },
+        {
+          "name": "Borrow Book",
+          "actor": "Member",
+          "description": "Member selects an available book and creates a loan record"
+        },
+        {
+          "name": "Return Book",
+          "actor": "Member",
+          "description": "Member returns a borrowed book, updating its status and calculating any overdue fine"
+        },
+        {
+          "name": "Manage Inventory",
+          "actor": "Librarian",
+          "description": "Librarian adds, edits, or removes books and updates member and loan information"
+        },
+        {
+          "name": "Send Due Reminder",
+          "actor": "Email Service",
+          "description": "Email Service dispatches reminder emails to members 24 hours before loan due dates"
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "Members can search the catalogue",
+          "criteria": [
+            "Search results are returned within 2 seconds",
+            "Search supports title, author, and ISBN filters"
+          ]
+        },
+        {
+          "requirement": "Members can borrow books",
+          "criteria": [
+            "System verifies book availability before creating loan",
+            "Loan record includes due date and member ID"
+          ]
+        },
+        {
+          "requirement": "Members can return books",
+          "criteria": [
+            "Book status changes to available upon return",
+            "Any overdue fine is calculated and displayed to the member"
+          ]
+        },
+        {
+          "requirement": "Members can renew loans",
+          "criteria": [
+            "Renewal is allowed only if no other member has placed a hold",
+            "Due date is extended by the maximum allowed renewal period"
+          ]
+        },
+        {
+          "requirement": "Librarians can manage books, members, loans and collect fines",
+          "criteria": [
+            "Librarian can add, edit, and delete book records",
+            "System generates a printable fine receipt for overdue items"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "user_stories": [
+      {
+        "id": "US-001",
+        "story": "As a member, I want to search the catalogue, so that I can find books of interest.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Search returns results matching title, author, or ISBN.",
+          "Results are displayed within 2 seconds."
+        ]
+      },
+      {
+        "id": "US-002",
+        "story": "As a member, I want to borrow books, so that I can read them at home.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Member can borrow up to the allowed limit of books.",
+          "Borrowed books are recorded with a due date."
+        ]
+      },
+      {
+        "id": "US-003",
+        "story": "As a member, I want to return books, so that they become available for others.",
+        "priority": "Medium",
+        "story_points": 3,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Returned books are marked as available in the catalogue.",
+          "System calculates any overdue fines at return."
+        ]
+      },
+      {
+        "id": "US-004",
+        "story": "As a member, I want to renew loans, so that I can extend my reading time without visiting the library.",
+        "priority": "Medium",
+        "story_points": 2,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Renewal is allowed only if no other member has placed a hold.",
+          "New due date is updated and communicated to the member."
+        ]
+      },
+      {
+        "id": "US-005",
+        "story": "As a librarian, I want to manage books, members, and loans and collect fines, so that the library operates smoothly.",
+        "priority": "High",
+        "story_points": 8,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Librarian can add, edit, or remove books and member records.",
+          "System tracks loans and automatically calculates and records overdue fines."
+        ]
+      },
+      {
+        "id": "US-006",
+        "story": "As a system, I want to send email reminders before due dates, so that members are aware of upcoming returns.",
+        "priority": "Low",
+        "story_points": 1,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Reminder emails are sent 3 days before the due date.",
+          "Emails contain book title, due date, and renewal link."
+        ]
+      }
+    ],
+    "uml": {
+      "use_case": "flowchart LR\n    Member -->|search| Catalogue\n    Member -->|borrow| System\n    Member -->|return| System\n    Member -->|renew| System\n    Librarian -->|manage books| System\n    Librarian -->|manage members| System\n    Librarian -->|manage loans| System\n    System -->|collect fines| Librarian\n    System -->|send reminder| EmailService",
+      "class_diagram": "classDiagram\n    class Member {\n        +memberId\n        +name\n        +searchCatalogue()\n        +borrowBook()\n        +returnBook()\n        +renewLoan()\n    }\n    class Librarian {\n        +librarianId\n        +manageBooks()\n        +manageMembers()\n        +manageLoans()\n        +collectFines()\n    }\n    class Book {\n        +ISBN\n        +title\n        +author\n        +available\n    }\n    class Loan {\n        +loanId\n        +dueDate\n        +isOverdue()\n    }\n    class Catalogue {\n        +search()\n    }\n    class EmailService {\n        +sendReminder()\n    }\n    Member \"1\" --> \"*\" Loan : borrows\n    Loan \"*\" --> \"1\" Book : contains\n    Librarian \"1\" --> \"*\" Book : manages\n    Librarian \"1\" --> \"*\" Member : manages\n    Librarian \"1\" --> \"*\" Loan : manages\n    Loan \"*\" --> EmailService : triggers\n    EmailService --> Member : notifies",
+      "sequence": "sequenceDiagram\n    participant M as Member\n    participant S as System\n    participant L as Librarian\n    participant E as EmailService\n    M->>S: request renew loan\n    S->>S: check due date\n    alt overdue\n        S->>L: calculate fine\n        L->>S: fine collected\n    else\n        S->>S: extend due date\n    end\n    S->>E: send reminder email\n    E->>M: email reminder"
+    },
+    "database": {
+      "tables": [
+        {
+          "table": "Members",
+          "columns": [
+            {
+              "name": "member_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "join_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "is_active",
+              "type": "BOOLEAN",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Books",
+          "columns": [
+            {
+              "name": "book_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "title",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "author",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "isbn",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "copies_total",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Loans",
+          "columns": [
+            {
+              "name": "loan_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "member_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Members.member_id"
+            },
+            {
+              "name": "book_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Books.book_id"
+            },
+            {
+              "name": "loan_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "due_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "returned_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Librarians",
+          "columns": [
+            {
+              "name": "librarian_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "hire_date",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Members.member_id",
+          "to": "Loans.member_id",
+          "cardinality": "1:N",
+          "description": "A member can have many loans"
+        },
+        {
+          "from": "Books.book_id",
+          "to": "Loans.book_id",
+          "cardinality": "1:N",
+          "description": "A book can be loaned many times"
+        },
+        {
+          "from": "Librarians.librarian_id",
+          "to": "Books.book_id",
+          "cardinality": "1:N",
+          "description": "A librarian manages many books"
+        }
+      ],
+      "sql": "CREATE TABLE Members (\n    member_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    join_date DATETIME,\n    is_active BOOLEAN\n);\n\nCREATE TABLE Books (\n    book_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    title TEXT,\n    author TEXT,\n    isbn TEXT,\n    copies_total INTEGER\n);\n\nCREATE TABLE Loans (\n    loan_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    member_id INTEGER,\n    book_id INTEGER,\n    loan_date DATETIME,\n    due_date DATETIME,\n    returned_date DATETIME,\n    FOREIGN KEY (member_id) REFERENCES Members(member_id),\n    FOREIGN KEY (book_id) REFERENCES Books(book_id)\n);\n\nCREATE TABLE Librarians (\n    librarian_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    hire_date DATETIME\n);",
+      "er_diagram": "erDiagram\nMEMBERS_MEMBER_ID ||--o{ LOANS_MEMBER_ID : \"A member can have many loans\"\nBOOKS_BOOK_ID ||--o{ LOANS_BOOK_ID : \"A book can be loaned many times\"\nLIBRARIANS_LIBRARIAN_ID ||--o{ BOOKS_BOOK_ID : \"A librarian manages many books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "apis": [
+      {
+        "method": "GET",
+        "endpoint": "/api/books",
+        "purpose": "Search catalogue for books",
+        "request_body": {},
+        "response_body": {
+          "books": [
+            {
+              "id": "string",
+              "title": "string",
+              "author": "string",
+              "available_copies": 0
+            }
+          ],
+          "total": 0
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Successful retrieval of book list"
+          },
+          {
+            "code": 400,
+            "description": "Invalid query parameters"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/loans",
+        "purpose": "Borrow a book",
+        "request_body": {
+          "member_id": "string",
+          "book_id": "string"
+        },
+        "response_body": {
+          "loan_id": "string",
+          "due_date": "YYYY-MM-DD"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Loan created successfully"
+          },
+          {
+            "code": 409,
+            "description": "No available copies or member limit reached"
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/api/loans/{loan_id}/return",
+        "purpose": "Return a borrowed book",
+        "request_body": {},
+        "response_body": {
+          "loan_id": "string",
+          "returned_at": "YYYY-MM-DDTHH:mm:ssZ",
+          "fine_amount": 0.0
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Book returned and fine calculated"
+          },
+          {
+            "code": 404,
+            "description": "Loan not found"
+          }
+        ]
+      },
+      {
+        "method": "PUT",
+        "endpoint": "/api/loans/{loan_id}/renew",
+        "purpose": "Renew an active loan",
+        "request_body": {},
+        "response_body": {
+          "loan_id": "string",
+          "new_due_date": "YYYY-MM-DD"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Loan renewed successfully"
+          },
+          {
+            "code": 403,
+            "description": "Renewal not allowed (overdue or max renewals reached)"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/books",
+        "purpose": "Add a new book to the catalogue (librarian)",
+        "request_body": {
+          "title": "string",
+          "author": "string",
+          "isbn": "string",
+          "total_copies": 0
+        },
+        "response_body": {
+          "book_id": "string",
+          "message": "Book added"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Book created"
+          },
+          {
+            "code": 400,
+            "description": "Invalid book data"
+          }
+        ]
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/api/members/{member_id}",
+        "purpose": "Remove a member (librarian)",
+        "request_body": {},
+        "response_body": {
+          "member_id": "string",
+          "message": "Member deleted"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Member removed"
+          },
+          {
+            "code": 404,
+            "description": "Member not found"
+          }
+        ]
+      }
+    ],
+    "project_structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend Framework",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build Tool",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend Framework",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "ORM",
+          "technology": "SQLAlchemy"
+        },
+        {
+          "category": "Migrations",
+          "technology": "Alembic"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        },
+        {
+          "category": "Cache / Queue",
+          "technology": "Redis"
+        }
+      ],
+      "architecture": "A modular client\u2011server system: React/Vite SPA communicates via REST/JSON with FastAPI services. FastAPI handles authentication, business logic, and interacts with PostgreSQL through SQLAlchemy. Alembic manages schema migrations. Redis caches catalog queries and stores temporary session data. Docker composes services for reproducible deployment. Email service sends due\u2011date reminders. Security enforced with JWT and role\u2011based access (librarian vs member).",
+      "dependencies": [
+        "fastapi",
+        "uvicorn",
+        "sqlalchemy",
+        "psycopg2-binary",
+        "alembic",
+        "redis",
+        "python-jose",
+        "email-validator"
+      ],
+      "folders": [
+        "frontend",
+        "backend",
+        "backend/app/models",
+        "backend/app/routers",
+        "backend/app/services",
+        "tests",
+        "docker",
+        "docs"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI]\n        Auth[JWT Auth]\n        Biz[Business Logic]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n        Email[Email Service]\n    end\n    UI -->|REST API| API\n    API --> Auth\n    API --> Biz\n    Biz --> DB\n    Biz --> Cache\n    Biz --> Email\n    Email -->|SMTP| UserEmail[User Email]\n    Cache -->|Cache Hits| DB"
+    },
+    "documentation": {
+      "readme": "Online Library Management System (OLMS) enables members to search, borrow, return, and renew books. Librarians manage catalog, members, loans, and fines. Email reminders are sent before due dates. The app prioritizes usability, security, and reliability.",
+      "api_documentation": "GET /books?query= - search catalog; GET /books/{id} - book details; POST /loans - borrow (memberId, bookId); PUT /loans/{id}/return - return; PATCH /loans/{id}/renew - extend due date; GET /members/{id}/loans - view member loans; POST /fines/pay - pay overdue fine; POST /notifications/reminder - trigger email reminder.",
+      "installation": "Clone repo, run `npm install` (Node.js 18+). Set up PostgreSQL DB, run `npm run migrate`. Configure .env with DB credentials, SMTP settings, JWT secret. Start with `npm start`.",
+      "deployment": "Containerize with Docker; use Dockerfile provided. Deploy to any cloud (AWS ECS, Azure App Service, GCP Cloud Run). Use PostgreSQL managed instance. Set environment variables for DB URL and email service. Enable HTTPS via reverse proxy.",
+      "sprint_plan": "Sprint 1: Core CRUD for books and members, authentication. Sprint 2: Loan workflow, due date logic, fine calculation. Sprint 3: Email reminder service, UI polishing. Sprint 4: Security hardening, testing, CI/CD pipeline.",
+      "architecture": "Three\u2011tier: Frontend (React), API layer (Express.js), Data layer (PostgreSQL). JWT for auth, role\u2011based access (member, librarian). Email service via Nodemailer. Services communicate via REST; Docker Compose orchestrates containers."
+    },
+    "review": {
+      "needs_clarification": false,
+      "questions": []
+    }
+  },
+  "sql_valid": true,
+  "sql_validation": {
+    "sql_syntax": "Valid",
+    "semantic": "Valid"
+  },
+  "counts": {
+    "fr": 5,
+    "stories": 6,
+    "tables": 4,
+    "apis": 6
+  },
+  "compliance": {
+    "satisfied": 35,
+    "checked": 35,
+    "ccr": 1.0,
+    "rules": [
+      {
+        "module": "Requirement Analyzer",
+        "rule": "FR = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "NFR = 4",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "actors = 3",
+        "passed": true,
+        "detail": "3"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use cases = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use-case actor in actors",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "no generic actor",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "5 criteria groups",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "6 stories",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "IDs US-001..US-006",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "Connextra template",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "priority in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "points in {1,2,3,5,8}",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "sprint in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "use_case starts 'flowchart LR'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "class_diagram starts 'classDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "sequence starts 'sequenceDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 6 classes",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 8 relationships",
+        "passed": true,
+        "detail": "7"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4 tables",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4-6 columns each",
+        "passed": true,
+        "detail": "5, 5, 6, 4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "one INTEGER PK each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "allowed types",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "FK as table.column",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "6 endpoints",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "API Designer",
+        "rule": "allowed HTTP verbs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "<= 2 status codes each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 stack entries",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 dependencies",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 folders",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "React + Vite + FastAPI",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "diagram starts 'flowchart TD'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "6 sections",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "each < 100 words",
+        "passed": true,
+        "detail": "35, 44, 28, 36, 32, 28"
+      }
+    ]
+  },
+  "coverage": {
+    "expected": [
+      "Members",
+      "Books",
+      "Loans",
+      "Librarians",
+      "Fines"
+    ],
+    "generated_tables": [
+      "Members",
+      "Books",
+      "Loans",
+      "Librarians"
+    ],
+    "covered": [
+      "Members",
+      "Books",
+      "Loans",
+      "Librarians"
+    ],
+    "missing": [
+      "Fines"
+    ],
+    "matched_by": {
+      "Members": "member",
+      "Books": "book",
+      "Loans": "loan",
+      "Librarians": "librarian"
+    },
+    "ec": 0.8
+  },
+  "consistency": {
+    "cacs": 0.6,
+    "checks": [
+      {
+        "id": "C1",
+        "check": "FR -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs have a matching story"
+      },
+      {
+        "id": "C2",
+        "check": "Use cases -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 use cases have a matching story"
+      },
+      {
+        "id": "C3",
+        "check": "FR -> API endpoints",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 FRs served by an endpoint; missing: []"
+      },
+      {
+        "id": "C4",
+        "check": "Actors <-> UML use-case actors",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "2/3 actors appear; generic nodes: ['System']"
+      },
+      {
+        "id": "C5",
+        "check": "DB tables <-> UML classes",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "4/4 tables have a class; classes without table: ['catalogue', 'emailservice']"
+      },
+      {
+        "id": "C6",
+        "check": "API design <-> documented APIs",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "5/6 designed endpoints documented; extra documented: 4"
+      },
+      {
+        "id": "C7",
+        "check": "N:M relationships <-> junction table",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "no many-to-many relationship in schema or class diagram"
+      },
+      {
+        "id": "C8",
+        "check": "API payloads <-> DB schema",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "uuid ids vs INTEGER keys: no ; 5/13 payload fields have no column: ['availablecopy', 'fineamount', 'newduedate', 'returnedat', 'totalcopy']"
+      },
+      {
+        "id": "C9",
+        "check": "Project structure <-> docs architecture",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "conflicts: [\"backend: ['FastAPI'] vs ['Express', 'Node.js']\"]"
+      },
+      {
+        "id": "C10",
+        "check": "Story sprints <-> docs sprint plan",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "stories use 3 sprints; plan uses 4"
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "D3-r1-use_case",
+      "kind": "use_case",
+      "code": "flowchart LR\n    Member -->|search| Catalogue\n    Member -->|borrow| System\n    Member -->|return| System\n    Member -->|renew| System\n    Librarian -->|manage books| System\n    Librarian -->|manage members| System\n    Librarian -->|manage loans| System\n    System -->|collect fines| Librarian\n    System -->|send reminder| EmailService",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D3-r1-class_diagram",
+      "kind": "class_diagram",
+      "code": "classDiagram\n    class Member {\n        +memberId\n        +name\n        +searchCatalogue()\n        +borrowBook()\n        +returnBook()\n        +renewLoan()\n    }\n    class Librarian {\n        +librarianId\n        +manageBooks()\n        +manageMembers()\n        +manageLoans()\n        +collectFines()\n    }\n    class Book {\n        +ISBN\n        +title\n        +author\n        +available\n    }\n    class Loan {\n        +loanId\n        +dueDate\n        +isOverdue()\n    }\n    class Catalogue {\n        +search()\n    }\n    class EmailService {\n        +sendReminder()\n    }\n    Member \"1\" --> \"*\" Loan : borrows\n    Loan \"*\" --> \"1\" Book : contains\n    Librarian \"1\" --> \"*\" Book : manages\n    Librarian \"1\" --> \"*\" Member : manages\n    Librarian \"1\" --> \"*\" Loan : manages\n    Loan \"*\" --> EmailService : triggers\n    EmailService --> Member : notifies",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D3-r1-sequence",
+      "kind": "sequence",
+      "code": "sequenceDiagram\n    participant M as Member\n    participant S as System\n    participant L as Librarian\n    participant E as EmailService\n    M->>S: request renew loan\n    S->>S: check due date\n    alt overdue\n        S->>L: calculate fine\n        L->>S: fine collected\n    else\n        S->>S: extend due date\n    end\n    S->>E: send reminder email\n    E->>M: email reminder",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D3-r1-er",
+      "kind": "er_diagram",
+      "code": "erDiagram\nMEMBERS_MEMBER_ID ||--o{ LOANS_MEMBER_ID : \"A member can have many loans\"\nBOOKS_BOOK_ID ||--o{ LOANS_BOOK_ID : \"A book can be loaned many times\"\nLIBRARIANS_LIBRARIAN_ID ||--o{ BOOKS_BOOK_ID : \"A librarian manages many books\"\nMEMBERS {\n    integer member_id PK\n    text name\n    text email\n    datetime join_date\n    boolean is_active\n}\nBOOKS {\n    integer book_id PK\n    text title\n    text author\n    text isbn\n    integer copies_total\n}\nLOANS {\n    integer loan_id PK\n    integer member_id FK\n    integer book_id FK\n    datetime loan_date\n    datetime due_date\n    datetime returned_date\n}\nLIBRARIANS {\n    integer librarian_id PK\n    text name\n    text email\n    datetime hire_date\n}",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D3-r1-arch",
+      "kind": "architecture_diagram",
+      "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph Server\n        API[FastAPI]\n        Auth[JWT Auth]\n        Biz[Business Logic]\n        DB[(PostgreSQL)]\n        Cache[Redis]\n        Email[Email Service]\n    end\n    UI -->|REST API| API\n    API --> Auth\n    API --> Biz\n    Biz --> DB\n    Biz --> Cache\n    Biz --> Email\n    Email -->|SMTP| UserEmail[User Email]\n    Cache -->|Cache Hits| DB",
+      "valid": true,
+      "error": null
+    }
+  ]
+}

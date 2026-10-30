@@ -1,0 +1,1796 @@
+{
+  "domain_id": "D1",
+  "domain": "Food delivery",
+  "repeat": 1,
+  "latency_s": 17.976,
+  "wall_clock_s": 17.976,
+  "rate_limit_wait_s": 0.0,
+  "succeeded": true,
+  "error": null,
+  "instrumentation": {
+    "main_calls": 7,
+    "first_attempt_ok": 7,
+    "gateway_retries": 0,
+    "repair_calls": 0,
+    "repair_kinds": [],
+    "http_requests": 7,
+    "prompt_tokens": 3295,
+    "completion_tokens": 5540,
+    "total_tokens": 8835,
+    "module_seconds": {
+      "Requirement Analyzer": 2.319,
+      "User Story Generator": 2.308,
+      "UML Generator": 2.29,
+      "Database Designer": 3.921,
+      "API Designer": 2.535,
+      "Project Structure": 2.144,
+      "Documentation": 2.458
+    },
+    "rate_limit_waits": 0,
+    "rate_limit_wait_s": 0.0
+  },
+  "requests": [
+    {
+      "module": "Requirement Analyzer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.319,
+      "usage": {
+        "prompt_tokens": 875,
+        "completion_tokens": 736,
+        "total_tokens": 1611
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "User Story Generator",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.308,
+      "usage": {
+        "prompt_tokens": 539,
+        "completion_tokens": 710,
+        "total_tokens": 1249
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "UML Generator",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 2.29,
+      "usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 604,
+        "total_tokens": 954
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "Database Designer",
+      "kind": "first",
+      "max_tokens": 1800,
+      "seconds": 3.921,
+      "usage": {
+        "prompt_tokens": 438,
+        "completion_tokens": 1483,
+        "total_tokens": 1921
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "API Designer",
+      "kind": "first",
+      "max_tokens": 1900,
+      "seconds": 2.535,
+      "usage": {
+        "prompt_tokens": 389,
+        "completion_tokens": 855,
+        "total_tokens": 1244
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "Project Structure",
+      "kind": "first",
+      "max_tokens": 1500,
+      "seconds": 2.143,
+      "usage": {
+        "prompt_tokens": 374,
+        "completion_tokens": 659,
+        "total_tokens": 1033
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    },
+    {
+      "module": "Documentation",
+      "kind": "first",
+      "max_tokens": 1600,
+      "seconds": 2.458,
+      "usage": {
+        "prompt_tokens": 330,
+        "completion_tokens": 493,
+        "total_tokens": 823
+      },
+      "error": null,
+      "rate_limit_waits": 0,
+      "rate_limit_wait_s": 0.0
+    }
+  ],
+  "calls": [
+    {
+      "module": "Requirement Analyzer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "User Story Generator",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "UML Generator",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Database Designer",
+      "purpose": "main",
+      "max_tokens": 1800,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "API Designer",
+      "purpose": "main",
+      "max_tokens": 1900,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Project Structure",
+      "purpose": "main",
+      "max_tokens": 1500,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    },
+    {
+      "module": "Documentation",
+      "purpose": "main",
+      "max_tokens": 1600,
+      "http_requests": 1,
+      "first_attempt_ok": true,
+      "succeeded": true,
+      "error": null
+    }
+  ],
+  "raw_outputs": {
+    "Requirement Analyzer": {
+      "project": {
+        "name": "Online Food Delivery Platform",
+        "summary": "A web platform for customers to order food, restaurants to manage menus, and delivery partners to fulfill orders.",
+        "domain": "Food Delivery"
+      },
+      "functional_requirements": [
+        "User registration and secure login",
+        "Browse restaurants and view menus",
+        "Add items to cart and place orders",
+        "Process online payments",
+        "Manage restaurants, menus, and orders by administrators"
+      ],
+      "non_functional_requirements": [
+        "Secure authentication and data protection",
+        "Response time under 2 seconds for user actions",
+        "High availability and reliable data storage",
+        "Responsive web interface across devices"
+      ],
+      "actors": [
+        {
+          "name": "Customer",
+          "description": "Registers, logs in, browses restaurants, orders food, and tracks delivery."
+        },
+        {
+          "name": "Restaurant Administrator",
+          "description": "Creates and updates restaurant profiles, menus, food items, and handles incoming orders."
+        },
+        {
+          "name": "Delivery Partner",
+          "description": "Views assigned deliveries, updates delivery status, and completes deliveries."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Register and Login",
+          "actor": "Customer",
+          "description": "Customer creates an account and authenticates to access the platform."
+        },
+        {
+          "name": "Browse Restaurants and Menus",
+          "actor": "Customer",
+          "description": "Customer searches and views restaurant listings and their menus."
+        },
+        {
+          "name": "Place Order and Pay",
+          "actor": "Customer",
+          "description": "Customer adds items to cart, confirms order, and completes online payment."
+        },
+        {
+          "name": "Manage Restaurant Catalog",
+          "actor": "Restaurant Administrator",
+          "description": "Administrator adds, edits, or removes restaurant details, menus, and food items."
+        },
+        {
+          "name": "Update Delivery Status",
+          "actor": "Delivery Partner",
+          "description": "Delivery partner marks deliveries as picked up, in\u2011transit, or completed."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "User registration and secure login",
+          "criteria": [
+            "Password must be stored hashed with a strong algorithm",
+            "Login fails after 5 consecutive invalid attempts"
+          ]
+        },
+        {
+          "requirement": "Browse restaurants and view menus",
+          "criteria": [
+            "Restaurant list loads within 2 seconds",
+            "Menu items display correct price and availability"
+          ]
+        },
+        {
+          "requirement": "Add items to cart and place orders",
+          "criteria": [
+            "Cart persists across sessions for logged\u2011in users",
+            "Order confirmation email is sent within 1 minute"
+          ]
+        },
+        {
+          "requirement": "Process online payments",
+          "criteria": [
+            "Payment gateway returns success/failure within 3 seconds",
+            "Sensitive payment data is never stored in plain text"
+          ]
+        },
+        {
+          "requirement": "Manage restaurants, menus, and orders by administrators",
+          "criteria": [
+            "Administrator actions are logged with timestamp and user ID",
+            "Changes to menu are reflected to customers within 5 seconds"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "User Story Generator": {
+      "user_stories": [
+        {
+          "id": "US-001",
+          "story": "As a customer, I want to register and login, so that I can securely access the platform.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "User can create an account with email verification.",
+            "User can log in using email and password and receive an authentication token."
+          ]
+        },
+        {
+          "id": "US-002",
+          "story": "As a customer, I want to browse restaurants and view menus, so that I can choose what to order.",
+          "priority": "High",
+          "story_points": 5,
+          "sprint": "Sprint 1",
+          "acceptance_criteria": [
+            "Restaurants are listed with basic info and can be filtered by cuisine.",
+            "Selecting a restaurant displays its menu with item details and prices."
+          ]
+        },
+        {
+          "id": "US-003",
+          "story": "As a customer, I want to add items to a cart and place an order, so that I can purchase food.",
+          "priority": "Medium",
+          "story_points": 5,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Items can be added, updated, or removed from the cart before checkout.",
+            "Order submission records the cart contents, total amount, and generates an order ID."
+          ]
+        },
+        {
+          "id": "US-004",
+          "story": "As a customer, I want to make online payments, so that my order is confirmed instantly.",
+          "priority": "High",
+          "story_points": 3,
+          "sprint": "Sprint 2",
+          "acceptance_criteria": [
+            "Payment gateway accepts credit/debit cards and returns success or failure.",
+            "Order status changes to 'Paid' only after successful payment confirmation."
+          ]
+        },
+        {
+          "id": "US-005",
+          "story": "As a restaurant administrator, I want to manage menus and incoming orders, so that I can keep offerings up\u2011to\u2011date and fulfill orders.",
+          "priority": "Medium",
+          "story_points": 8,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Admin can create, edit, or delete menu items and set availability.",
+            "Admin can view a list of new orders, update order status, and mark orders as ready."
+          ]
+        },
+        {
+          "id": "US-006",
+          "story": "As a delivery partner, I want to view assigned deliveries and update delivery status, so that customers can track their orders.",
+          "priority": "Low",
+          "story_points": 2,
+          "sprint": "Sprint 3",
+          "acceptance_criteria": [
+            "Delivery partner sees a list of assigned orders with pickup and drop\u2011off details.",
+            "Partner can change status to 'Picked Up' and 'Delivered', triggering customer notifications."
+          ]
+        }
+      ]
+    },
+    "UML Generator": {
+      "use_case": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|update status| DeliverySystem\n    AuthSystem -->|authenticate| Database\n    OrderSystem -->|process| Database\n    DeliverySystem -->|track| Database",
+      "class_diagram": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assignedTo\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives",
+      "sequence": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login credentials\n    WA->>AS: authenticate\n    AS->>DB: verify user\n    DB-->>AS: user data\n    AS-->>WA: auth token\n    WA->>U: login success\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>WA: order status update\n    WA->>U: order status"
+    },
+    "Database Designer": {
+      "tables": [
+        {
+          "table": "Users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "password_hash",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Restaurants",
+          "columns": [
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "address",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "admin_user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            }
+          ]
+        },
+        {
+          "table": "MenuItems",
+          "columns": [
+            {
+              "name": "item_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Restaurants.restaurant_id"
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "price",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Orders",
+          "columns": [
+            {
+              "name": "order_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Restaurants.restaurant_id"
+            },
+            {
+              "name": "delivery_partner_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "order_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "total",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Users.user_id",
+          "to": "Restaurants.admin_user_id",
+          "cardinality": "1:N",
+          "description": "User administers many restaurants"
+        },
+        {
+          "from": "Restaurants.restaurant_id",
+          "to": "MenuItems.restaurant_id",
+          "cardinality": "1:N",
+          "description": "Restaurant offers many menu items"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Orders.user_id",
+          "cardinality": "1:N",
+          "description": "User places many orders"
+        },
+        {
+          "from": "Restaurants.restaurant_id",
+          "to": "Orders.restaurant_id",
+          "cardinality": "1:N",
+          "description": "Restaurant receives many orders"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Orders.delivery_partner_id",
+          "cardinality": "1:N",
+          "description": "Delivery partner handles many orders"
+        }
+      ],
+      "sql": "CREATE TABLE Users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    password_hash TEXT,\n    phone TEXT\n);\n\nCREATE TABLE Restaurants (\n    restaurant_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    address TEXT,\n    phone TEXT,\n    admin_user_id INTEGER,\n    FOREIGN KEY (admin_user_id) REFERENCES Users(user_id)\n);\n\nCREATE TABLE MenuItems (\n    item_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    restaurant_id INTEGER,\n    name TEXT,\n    description TEXT,\n    price REAL,\n    FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id)\n);\n\nCREATE TABLE Orders (\n    order_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    restaurant_id INTEGER,\n    delivery_partner_id INTEGER,\n    order_time DATETIME,\n    status TEXT,\n    total REAL,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id),\n    FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id),\n    FOREIGN KEY (delivery_partner_id) REFERENCES Users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ RESTAURANTS_ADMIN_USER_ID : \"User administers many restaurants\"\nRESTAURANTS_RESTAURANT_ID ||--o{ MENUITEMS_RESTAURANT_ID : \"Restaurant offers many menu items\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"User places many orders\"\nRESTAURANTS_RESTAURANT_ID ||--o{ ORDERS_RESTAURANT_ID : \"Restaurant receives many orders\"\nUSERS_USER_ID ||--o{ ORDERS_DELIVERY_PARTNER_ID : \"Delivery partner handles many orders\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    integer delivery_partner_id FK\n    datetime order_time\n    text status\n    real total\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "API Designer": {
+      "apis": [
+        {
+          "method": "POST",
+          "endpoint": "/api/auth/register",
+          "purpose": "Create a new user account",
+          "request_body": {
+            "name": "string",
+            "email": "string",
+            "password": "string"
+          },
+          "response_body": {
+            "user_id": "uuid",
+            "token": "jwt"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "User created"
+            },
+            {
+              "code": 400,
+              "description": "Invalid input"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/auth/login",
+          "purpose": "Authenticate user and issue token",
+          "request_body": {
+            "email": "string",
+            "password": "string"
+          },
+          "response_body": {
+            "token": "jwt",
+            "expires_in": "integer"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Login successful"
+            },
+            {
+              "code": 401,
+              "description": "Unauthorized"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/restaurants",
+          "purpose": "List available restaurants",
+          "request_body": {},
+          "response_body": {
+            "restaurants": [
+              {
+                "id": "uuid",
+                "name": "string",
+                "rating": "number"
+              }
+            ]
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "List retrieved"
+            },
+            {
+              "code": 500,
+              "description": "Server error"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "endpoint": "/api/restaurants/{restaurantId}/menu",
+          "purpose": "Get menu items for a restaurant",
+          "request_body": {},
+          "response_body": {
+            "items": [
+              {
+                "id": "uuid",
+                "name": "string",
+                "price": "number"
+              }
+            ]
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Menu returned"
+            },
+            {
+              "code": 404,
+              "description": "Restaurant not found"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "endpoint": "/api/orders",
+          "purpose": "Place a new food order",
+          "request_body": {
+            "restaurant_id": "uuid",
+            "items": [
+              {
+                "item_id": "uuid",
+                "quantity": "integer"
+              }
+            ],
+            "payment_method": "string",
+            "delivery_address": "string"
+          },
+          "response_body": {
+            "order_id": "uuid",
+            "status": "string",
+            "estimated_delivery": "datetime"
+          },
+          "status_codes": [
+            {
+              "code": 201,
+              "description": "Order created"
+            },
+            {
+              "code": 400,
+              "description": "Invalid order data"
+            }
+          ]
+        },
+        {
+          "method": "PATCH",
+          "endpoint": "/api/delivery/{orderId}/status",
+          "purpose": "Update delivery status by partner",
+          "request_body": {
+            "status": "string"
+          },
+          "response_body": {
+            "order_id": "uuid",
+            "new_status": "string"
+          },
+          "status_codes": [
+            {
+              "code": 200,
+              "description": "Status updated"
+            },
+            {
+              "code": 403,
+              "description": "Forbidden"
+            }
+          ]
+        }
+      ]
+    },
+    "Project Structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "Authentication",
+          "technology": "JWT"
+        },
+        {
+          "category": "Cache",
+          "technology": "Redis"
+        },
+        {
+          "category": "Message Queue",
+          "technology": "RabbitMQ"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        }
+      ],
+      "architecture": "A micro\u2011service style system with a React/Vite SPA communicating over HTTPS to FastAPI services. FastAPI handles user, restaurant, order, and delivery domains, persisting data in PostgreSQL. Redis caches session and menu data. RabbitMQ decouples order processing and delivery notifications. JWT secures API calls. Nginx terminates TLS and serves the SPA. Docker containers are orchestrated via Docker Compose (or Kubernetes) for scalability and resilience.",
+      "dependencies": [
+        "Docker",
+        "Docker Compose",
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "Nginx",
+        "Stripe API",
+        "GitHub Actions"
+      ],
+      "folders": [
+        "frontend/",
+        "backend/",
+        "configs/",
+        "scripts/",
+        "tests/",
+        "docs/",
+        "deployments/",
+        "logs/"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Infra\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n        MQ[(RabbitMQ)]\n        NG[NGINX]\n    end\n    UI -->|HTTPS| NG\n    NG -->|Proxy| Auth & User & Restaurant & Order & Delivery\n    Auth -->|JWT| User\n    Order -->|Publish| MQ\n    MQ -->|Consume| Delivery\n    Delivery -->|Update| DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Cache -->|Cache| DB"
+    },
+    "Documentation": {
+      "readme": "Online Food Delivery Platform enables users to register, browse restaurants, add items to cart, place orders, pay online, and track deliveries. Restaurants manage menus and orders; delivery partners handle assigned deliveries and update status. Built with React front\u2011end, Node.js/Express API, PostgreSQL, JWT auth, and Stripe for payments.",
+      "api_documentation": "POST /api/auth/register \u2013 body {email,password,role}. Returns JWT. POST /api/auth/login \u2013 returns JWT. GET /api/restaurants \u2013 list restaurants. GET /api/restaurants/:id/menu \u2013 menu items. POST /api/cart \u2013 add item. GET /api/cart \u2013 view cart. POST /api/orders \u2013 place order, includes payment token. GET /api/orders/:id \u2013 order status. PUT /api/delivery/:id/status \u2013 update status (partner only). Admin routes prefixed /api/admin for CRUD on restaurants, menus, items.",
+      "installation": "Clone repo, run `npm install` in root and client directories. Set up PostgreSQL DB and run migrations (`npm run migrate`). Create .env with DB_URL, JWT_SECRET, STRIPE_KEY. Start server with `npm run dev`. Launch client with `npm start` in client folder.",
+      "deployment": "Containerize with Docker. Use docker-compose to run app, db, and nginx. Deploy to any cloud VM or Kubernetes. Configure environment variables securely. Set up HTTPS via Let\u2019s Encrypt. Use PM2 or systemd to keep Node process alive.",
+      "sprint_plan": "Sprint 1: Auth, user registration/login, JWT. Sprint 2: Restaurant listing, menu API, admin CRUD. Sprint 3: Cart management, order creation, Stripe integration. Sprint 4: Delivery partner UI, status updates, real\u2011time tracking via WebSocket. Sprint 5: UI polish, performance testing, CI/CD pipeline.",
+      "architecture": "Three\u2011tier: React SPA (client) \u2192 Node.js/Express REST API (service) \u2192 PostgreSQL (data). JWT secures endpoints. Stripe handles payments. WebSocket server pushes order status to users and partners. Nginx reverse proxy serves static assets and routes API. Docker isolates each component."
+    }
+  },
+  "result": {
+    "project": {
+      "name": "Online Food Delivery Platform",
+      "summary": "A web platform for customers to order food, restaurants to manage menus, and delivery partners to fulfill orders.",
+      "domain": "Food Delivery"
+    },
+    "requirement_analysis": {
+      "functional_requirements": [
+        "User registration and secure login",
+        "Browse restaurants and view menus",
+        "Add items to cart and place orders",
+        "Process online payments",
+        "Manage restaurants, menus, and orders by administrators"
+      ],
+      "non_functional_requirements": [
+        "Secure authentication and data protection",
+        "Response time under 2 seconds for user actions",
+        "High availability and reliable data storage",
+        "Responsive web interface across devices"
+      ],
+      "actors": [
+        {
+          "name": "Customer",
+          "description": "Registers, logs in, browses restaurants, orders food, and tracks delivery."
+        },
+        {
+          "name": "Restaurant Administrator",
+          "description": "Creates and updates restaurant profiles, menus, food items, and handles incoming orders."
+        },
+        {
+          "name": "Delivery Partner",
+          "description": "Views assigned deliveries, updates delivery status, and completes deliveries."
+        }
+      ],
+      "use_cases": [
+        {
+          "name": "Register and Login",
+          "actor": "Customer",
+          "description": "Customer creates an account and authenticates to access the platform."
+        },
+        {
+          "name": "Browse Restaurants and Menus",
+          "actor": "Customer",
+          "description": "Customer searches and views restaurant listings and their menus."
+        },
+        {
+          "name": "Place Order and Pay",
+          "actor": "Customer",
+          "description": "Customer adds items to cart, confirms order, and completes online payment."
+        },
+        {
+          "name": "Manage Restaurant Catalog",
+          "actor": "Restaurant Administrator",
+          "description": "Administrator adds, edits, or removes restaurant details, menus, and food items."
+        },
+        {
+          "name": "Update Delivery Status",
+          "actor": "Delivery Partner",
+          "description": "Delivery partner marks deliveries as picked up, in\u2011transit, or completed."
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "requirement": "User registration and secure login",
+          "criteria": [
+            "Password must be stored hashed with a strong algorithm",
+            "Login fails after 5 consecutive invalid attempts"
+          ]
+        },
+        {
+          "requirement": "Browse restaurants and view menus",
+          "criteria": [
+            "Restaurant list loads within 2 seconds",
+            "Menu items display correct price and availability"
+          ]
+        },
+        {
+          "requirement": "Add items to cart and place orders",
+          "criteria": [
+            "Cart persists across sessions for logged\u2011in users",
+            "Order confirmation email is sent within 1 minute"
+          ]
+        },
+        {
+          "requirement": "Process online payments",
+          "criteria": [
+            "Payment gateway returns success/failure within 3 seconds",
+            "Sensitive payment data is never stored in plain text"
+          ]
+        },
+        {
+          "requirement": "Manage restaurants, menus, and orders by administrators",
+          "criteria": [
+            "Administrator actions are logged with timestamp and user ID",
+            "Changes to menu are reflected to customers within 5 seconds"
+          ]
+        }
+      ],
+      "clarifications": []
+    },
+    "user_stories": [
+      {
+        "id": "US-001",
+        "story": "As a customer, I want to register and login, so that I can securely access the platform.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "User can create an account with email verification.",
+          "User can log in using email and password and receive an authentication token."
+        ]
+      },
+      {
+        "id": "US-002",
+        "story": "As a customer, I want to browse restaurants and view menus, so that I can choose what to order.",
+        "priority": "High",
+        "story_points": 5,
+        "sprint": "Sprint 1",
+        "acceptance_criteria": [
+          "Restaurants are listed with basic info and can be filtered by cuisine.",
+          "Selecting a restaurant displays its menu with item details and prices."
+        ]
+      },
+      {
+        "id": "US-003",
+        "story": "As a customer, I want to add items to a cart and place an order, so that I can purchase food.",
+        "priority": "Medium",
+        "story_points": 5,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Items can be added, updated, or removed from the cart before checkout.",
+          "Order submission records the cart contents, total amount, and generates an order ID."
+        ]
+      },
+      {
+        "id": "US-004",
+        "story": "As a customer, I want to make online payments, so that my order is confirmed instantly.",
+        "priority": "High",
+        "story_points": 3,
+        "sprint": "Sprint 2",
+        "acceptance_criteria": [
+          "Payment gateway accepts credit/debit cards and returns success or failure.",
+          "Order status changes to 'Paid' only after successful payment confirmation."
+        ]
+      },
+      {
+        "id": "US-005",
+        "story": "As a restaurant administrator, I want to manage menus and incoming orders, so that I can keep offerings up\u2011to\u2011date and fulfill orders.",
+        "priority": "Medium",
+        "story_points": 8,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Admin can create, edit, or delete menu items and set availability.",
+          "Admin can view a list of new orders, update order status, and mark orders as ready."
+        ]
+      },
+      {
+        "id": "US-006",
+        "story": "As a delivery partner, I want to view assigned deliveries and update delivery status, so that customers can track their orders.",
+        "priority": "Low",
+        "story_points": 2,
+        "sprint": "Sprint 3",
+        "acceptance_criteria": [
+          "Delivery partner sees a list of assigned orders with pickup and drop\u2011off details.",
+          "Partner can change status to 'Picked Up' and 'Delivered', triggering customer notifications."
+        ]
+      }
+    ],
+    "uml": {
+      "use_case": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|update status| DeliverySystem\n    AuthSystem -->|authenticate| Database\n    OrderSystem -->|process| Database\n    DeliverySystem -->|track| Database",
+      "class_diagram": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assignedTo\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives",
+      "sequence": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login credentials\n    WA->>AS: authenticate\n    AS->>DB: verify user\n    DB-->>AS: user data\n    AS-->>WA: auth token\n    WA->>U: login success\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>WA: order status update\n    WA->>U: order status"
+    },
+    "database": {
+      "tables": [
+        {
+          "table": "Users",
+          "columns": [
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "email",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "password_hash",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Restaurants",
+          "columns": [
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "address",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "phone",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "admin_user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            }
+          ]
+        },
+        {
+          "table": "MenuItems",
+          "columns": [
+            {
+              "name": "item_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Restaurants.restaurant_id"
+            },
+            {
+              "name": "name",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "price",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        },
+        {
+          "table": "Orders",
+          "columns": [
+            {
+              "name": "order_id",
+              "type": "INTEGER",
+              "primary_key": true,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "user_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "restaurant_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Restaurants.restaurant_id"
+            },
+            {
+              "name": "delivery_partner_id",
+              "type": "INTEGER",
+              "primary_key": false,
+              "foreign_key": true,
+              "references": "Users.user_id"
+            },
+            {
+              "name": "order_time",
+              "type": "DATETIME",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            },
+            {
+              "name": "total",
+              "type": "REAL",
+              "primary_key": false,
+              "foreign_key": false,
+              "references": ""
+            }
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "Users.user_id",
+          "to": "Restaurants.admin_user_id",
+          "cardinality": "1:N",
+          "description": "User administers many restaurants"
+        },
+        {
+          "from": "Restaurants.restaurant_id",
+          "to": "MenuItems.restaurant_id",
+          "cardinality": "1:N",
+          "description": "Restaurant offers many menu items"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Orders.user_id",
+          "cardinality": "1:N",
+          "description": "User places many orders"
+        },
+        {
+          "from": "Restaurants.restaurant_id",
+          "to": "Orders.restaurant_id",
+          "cardinality": "1:N",
+          "description": "Restaurant receives many orders"
+        },
+        {
+          "from": "Users.user_id",
+          "to": "Orders.delivery_partner_id",
+          "cardinality": "1:N",
+          "description": "Delivery partner handles many orders"
+        }
+      ],
+      "sql": "CREATE TABLE Users (\n    user_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    email TEXT,\n    password_hash TEXT,\n    phone TEXT\n);\n\nCREATE TABLE Restaurants (\n    restaurant_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT,\n    address TEXT,\n    phone TEXT,\n    admin_user_id INTEGER,\n    FOREIGN KEY (admin_user_id) REFERENCES Users(user_id)\n);\n\nCREATE TABLE MenuItems (\n    item_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    restaurant_id INTEGER,\n    name TEXT,\n    description TEXT,\n    price REAL,\n    FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id)\n);\n\nCREATE TABLE Orders (\n    order_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    user_id INTEGER,\n    restaurant_id INTEGER,\n    delivery_partner_id INTEGER,\n    order_time DATETIME,\n    status TEXT,\n    total REAL,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id),\n    FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id),\n    FOREIGN KEY (delivery_partner_id) REFERENCES Users(user_id)\n);",
+      "er_diagram": "erDiagram\nUSERS_USER_ID ||--o{ RESTAURANTS_ADMIN_USER_ID : \"User administers many restaurants\"\nRESTAURANTS_RESTAURANT_ID ||--o{ MENUITEMS_RESTAURANT_ID : \"Restaurant offers many menu items\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"User places many orders\"\nRESTAURANTS_RESTAURANT_ID ||--o{ ORDERS_RESTAURANT_ID : \"Restaurant receives many orders\"\nUSERS_USER_ID ||--o{ ORDERS_DELIVERY_PARTNER_ID : \"Delivery partner handles many orders\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    integer delivery_partner_id FK\n    datetime order_time\n    text status\n    real total\n}",
+      "validation": {
+        "sql_syntax": "Valid",
+        "semantic": "Valid"
+      }
+    },
+    "apis": [
+      {
+        "method": "POST",
+        "endpoint": "/api/auth/register",
+        "purpose": "Create a new user account",
+        "request_body": {
+          "name": "string",
+          "email": "string",
+          "password": "string"
+        },
+        "response_body": {
+          "user_id": "uuid",
+          "token": "jwt"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "User created"
+          },
+          {
+            "code": 400,
+            "description": "Invalid input"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/auth/login",
+        "purpose": "Authenticate user and issue token",
+        "request_body": {
+          "email": "string",
+          "password": "string"
+        },
+        "response_body": {
+          "token": "jwt",
+          "expires_in": "integer"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Login successful"
+          },
+          {
+            "code": 401,
+            "description": "Unauthorized"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/restaurants",
+        "purpose": "List available restaurants",
+        "request_body": {},
+        "response_body": {
+          "restaurants": [
+            {
+              "id": "uuid",
+              "name": "string",
+              "rating": "number"
+            }
+          ]
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "List retrieved"
+          },
+          {
+            "code": 500,
+            "description": "Server error"
+          }
+        ]
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/restaurants/{restaurantId}/menu",
+        "purpose": "Get menu items for a restaurant",
+        "request_body": {},
+        "response_body": {
+          "items": [
+            {
+              "id": "uuid",
+              "name": "string",
+              "price": "number"
+            }
+          ]
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Menu returned"
+          },
+          {
+            "code": 404,
+            "description": "Restaurant not found"
+          }
+        ]
+      },
+      {
+        "method": "POST",
+        "endpoint": "/api/orders",
+        "purpose": "Place a new food order",
+        "request_body": {
+          "restaurant_id": "uuid",
+          "items": [
+            {
+              "item_id": "uuid",
+              "quantity": "integer"
+            }
+          ],
+          "payment_method": "string",
+          "delivery_address": "string"
+        },
+        "response_body": {
+          "order_id": "uuid",
+          "status": "string",
+          "estimated_delivery": "datetime"
+        },
+        "status_codes": [
+          {
+            "code": 201,
+            "description": "Order created"
+          },
+          {
+            "code": 400,
+            "description": "Invalid order data"
+          }
+        ]
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/api/delivery/{orderId}/status",
+        "purpose": "Update delivery status by partner",
+        "request_body": {
+          "status": "string"
+        },
+        "response_body": {
+          "order_id": "uuid",
+          "new_status": "string"
+        },
+        "status_codes": [
+          {
+            "code": 200,
+            "description": "Status updated"
+          },
+          {
+            "code": 403,
+            "description": "Forbidden"
+          }
+        ]
+      }
+    ],
+    "project_structure": {
+      "technology_stack": [
+        {
+          "category": "Frontend",
+          "technology": "React"
+        },
+        {
+          "category": "Frontend Build",
+          "technology": "Vite"
+        },
+        {
+          "category": "Backend",
+          "technology": "FastAPI"
+        },
+        {
+          "category": "Database",
+          "technology": "PostgreSQL"
+        },
+        {
+          "category": "Authentication",
+          "technology": "JWT"
+        },
+        {
+          "category": "Cache",
+          "technology": "Redis"
+        },
+        {
+          "category": "Message Queue",
+          "technology": "RabbitMQ"
+        },
+        {
+          "category": "Containerization",
+          "technology": "Docker"
+        }
+      ],
+      "architecture": "A micro\u2011service style system with a React/Vite SPA communicating over HTTPS to FastAPI services. FastAPI handles user, restaurant, order, and delivery domains, persisting data in PostgreSQL. Redis caches session and menu data. RabbitMQ decouples order processing and delivery notifications. JWT secures API calls. Nginx terminates TLS and serves the SPA. Docker containers are orchestrated via Docker Compose (or Kubernetes) for scalability and resilience.",
+      "dependencies": [
+        "Docker",
+        "Docker Compose",
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "Nginx",
+        "Stripe API",
+        "GitHub Actions"
+      ],
+      "folders": [
+        "frontend/",
+        "backend/",
+        "configs/",
+        "scripts/",
+        "tests/",
+        "docs/",
+        "deployments/",
+        "logs/"
+      ],
+      "architecture_diagram": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Infra\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n        MQ[(RabbitMQ)]\n        NG[NGINX]\n    end\n    UI -->|HTTPS| NG\n    NG -->|Proxy| Auth & User & Restaurant & Order & Delivery\n    Auth -->|JWT| User\n    Order -->|Publish| MQ\n    MQ -->|Consume| Delivery\n    Delivery -->|Update| DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Cache -->|Cache| DB"
+    },
+    "documentation": {
+      "readme": "Online Food Delivery Platform enables users to register, browse restaurants, add items to cart, place orders, pay online, and track deliveries. Restaurants manage menus and orders; delivery partners handle assigned deliveries and update status. Built with React front\u2011end, Node.js/Express API, PostgreSQL, JWT auth, and Stripe for payments.",
+      "api_documentation": "POST /api/auth/register \u2013 body {email,password,role}. Returns JWT. POST /api/auth/login \u2013 returns JWT. GET /api/restaurants \u2013 list restaurants. GET /api/restaurants/:id/menu \u2013 menu items. POST /api/cart \u2013 add item. GET /api/cart \u2013 view cart. POST /api/orders \u2013 place order, includes payment token. GET /api/orders/:id \u2013 order status. PUT /api/delivery/:id/status \u2013 update status (partner only). Admin routes prefixed /api/admin for CRUD on restaurants, menus, items.",
+      "installation": "Clone repo, run `npm install` in root and client directories. Set up PostgreSQL DB and run migrations (`npm run migrate`). Create .env with DB_URL, JWT_SECRET, STRIPE_KEY. Start server with `npm run dev`. Launch client with `npm start` in client folder.",
+      "deployment": "Containerize with Docker. Use docker-compose to run app, db, and nginx. Deploy to any cloud VM or Kubernetes. Configure environment variables securely. Set up HTTPS via Let\u2019s Encrypt. Use PM2 or systemd to keep Node process alive.",
+      "sprint_plan": "Sprint 1: Auth, user registration/login, JWT. Sprint 2: Restaurant listing, menu API, admin CRUD. Sprint 3: Cart management, order creation, Stripe integration. Sprint 4: Delivery partner UI, status updates, real\u2011time tracking via WebSocket. Sprint 5: UI polish, performance testing, CI/CD pipeline.",
+      "architecture": "Three\u2011tier: React SPA (client) \u2192 Node.js/Express REST API (service) \u2192 PostgreSQL (data). JWT secures endpoints. Stripe handles payments. WebSocket server pushes order status to users and partners. Nginx reverse proxy serves static assets and routes API. Docker isolates each component."
+    },
+    "review": {
+      "needs_clarification": false,
+      "questions": []
+    }
+  },
+  "sql_valid": true,
+  "sql_validation": {
+    "sql_syntax": "Valid",
+    "semantic": "Valid"
+  },
+  "counts": {
+    "fr": 5,
+    "stories": 6,
+    "tables": 4,
+    "apis": 6
+  },
+  "compliance": {
+    "satisfied": 34,
+    "checked": 35,
+    "ccr": 0.9714,
+    "rules": [
+      {
+        "module": "Requirement Analyzer",
+        "rule": "FR = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "NFR = 4",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "actors = 3",
+        "passed": true,
+        "detail": "3"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use cases = 5",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "use-case actor in actors",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "no generic actor",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "5 criteria groups",
+        "passed": true,
+        "detail": "5"
+      },
+      {
+        "module": "Requirement Analyzer",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "6 stories",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "IDs US-001..US-006",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "Connextra template",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "priority in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "points in {1,2,3,5,8}",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "sprint in set",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "User Story Generator",
+        "rule": "2 criteria each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "use_case starts 'flowchart LR'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "class_diagram starts 'classDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "sequence starts 'sequenceDiagram'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 6 classes",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "UML Generator",
+        "rule": "<= 8 relationships",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4 tables",
+        "passed": true,
+        "detail": "4"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "4-6 columns each",
+        "passed": false,
+        "detail": "5, 5, 5, 7"
+      },
+      {
+        "module": "Database Designer",
+        "rule": "one INTEGER PK each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "allowed types",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Database Designer",
+        "rule": "FK as table.column",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "6 endpoints",
+        "passed": true,
+        "detail": "6"
+      },
+      {
+        "module": "API Designer",
+        "rule": "allowed HTTP verbs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "API Designer",
+        "rule": "<= 2 status codes each",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 stack entries",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 dependencies",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "<= 8 folders",
+        "passed": true,
+        "detail": "8"
+      },
+      {
+        "module": "Project Structure",
+        "rule": "React + Vite + FastAPI",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Project Structure",
+        "rule": "diagram starts 'flowchart TD'",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "6 sections",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "module": "Documentation",
+        "rule": "each < 100 words",
+        "passed": true,
+        "detail": "47, 62, 40, 37, 41, 40"
+      }
+    ]
+  },
+  "coverage": {
+    "expected": [
+      "Users",
+      "Restaurants",
+      "MenuItems",
+      "Orders",
+      "OrderItems",
+      "Payments",
+      "Deliveries"
+    ],
+    "generated_tables": [
+      "Users",
+      "Restaurants",
+      "MenuItems",
+      "Orders"
+    ],
+    "covered": [
+      "Users",
+      "Restaurants",
+      "MenuItems",
+      "Orders"
+    ],
+    "missing": [
+      "OrderItems",
+      "Payments",
+      "Deliveries"
+    ],
+    "matched_by": {
+      "Users": "user",
+      "Restaurants": "restaurant",
+      "MenuItems": "menuitem",
+      "Orders": "order"
+    },
+    "ec": 0.5714
+  },
+  "consistency": {
+    "cacs": 0.35,
+    "checks": [
+      {
+        "id": "C1",
+        "check": "FR -> user stories",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "4/5 FRs have a matching story"
+      },
+      {
+        "id": "C2",
+        "check": "Use cases -> user stories",
+        "score": 1.0,
+        "result": "pass",
+        "evidence": "5/5 use cases have a matching story"
+      },
+      {
+        "id": "C3",
+        "check": "FR -> API endpoints",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/5 FRs served by an endpoint; missing: ['User registration and secure login', 'Process online payments']"
+      },
+      {
+        "id": "C4",
+        "check": "Actors <-> UML use-case actors",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "2/3 actors appear; generic nodes: none"
+      },
+      {
+        "id": "C5",
+        "check": "DB tables <-> UML classes",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "3/4 tables have a class; classes without table: ['deliverypartner', 'fooditem', 'menu']"
+      },
+      {
+        "id": "C6",
+        "check": "API design <-> documented APIs",
+        "score": 0.5,
+        "result": "partial",
+        "evidence": "6/6 designed endpoints documented; extra documented: 3"
+      },
+      {
+        "id": "C7",
+        "check": "N:M relationships <-> junction table",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "no junction table for: ['Order-FoodItem']"
+      },
+      {
+        "id": "C8",
+        "check": "API payloads <-> DB schema",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "uuid ids vs INTEGER keys: yes ['id', 'item_id', 'order_id', 'restaurant_id', 'user_id']; 8/17 payload fields have no column: ['deliveryaddress', 'estimateddelivery', 'expiresin', 'newstatu', 'password', 'paymentmethod', 'quantity', 'rating']"
+      },
+      {
+        "id": "C9",
+        "check": "Project structure <-> docs architecture",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "conflicts: [\"backend: ['FastAPI'] vs ['Express', 'Node.js']\"]"
+      },
+      {
+        "id": "C10",
+        "check": "Story sprints <-> docs sprint plan",
+        "score": 0.0,
+        "result": "fail",
+        "evidence": "stories use 3 sprints; plan uses 5"
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "D1-r1-use_case",
+      "kind": "use_case",
+      "code": "flowchart LR\n    User -->|register/login| AuthSystem\n    User -->|browse| WebApp\n    User -->|place order| OrderSystem\n    RestaurantAdmin -->|manage| AdminPortal\n    DeliveryPartner -->|update status| DeliverySystem\n    AuthSystem -->|authenticate| Database\n    OrderSystem -->|process| Database\n    DeliverySystem -->|track| Database",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D1-r1-class_diagram",
+      "kind": "class_diagram",
+      "code": "classDiagram\n    class User {\n        +userId\n        +name\n        +email\n        +password\n    }\n    class Restaurant {\n        +restaurantId\n        +name\n        +address\n    }\n    class Menu {\n        +menuId\n        +title\n    }\n    class FoodItem {\n        +itemId\n        +name\n        +price\n    }\n    class Order {\n        +orderId\n        +status\n        +totalAmount\n    }\n    class DeliveryPartner {\n        +partnerId\n        +name\n    }\n    User \"1\" --> \"*\" Order : places\n    Order \"*\" --> \"1\" DeliveryPartner : assignedTo\n    Restaurant \"1\" --> \"*\" Menu : has\n    Menu \"1\" --> \"*\" FoodItem : contains\n    Order \"*\" --> \"*\" FoodItem : includes\n    Restaurant \"1\" --> \"*\" Order : receives",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D1-r1-sequence",
+      "kind": "sequence",
+      "code": "sequenceDiagram\n    participant U as User\n    participant WA as WebApp\n    participant AS as AuthService\n    participant OS as OrderService\n    participant DB as Database\n    participant DP as DeliveryPartner\n    U->>WA: login credentials\n    WA->>AS: authenticate\n    AS->>DB: verify user\n    DB-->>AS: user data\n    AS-->>WA: auth token\n    WA->>U: login success\n    U->>WA: add items to cart\n    U->>WA: place order\n    WA->>OS: create order\n    OS->>DB: store order\n    DB-->>OS: orderId\n    OS-->>WA: order confirmation\n    OS->>DP: assign delivery\n    DP->>OS: accept\n    OS->>DP: delivery details\n    DP->>OS: update status\n    OS->>WA: order status update\n    WA->>U: order status",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D1-r1-er",
+      "kind": "er_diagram",
+      "code": "erDiagram\nUSERS_USER_ID ||--o{ RESTAURANTS_ADMIN_USER_ID : \"User administers many restaurants\"\nRESTAURANTS_RESTAURANT_ID ||--o{ MENUITEMS_RESTAURANT_ID : \"Restaurant offers many menu items\"\nUSERS_USER_ID ||--o{ ORDERS_USER_ID : \"User places many orders\"\nRESTAURANTS_RESTAURANT_ID ||--o{ ORDERS_RESTAURANT_ID : \"Restaurant receives many orders\"\nUSERS_USER_ID ||--o{ ORDERS_DELIVERY_PARTNER_ID : \"Delivery partner handles many orders\"\nUSERS {\n    integer user_id PK\n    text name\n    text email\n    text password_hash\n    text phone\n}\nRESTAURANTS {\n    integer restaurant_id PK\n    text name\n    text address\n    text phone\n    integer admin_user_id FK\n}\nMENUITEMS {\n    integer item_id PK\n    integer restaurant_id FK\n    text name\n    text description\n    real price\n}\nORDERS {\n    integer order_id PK\n    integer user_id FK\n    integer restaurant_id FK\n    integer delivery_partner_id FK\n    datetime order_time\n    text status\n    real total\n}",
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": "D1-r1-arch",
+      "kind": "architecture_diagram",
+      "code": "flowchart TD\n    subgraph Client\n        UI[React SPA]\n    end\n    subgraph API\n        Auth[Auth Service]\n        User[User Service]\n        Restaurant[Restaurant Service]\n        Order[Order Service]\n        Delivery[Delivery Service]\n    end\n    subgraph Infra\n        DB[(PostgreSQL)]\n        Cache[(Redis)]\n        MQ[(RabbitMQ)]\n        NG[NGINX]\n    end\n    UI -->|HTTPS| NG\n    NG -->|Proxy| Auth & User & Restaurant & Order & Delivery\n    Auth -->|JWT| User\n    Order -->|Publish| MQ\n    MQ -->|Consume| Delivery\n    Delivery -->|Update| DB\n    User --> DB\n    Restaurant --> DB\n    Order --> DB\n    Cache -->|Cache| DB",
+      "valid": true,
+      "error": null
+    }
+  ]
+}
