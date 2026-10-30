@@ -438,6 +438,11 @@ async def call_ai(
     # First attempt
     # --------------------------------------------------------
 
+    # Python deletes an "except ... as name" variable when the
+    # except block ends, so the first error is kept separately
+    # for the combined error message below.
+    first_error = None
+
     try:
 
         content = await raw_ai_request(
@@ -451,7 +456,9 @@ async def call_ai(
 
         return result
 
-    except Exception as first_error:
+    except Exception as error:
+
+        first_error = error
 
         print()
         print("========================================")
@@ -1369,6 +1376,7 @@ def build_er_diagram(
         if not description:
 
             description = "related"
+
         if cardinality == "1:1":
 
             lines.append(
@@ -1389,6 +1397,7 @@ def build_er_diagram(
             lines.append(
                 f"{source} ||--o{{ {target} : \"{description}\""
             )
+
     # --------------------------------------------------------
     # Tables
     # --------------------------------------------------------
